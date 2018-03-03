@@ -6,7 +6,6 @@ const userSchema = new Schema({
   lifetime_claps: { type: Number, required: true },
   perf_num: { type: Number, required: true },
   last_perf: { type: Date, required: true }
-});
 
 const User = mongoose.model("User", userSchema);
 
