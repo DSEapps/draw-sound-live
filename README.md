@@ -1,10 +1,13 @@
-# Create React Express App
+# Draw <--> Sound
 
 ## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Sound><Art is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by Soundspace at Durham Science Museum (https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art. 
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+The app provides an endless participatory experience in which performers interact with the canvas DOM. They have a canvas on the screen--an instrument--which allows them to manipulate a sound track and generate sound based on input events (eg. mouse location, direction, velocity) which is seen both seen and heard by viewers. Each movement is drawn and viewable. The underlying rules are not explicit to the users. Simply, they are sketching “music”.
+
+Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
+
 
 ## Starting the app locally
 
