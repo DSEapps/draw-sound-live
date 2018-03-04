@@ -14,7 +14,17 @@ class Venue extends Component {
 
   render() {
     return(
-      <h2>This is in the render return statement in Pages/Venue</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="jumbotron">
+              <h1>Venue</h1>
+              <p>This is in the render return statement in Pages/Venue</p>
+              <p><a className="btn btn-primary btn-lg">Learn more</a></p>
+            </div>
+          </div>  
+        </div>
+      </div>      
     );
   }
 }

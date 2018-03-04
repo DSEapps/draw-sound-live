@@ -9,15 +9,22 @@ class Landing extends Component {
 
   componentDidMount() {
     // In case we need 
-    <div>
-    <h2>Landing Page!!</h2>
-    </div>
   }
 
 
   render() {
     return(
-      <h2>This is in the render return statement in Pages/Landing</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="jumbotron">
+              <h1>Landing</h1>
+              <p>This is in the render return statement in Pages/Landing</p>
+              <p><a className="btn btn-primary btn-lg">Learn more</a></p>
+            </div>
+          </div>  
+        </div>
+      </div>      
     );
   }
 }
