@@ -9,11 +9,16 @@ class Landing extends Component {
 
   componentDidMount() {
     // In case we need 
+    <div>
+    <h2>Landing Page!!</h2>
+    </div>
   }
 
 
   render() {
-    // return();
+    return(
+      <h2>This is in the render return statement in Pages/Landing</h2>
+    );
   }
 }
 
