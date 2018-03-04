@@ -13,7 +13,9 @@ class Login extends Component {
 
 
   render() {
-    // return();
+    return(
+      <h2>This is in the render return statement in Pages/Login</h2>
+    );
   }
 }
 
