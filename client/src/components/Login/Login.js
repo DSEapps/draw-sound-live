@@ -16,6 +16,17 @@ class Login extends Component {
     this.props.history.push("/venue");
 }
 
+handleFormSubmit = event => {
+    event.preventDefault();
+      API.saveUser({
+        title: this.state.title,
+        author: this.state.author,
+        synopsis: this.state.synopsis
+      })
+        .then(res => this.loadBooks())
+        .catch(err => console.log(err));
+  };
+
   render() {
     return(
       <div className="container">
