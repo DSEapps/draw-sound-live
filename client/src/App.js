@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Landing from "./pages/Landing";
-import Login from "./pages/Login";
-import Venue from "./pages/Venue";
+import Landing from "./components/Landing";
+import Login from "./components/Login";
+import Venue from "./components/Venue";
 
 const App = () =>
   <Router>
