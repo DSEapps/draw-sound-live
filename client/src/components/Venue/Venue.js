@@ -11,6 +11,10 @@ class Venue extends Component {
     // In case we need 
   }
 
+  performClick = () => {
+    // enter Stage to perform
+    this.props.history.push("/venue");
+}
 
   render() {
     return(
@@ -19,8 +23,9 @@ class Venue extends Component {
           <div className="col-md-12">
             <div className="jumbotron">
               <h1>Venue</h1>
-              <p>This is in the render return statement in Pages/Venue</p>
-              <p><a className="btn btn-primary btn-lg">Learn more</a></p>
+              <p>This is in the render return statement in Components/Venue</p>
+              <p>Our core app is rendered here...</p>
+              <button onClick={this.performClick} className="btn btn-primary btn-lg">Perform</button>
             </div>
           </div>  
         </div>
