@@ -15,12 +15,12 @@ class Login extends Component {
     // redirect to Googe oAuth code
     console.log("Login button clicked");
     API.saveUser({
-      google_id: "XYZ12345",
-      google_email: "acb@gmail.com",
-      in_venue: true,
-      lifetime_claps: "231",
-      perf_num: "21",
-      last_perf: Date.now()
+      "google_id": "XYX987654321",
+      "google_email": "dpk@gmail.com",
+      "in_venue": true,
+      "lifetime_claps": 999,
+      "perf_num": 99,
+      "last_perf": "Thu Mar 17 2013 15:48:59 GMT+0400"
     })
       // .then(res => this.props.history.push("/venue"))
       .then(res => console.log("User saved to database"))
