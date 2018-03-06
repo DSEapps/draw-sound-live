@@ -17,7 +17,6 @@ module.exports = {
   },
   create: function(req, res) {
     console.log("We are in the Controller create module");
-    console.log(req);
     // req.body = {
     //     "google_id": "XYZ12345",
     //     "google_email": "acb@gmail.com",
