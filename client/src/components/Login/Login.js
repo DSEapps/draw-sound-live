@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import {withRouter} from "react-router-dom";
 import API from "../../utils/API";
+import ReactDOM from 'react-dom';
+import {GoogleAPI,GoogleLogin,GoogleLogout} from 'react-google-oauth'
+ 
+
+
 
 class Login extends Component {
   state = {
@@ -40,7 +45,20 @@ class Login extends Component {
 //         .catch(err => console.log(err));
 //   };
 
+
   render() {
+
+    ReactDOM.render(
+      <GoogleAPI clientId="538104571007-v1iusu7qhincf08obk1nr88nfdgn41mt.apps.googleusercontent.com"
+          // onUpdateSigninStatus={this.props.history.push("/venue")}
+          onLoginSuccess={this.props.history.push("/venue")}
+          onInitFailure={console.log("SIGNIN FAILED!!")} >
+        <div>
+          <div><GoogleLogin /></div>
+          <div><GoogleLogout /></div> 
+        </div>
+      </GoogleAPI>, document.getElementById('root'));
+ 
     return(
       <div className="container">
         <div className="row">

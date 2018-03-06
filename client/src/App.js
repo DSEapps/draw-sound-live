@@ -4,6 +4,7 @@ import './App.css';
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
+import { Navbar, Button } from 'react-bootstrap';
 
 const App = () =>
   <Router>
