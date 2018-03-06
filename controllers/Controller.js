@@ -16,6 +16,16 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("We are in the Controller create module");
+    console.log(req);
+    // req.body = {
+    //     "google_id": "XYZ12345",
+    //     "google_email": "acb@gmail.com",
+    //     "in_venue": true,
+    //     "lifetime_claps": 231,
+    //     "perf_num": 21,
+    //     "last_perf": "Thu Jul 18 2013 15:48:59 GMT+0400"
+    //   };
     db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))
