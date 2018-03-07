@@ -1,8 +1,10 @@
 import React from "react";
 
-const Stage = () =>
-    <div>
-
-    </div>
-
+const Stage = () => {
+    return(
+        <div className="well well-lg">
+        <h1>Stage</h1>
+        </div>
+    );
+}    
 export default Stage;
