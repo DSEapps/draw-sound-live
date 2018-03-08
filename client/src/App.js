@@ -4,16 +4,23 @@ import './App.css';
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
+import LoginPage from './components/Auth/LoginPage';
 
-const App = () =>
+
+class App extends Component {
+  render(){
+    return (
   <Router>
     <div>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/login" component={LoginPage} />
         <Route exact path="/venue" component={Venue} />
       </Switch>
     </div>
-  </Router>;
+  </Router>
+    );
+  }
+}
 
 export default App;

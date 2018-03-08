@@ -11,22 +11,22 @@ class Login extends Component {
     // In case we need 
   }
 
-  loginClick = () => {
-    // redirect to Googe oAuth code
-    console.log("Login button clicked");
-    API.saveUser({
-      "google_id": "XYX987654321",
-      "google_email": "ejk@gmail.com",
-      "in_venue": true,
-      "lifetime_claps": 999,
-      "perf_num": 99,
-      "last_perf": "Thu Mar 17 2013 15:48:59 GMT+0400"
-    })
-      .then(res => this.props.history.push("/venue"))
-      .then(res => console.log("User saved to database"))
-      .catch(err => console.log(err));
+//   loginClick = () => {
+//     // redirect to Googe oAuth code
+//     console.log("Login button clicked");
+//     API.saveUser({
+//       "google_id": "XYX987654321",
+//       "google_email": "ejk@gmail.com",
+//       "in_venue": true,
+//       "lifetime_claps": 999,
+//       "perf_num": 99,
+//       "last_perf": "Thu Mar 17 2013 15:48:59 GMT+0400"
+//     })
+//       .then(res => this.props.history.push("/venue"))
+//       .then(res => console.log("User saved to database"))
+//       .catch(err => console.log(err));
 
-}
+// }
 
 
 // handleFormSubmit = event => {
