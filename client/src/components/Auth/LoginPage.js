@@ -1,5 +1,6 @@
 import React from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
+import Backbone from 'backbone';
 
 export default class LoginPage extends React.Component{
   constructor(){
@@ -8,7 +9,7 @@ export default class LoginPage extends React.Component{
     this.widget = new OktaSignIn({
       baseUrl: 'https://dev-199627.oktapreview.com',
       clientId: '0oae8l8wbnX33qC9A0h7',
-      redirectUri: 'http://localhost:3000',
+      redirectUri: 'http://localhost:3000/venue',
       authParams: {
         responseType: 'id_token'
       }
@@ -29,7 +30,7 @@ export default class LoginPage extends React.Component{
   }
 
   showLogin(){
-    // Backbone.history.stop();
+    Backbone.history.stop();
     this.widget.renderEl({el:this.loginContainer},
       (response) => {
         this.setState({user: response.claims.email});
