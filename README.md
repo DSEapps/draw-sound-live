@@ -13,8 +13,8 @@ Viewers can rate and comment on the performance. Performers stats (eg. # of perf
 We decided to use Okta for for a simple authentication scheme.  Okta provides a sign-in widget that makes this process pretty easy.  Users are managed from the Okta website dashboard.
 
 #### References:
-https://developer.okta.com
-https://www.npmjs.com/package/@okta/okta-signin-widget
+[Okta] https://developer.okta.com
+[NPM Okta-Signin-Widget] https://www.npmjs.com/package/@okta/okta-signin-widget
 
 
 
