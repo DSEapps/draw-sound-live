@@ -8,6 +8,16 @@ The app provides an endless participatory experience in which performers interac
 
 Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
 
+## Components
+### Okta Signin
+We decided to use Okta for for a simple authentication scheme.  Okta provides a sign-in widget that makes this process pretty easy.  Users are managed from the Okta website dashboard.
+
+#### References:
+https://developer.okta.com
+https://www.npmjs.com/package/@okta/okta-signin-widget
+
+
+
 
 ## Starting the app locally
 
