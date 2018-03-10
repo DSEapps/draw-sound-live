@@ -12,17 +12,25 @@ class Square extends Component {
     componentDidUpdate() {
         const props = this.props.instrumentProps;
         if (props.location.mouseDown && this.props.name === props.location.activeNode) {
+            let h = this.dimensions.height;
+            let w = this.dimensions.width;
+            if (w < 1) {
+                w = 100
+            }
+            if (h < 1) {
+                h = 100
+            }
             this.props.soundUpdater(
                 props.location.x - this.dimensions.left,
                 props.location.y - this.dimensions.top,
-                this.dimensions.width,
-                this.dimensions.height
+                w,
+                h
             )
         }
     }
 
     handleMouseEnter = event => {
-        const rect = event.target.getBoundingClientRect();        
+        const rect = event.target.getBoundingClientRect();
         this.dimensions.left = rect.left;
         this.dimensions.top = rect.top;
         this.dimensions.width = rect.width;

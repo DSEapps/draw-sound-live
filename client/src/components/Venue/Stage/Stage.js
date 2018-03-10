@@ -5,16 +5,31 @@ const audioURLS = [
   "https://ia600206.us.archive.org/11/items/AliceColtrane-TuriyaAndRamakrishna/AliceColtrane-TuriyaAndRamakrishna.mp3",
   "https://ia801200.us.archive.org/4/items/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a/I%20Want%20A%20Hippopotamus%20For%20Christmas%20-%20Vicki%20Dale.mp3",
   "https://ia800405.us.archive.org/24/items/DEBUSSYStringQuartetInGMinor-NEWTRANSFER/01.I.AnimEtTrsDecid.mp3",
-
-]
-
+];
 
 class Stage extends Component {
-  state = {
-    //This will be toggled to true or false by the PERFORM component!
-    //Initializing as TRUE for POC/testing
-    //This triggers music to start and canvas to clear, etc.
-    performer: false
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      performanceOn: false
+    }
+    this.props.socket.on('startPerformance', (msg) => {
+      this.setState({ performanceOn: msg })
+    })
+  }
+
+  //if someone has chosen to perform, update performanceOn to true
+  componentWillUpdate(nextProps, nextState) {
+    if (!this.state.performanceOn && nextProps.isPerformer) {
+      this.props.socket.emit('startPerformance', true)
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevState.performanceOn && this.state.performanceOn) {
+      this.setUpInstrument()
+    }
   }
 
   //TODO - put this function in utils
@@ -30,7 +45,7 @@ class Stage extends Component {
     }
     this.player = new Tone.Player(audioURLS[2], console.log("loaded song"));
     // UNCOMMENT THIS to hear the music
-    // this.player.autostart = true;
+    this.player.autostart = true;
     this.player.volume.value = 10;
 
     //Default wetness
@@ -57,10 +72,10 @@ class Stage extends Component {
   //TODO - put this functin in utils  
   soundUpdaters = {
     phaser: (x, y, w, h) => {
-      const freqVal = x * (10 / w);   
+      const freqVal = x * (10 / w);
       const wetVal = y * (1 / h);
-      this.fx.phaser.frequency.value = freqVal;    
-      this.fx.phaser.wet.value = wetVal;      
+      this.fx.phaser.frequency.value = freqVal;
+      this.fx.phaser.wet.value = wetVal;
     },
 
     distortion: (x, y, w, h) => {
@@ -103,13 +118,11 @@ class Stage extends Component {
     pitchShift: (x, y, w, h) => {
       const pitchVal = x * (72 / w) - 36;
       const wetVal = y * (1 / h);
-      console.log(pitchVal);
       this.fx.pitchShift.wet.val = wetVal;
-      this.fx.pitchShift.pitch = pitchVal;
-      console.log("hi")
+      this.fx.pitchShift.pitch = null;
     },
 
-    tremolo: (x, y, w, h) => {
+    tremolo: (x, y, w, h) => { 
       const frequencyVal = x * (30 / w);
       const wetVal = y * (1 / h);
       this.fx.tremolo.frequency.value = frequencyVal;
@@ -119,11 +132,10 @@ class Stage extends Component {
   }
 
   render() {
-    this.setUpInstrument();
 
     return (
       <div className="stage">
-        <Instrument soundUpdaters={this.soundUpdaters} />
+        <Instrument socket={this.props.socket} performanceOn={this.props.performanceOn} isPerformer={this.props.isPerformer} soundUpdaters={this.soundUpdaters} />
       </div>
     );
   }

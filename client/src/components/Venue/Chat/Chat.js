@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
-const socket = io();
 
 class Chat extends Component {
     state = {
@@ -9,7 +8,7 @@ class Chat extends Component {
     }
 
     componentDidMount() {
-        socket.on('chat msg', (msg) => {
+        this.props.socket.on('chat msg', (msg) => {
             const chatsArray = this.state.chats.slice();
             chatsArray.splice(0, 0, msg);
             this.setState({ chats: chatsArray });
@@ -22,20 +21,20 @@ class Chat extends Component {
 
     handleClick = () => {
         this.setState({chat:""});
-        socket.emit('chat msg', this.state.chat);
+        this.props.socket.emit('chat msg', this.state.chat);
     }
 
     render() {
 
         return (
             <div className="form-group">
-                <label for="chatArea" className="col-lg-2 control-label">Chat Text</label>
-                <div class="col-lg-10">
-                    <textarea value= {this.state.chat} onChange={this.handleChange} class="form-control" rows="1" id="chatArea"></textarea>
+                <label htmlFor="chatArea" className="col-lg-2 control-label">Chat Text</label>
+                <div className="col-lg-10">
+                    <textarea value= {this.state.chat} onChange={this.handleChange} className="form-control" rows="1" col="5" id="chatArea"></textarea>
                 </div>
 
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button onClick={this.handleClick} type="submit" class="btn btn-primary">Submit</button>
+                <div className="col-lg-10 col-lg-offset-2">
+                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Submit</button>
                 </div>
 
                 {this.state.chats.map(chat =>

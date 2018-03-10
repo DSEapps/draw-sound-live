@@ -3,14 +3,26 @@ import Art from "./Art/Art";
 import Music from "./Music/Music";
 
 class Instrument extends Component {
-    state = {
-        //title of div that mouse is in, e.g. "distortion"
-        activeNode: null,
-        //is mouse held down?
-        mouseDown: false,
-        x: 0,
-        y: 0
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            //title of div that mouse is in, e.g. "distortion"
+            activeNode: null,
+            //is mouse held down?
+            mouseDown: false,
+            x: 0,
+            y: 0
+        }
+        this.props.socket.on('performance', (msg) => {
+            this.setState({ activeNode: msg.activeNode, mouseDown: msg.mouseDown, x: msg.x, y: msg.y })
+        })
     }
+
+     componentWillUpdate(nextProps, nextState) {
+        this.props.isPerformer ? this.props.socket.emit('performance', nextState) : null
+    }
+
 
     handleMouseMove = (x, y) => {
         this.setState({ x: x, y: y });
@@ -24,7 +36,7 @@ class Instrument extends Component {
         this.setState({ activeNode: node });
     }
 
-    render() {    
+    render() {
         return (
             <div className="instrument">
                 <Art location={this.state} />
