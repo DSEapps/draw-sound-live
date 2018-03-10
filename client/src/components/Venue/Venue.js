@@ -1,59 +1,38 @@
 import React, { Component } from "react";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import API from "../../utils/API";
 import Stage from "./Stage/Stage";
 import Marquee from "./Marquee/Marquee";
 import Chat from "./Chat/Chat";
 import Chatlog from "./Chat/Chatlog";
+import Perform from "./Perform"
 import './Venue.css';
 
 class Venue extends Component {
   state = {
-
+    isPerformer: false,
+    performanceOn: false,
   };
 
-  componentDidMount() {
-    // In case we need 
+  startPerformance = () => {
+    this.setState({ isPerformer: true, performanceOn: true })
   }
 
-  performClick = () => {
-    // enter Stage to perform
-    this.props.history.push("/venue");
-}
-
   render() {
-    return(
+    return (
       <div className="">
-
         <div className="">
-          <p>perform btn div</p>
-          <button onClick={this.performClick} className="btn btn-primary btn-lg">Perform</button>
+          <Perform onClick={this.startPerformance} />
         </div>
-
-        
-          <Stage />
-     
-
-
+        <Stage />
         <div className="">
-          <p>marquee div</p>
-          <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314"/>
-        </div>        
-
-
+          <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314" />
+        </div>
         <div className="row">
-              <Chat />
-              {/* <Chatlog name="dpk@gmail.com" comment="This UI is sucky"/>
-              <Chatlog name="ejk@gmail.com" comment="Yes, I agree"/>
-              <Chatlog name="abc@gmail.com" comment="There needs to be a lot of work done"/>
-              <Chatlog name="efg@gmail.com" comment="This will have to be a function call"/>
-              <Chatlog name="hij@gmail.com" comment="In order to iterate thru the comments in real time"/>
-              <Chatlog name="klm@gmail.com" comment="Good luck with that!"/> */}
+          <Chat />
         </div>
+      </div>
 
-
-      </div> 
-      
       // Bootswatch Code
       // <div className="container">
       //   <div className="row">
@@ -91,11 +70,11 @@ class Venue extends Component {
 
       // </div> 
       // // Bootswatch Code
-  
+
     );
   }
 }
-    
+
 
 
 export default Venue;
