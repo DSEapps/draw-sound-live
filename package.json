@@ -21,6 +21,7 @@
     "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.15.4",
-    "mongoose": "^5.0.8"
+    "mongoose": "^5.0.8",
+    "socket.io": "^2.0.4"
   }
 }
