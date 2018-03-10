@@ -25,8 +25,8 @@ class Art extends Component {
 
         //////////////// SET - KANDINSKY 01//////////////////////
         // global
-        let colorSet1 = 0; // current cursor lcation - full opacity
-        let colorSet2 = 0; // current cursor lcation - 0.7 opacity
+        let colorSet1; // current cursor lcation - full opacity
+        let colorSet2; // current cursor lcation - 0.7 opacity
         
 
         // create color variable based on current box
@@ -57,8 +57,8 @@ class Art extends Component {
             break;
 
             case "F":
-            colorSet1 = "rgba(60, 86, 16,1)";
-            colorSet2 = "rgba(60, 86, 16, 0.7)";
+            colorSet1 = "rgba(77, 109, 13,1)";
+            colorSet2 = "rgba(77, 109, 13, 0.7)";
             break;
 
 
