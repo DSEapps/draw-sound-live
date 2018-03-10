@@ -51,8 +51,11 @@ io.on('connection', function (socket) {
     io.emit('chat msg', msg);
   });
 
+  socket.on('startPerformance', function (msg) {
+    io.emit('startPerformance', true);
+  });
+
   socket.on('performance', function (msg) {
-    console.log(msg);
     socket.broadcast.emit('performance', msg)
   });
 

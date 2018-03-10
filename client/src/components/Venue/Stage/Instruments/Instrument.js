@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Art from "./Art/Art";
 import Music from "./Music/Music";
-import io from 'socket.io-client';
-const socket = io();
 
 class Instrument extends Component {
 
@@ -16,21 +14,13 @@ class Instrument extends Component {
             x: 0,
             y: 0
         }
-        socket.on('performance', (msg) => {
-            //this i firing!
+        this.props.socket.on('performance', (msg) => {
             this.setState({ activeNode: msg.activeNode, mouseDown: msg.mouseDown, x: msg.x, y: msg.y })
         })
     }
 
-    // componentDidMount() {
-    //     socket.on('performance', (msg) => {
-    //         console.log("HELLO");
-    //         this.setState({ msg })
-    //     })
-    // }
-
-    componentWillUpdate(nextProps, nextState) {
-        this.props.isPerformer ? socket.emit('performance', nextState) : null
+     componentWillUpdate(nextProps, nextState) {
+        this.props.isPerformer ? this.props.socket.emit('performance', nextState) : null
     }
 
 

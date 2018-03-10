@@ -7,16 +7,18 @@ import Chat from "./Chat/Chat";
 import Chatlog from "./Chat/Chatlog";
 import Perform from "./Perform"
 import './Venue.css';
+import io from 'socket.io-client';
+
+const socket = io();
 
 class Venue extends Component {
 
   state = {
     isPerformer: false,
-    performanceOn: false,
   };
 
   startPerformance = () => {
-    this.setState({ isPerformer: true, performanceOn: true })
+    this.setState({ isPerformer: true })
   }
 
   render() {
@@ -25,13 +27,13 @@ class Venue extends Component {
         <div className="">
           <Perform onClick={this.startPerformance} />
         </div>
-        
-        <Stage isPerformer={this.state.isPerformer} performanceOn={this.state.performanceOn} />
-        <div className="">
+
+        <Stage socket={socket} isPerformer={this.state.isPerformer} />
+        {/* <div className="">
           <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314" />
-        </div>
+        </div> */}
         <div className="row">
-          <Chat />
+          <Chat socket={socket} />
         </div>
       </div>
 
