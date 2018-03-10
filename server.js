@@ -39,14 +39,21 @@ app.use(routes);
 // });
 
 
-http.listen(PORT, function() {
+http.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
 
-io.on('connection', function(socket){
+io.on('connection', function (socket) {
+  
   console.log('a user connected');
-  socket.on('chat msg', function(msg){
-    console.log(msg);
+
+  socket.on('chat msg', function (msg) {
     io.emit('chat msg', msg);
   });
+
+  socket.on('performance', function (msg) {
+    console.log(msg);
+    socket.broadcast.emit('performance', msg)
+  });
+
 });

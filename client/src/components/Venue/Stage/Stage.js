@@ -8,13 +8,10 @@ const audioURLS = [
 
 ]
 
-
 class Stage extends Component {
-  state = {
-    //This will be toggled to true or false by the PERFORM component!
-    //Initializing as TRUE for POC/testing
-    //This triggers music to start and canvas to clear, etc.
-    performer: false
+
+  componentWillUpdate(){
+    
   }
 
   //TODO - put this function in utils
@@ -30,7 +27,7 @@ class Stage extends Component {
     }
     this.player = new Tone.Player(audioURLS[2], console.log("loaded song"));
     // UNCOMMENT THIS to hear the music
-    // this.player.autostart = true;
+    this.player.autostart = true;
     this.player.volume.value = 10;
 
     //Default wetness
@@ -103,10 +100,8 @@ class Stage extends Component {
     pitchShift: (x, y, w, h) => {
       const pitchVal = x * (72 / w) - 36;
       const wetVal = y * (1 / h);
-      console.log(pitchVal);
       this.fx.pitchShift.wet.val = wetVal;
       this.fx.pitchShift.pitch = pitchVal;
-      console.log("hi")
     },
 
     tremolo: (x, y, w, h) => {
@@ -123,7 +118,7 @@ class Stage extends Component {
 
     return (
       <div className="stage">
-        <Instrument soundUpdaters={this.soundUpdaters} />
+        <Instrument performanceOn={this.props.performanceOn} isPerformer={this.props.isPerformer} soundUpdaters={this.soundUpdaters} />
       </div>
     );
   }

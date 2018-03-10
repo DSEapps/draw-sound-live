@@ -9,6 +9,7 @@ import Perform from "./Perform"
 import './Venue.css';
 
 class Venue extends Component {
+
   state = {
     isPerformer: false,
     performanceOn: false,
@@ -24,7 +25,8 @@ class Venue extends Component {
         <div className="">
           <Perform onClick={this.startPerformance} />
         </div>
-        <Stage />
+        
+        <Stage isPerformer={this.state.isPerformer} performanceOn={this.state.performanceOn} />
         <div className="">
           <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314" />
         </div>

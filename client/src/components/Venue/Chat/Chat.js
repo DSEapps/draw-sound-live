@@ -29,13 +29,13 @@ class Chat extends Component {
 
         return (
             <div className="form-group">
-                <label for="chatArea" className="col-lg-2 control-label">Chat Text</label>
+                <label htmlFor="chatArea" className="col-lg-2 control-label">Chat Text</label>
                 <div class="col-lg-10">
-                    <textarea value= {this.state.chat} onChange={this.handleChange} class="form-control" rows="1" id="chatArea"></textarea>
+                    <textarea value= {this.state.chat} onChange={this.handleChange} className="form-control" rows="1" id="chatArea"></textarea>
                 </div>
 
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button onClick={this.handleClick} type="submit" class="btn btn-primary">Submit</button>
+                <div className="col-lg-10 col-lg-offset-2">
+                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Submit</button>
                 </div>
 
                 {this.state.chats.map(chat =>
