@@ -2,10 +2,11 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
-const app = express();
 const routes = require("./routes");
-var bodyParser = require('body-parser')
-
+const bodyParser = require('body-parser');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,7 +18,6 @@ app.use(bodyParser.json())
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
@@ -32,13 +32,21 @@ mongoose.connect(
 // Add routes, both API and view
 app.use(routes);
 
-
 // Send every request to the React app
 // Define any API routes before this runs
 // app.get("*", function(req, res) {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-app.listen(PORT, function() {
+
+http.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
+});
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('chat msg', function(msg){
+    console.log(msg);
+    io.emit('chat msg', msg);
+  });
 });

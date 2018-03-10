@@ -43,12 +43,12 @@ class Venue extends Component {
 
         <div className="row">
               <Chat />
-              <Chatlog name="dpk@gmail.com" comment="This UI is sucky"/>
+              {/* <Chatlog name="dpk@gmail.com" comment="This UI is sucky"/>
               <Chatlog name="ejk@gmail.com" comment="Yes, I agree"/>
               <Chatlog name="abc@gmail.com" comment="There needs to be a lot of work done"/>
               <Chatlog name="efg@gmail.com" comment="This will have to be a function call"/>
               <Chatlog name="hij@gmail.com" comment="In order to iterate thru the comments in real time"/>
-              <Chatlog name="klm@gmail.com" comment="Good luck with that!"/>
+              <Chatlog name="klm@gmail.com" comment="Good luck with that!"/> */}
         </div>
 
 

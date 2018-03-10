@@ -5,20 +5,26 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
 import LoginPage from './components/Auth/LoginPage';
-
+import io from 'socket.io-client';
 
 class App extends Component {
-  render(){
+  render() {
     return (
-  <Router>
-    <div>
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/venue" component={Venue} />
-      </Switch>
-    </div>
-  </Router>
+      <Router>
+        <div>
+          <Switch>
+
+            {/* for testing... */}
+          <Route exact path="/" component={Venue} />
+            
+
+
+            {/* <Route exact path="/" component={Landing} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/venue" component={Venue} /> */}
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
