@@ -12,7 +12,7 @@ const socket = io();
 class Venue extends Component {
 
   state = {
-    performer: null,    
+    performer: null,
     isPerformer: false,
   };
 
@@ -35,7 +35,7 @@ class Venue extends Component {
   }
 
   render() {
-    
+
     return (
       <div className="">
         <div className="">
@@ -50,12 +50,11 @@ class Venue extends Component {
         <Stage
           socket={socket}
           performer={this.state.performer}
-          isPerformer={this.state.isPerformer} />
-        {/* <div className="">
-          <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314" />
-        </div> */}
+          isPerformer={this.state.isPerformer} />   
         <div className="row">
-          <Chat socket={socket} />
+          <Chat 
+          socket={socket} 
+          userInfo={this.props.userInfo} />
         </div>
       </div>
 
