@@ -8,14 +8,16 @@ const audioURLS = [
 ];
 
 class Stage extends Component {
-
-  //if someone has chosen to perform, update performanceOn to true
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.props.performer) {
       this.setUpInstrument();
-    } else {
-      //possibly tear down instrument?
+    } else if (prevProps.performer && !this.props.performer ) {
+      this.stopInstrument()
     }
+  }
+
+  stopInstrument = () => {
+    this.player.stop();
   }
 
   //TODO - put this function in utils
@@ -123,6 +125,7 @@ class Stage extends Component {
       <div className="stage">
         <Instrument 
         socket={this.props.socket} 
+        performer={this.props.performer}
         isPerformer={this.props.isPerformer} 
         soundUpdaters={this.soundUpdaters} />
       </div>

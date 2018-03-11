@@ -15,9 +15,19 @@ class Applause extends Component {
         })
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
         if (this.state.downClaps > 3) {
             this.props.stopPerformance();
+        }   
+
+        if (!this.props.performer) {
+            if (prevProps.isPerformer) {
+                //TODO: Update performer's lifetime claps in DB
+            }    
+            this.setState({
+                upClaps: 0,
+                downClaps: 0
+            })
         }
     }
 
