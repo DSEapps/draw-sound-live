@@ -4,7 +4,8 @@ import API from "../../utils/API";
 import Stage from "./Stage/Stage";
 import Marquee from "./Marquee/Marquee";
 import Chat from "./Chat/Chat";
-import Perform from "./Perform"
+import Perform from "./Perform";
+import Applause from "./Applause";
 import './Venue.css';
 import io from 'socket.io-client';
 const socket = io();
@@ -29,8 +30,8 @@ class Venue extends Component {
   }
 
   stopPerformance = () => {
+    console.log("stop performance");
     this.setState({ performer: null })
-
     //do everything that needs happen when perf ends
   }
 
@@ -46,15 +47,21 @@ class Venue extends Component {
             isPerformer={this.state.isPerformer}
             userInfo={this.props.userInfo} />
         </div>
-
+        {this.state.performer
+          ? <Applause
+            socket={socket}
+            stopPerformance={this.stopPerformance}
+            performer={this.state.performer}
+            isPerformer={this.state.isPerformer} />
+          : null}
         <Stage
           socket={socket}
           performer={this.state.performer}
-          isPerformer={this.state.isPerformer} />   
+          isPerformer={this.state.isPerformer} />
         <div className="row">
-          <Chat 
-          socket={socket} 
-          userInfo={this.props.userInfo} />
+          <Chat
+            socket={socket}
+            userInfo={this.props.userInfo} />
         </div>
       </div>
 
