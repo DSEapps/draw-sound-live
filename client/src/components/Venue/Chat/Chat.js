@@ -34,7 +34,6 @@ class Chat extends Component {
     }
 
     render() {
-
         return (
             <div className="form-group">
                 {this.state.chats.map(chat =>

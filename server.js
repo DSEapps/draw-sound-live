@@ -55,6 +55,15 @@ io.on('connection', (socket) => {
     io.emit('start', performer);
   });
 
+  socket.on('up', () => {
+    io.emit('up');
+  });
+
+  socket.on('down', () => {
+    io.emit('down');
+  });
+
+
   socket.on('performance', (msg) => {
     socket.broadcast.emit('performance', msg);
   });
