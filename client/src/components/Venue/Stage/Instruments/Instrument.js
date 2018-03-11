@@ -19,7 +19,7 @@ class Instrument extends Component {
         })
     }
 
-     componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate(nextProps, nextState) {
         this.props.isPerformer ? this.props.socket.emit('performance', nextState) : null
     }
 
@@ -39,10 +39,13 @@ class Instrument extends Component {
     render() {
         return (
             <div className="instrument">
-                <Art location={this.state} />
+                <Art
+                    location={this.state}
+                    performer={this.props.performer}
+                />
                 <Music
                     location={this.state}
-                    isPerformer = {this.props.isPerformer}
+                    isPerformer={this.props.isPerformer}
                     handleNodeChange={this.handleNodeChange}
                     handleClick={this.handleClick}
                     handleMouseMove={this.handleMouseMove}

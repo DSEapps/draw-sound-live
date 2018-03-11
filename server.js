@@ -55,6 +55,10 @@ io.on('connection', (socket) => {
     io.emit('start', performer);
   });
 
+  socket.on('stop', (performer) => {
+    io.emit('stop', performer);
+  });
+
   socket.on('up', () => {
     io.emit('up');
   });

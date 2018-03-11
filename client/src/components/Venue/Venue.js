@@ -20,6 +20,9 @@ class Venue extends Component {
   componentDidMount() {
     socket.on('start', (performer) => {
       this.setState({ performer: performer });
+    });   
+    socket.on('stop', (performer) => {
+      this.setState({ performer: null, isPerformer:false })
     });
   }
 
@@ -30,9 +33,7 @@ class Venue extends Component {
   }
 
   stopPerformance = () => {
-    console.log("stop performance");
-    this.setState({ performer: null })
-    //do everything that needs happen when perf ends
+    socket.emit("stop");
   }
 
   render() {
