@@ -1,21 +1,27 @@
 import React from "react";
 
 const Perform = props => {
-    let button = null;
+    let display = null;
     //If user is a performer, stop button shows
     if (props.isPerformer) {
-        button = <button onClick={props.stopPerformance}>Get off stage</button>
-    } 
+        display = <button onClick={props.stopPerformance}>Get off stage</button>
+    }
+    
     //If someone is performing, button is disabled
     else if (props.performer) {
-        button = <button disabled="true">Disabled</button>
-    } 
-    //If nobody is performing, start button shows
-    else if (!props.performer) {
-        button = <button onClick={props.startPerformance}>Get on stage</button>
+        display = <div className="marquee">
+            <div>Name: {props.userInfo.name}</div>
+            <div>Lifetime upclaps: {props.userInfo.upClaps}</div>
+            <div>Lifetime downclaps: {props.userInfo.downClaps}</div>
+        </div>
     }
 
-    return button;
+    //If nobody is performing, start button shows
+    else if (!props.performer) {
+        display = <button onClick={props.startPerformance}>Get on stage</button>
+    }
+
+    return display;
 
 }
 

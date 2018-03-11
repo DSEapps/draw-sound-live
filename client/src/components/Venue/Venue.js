@@ -4,17 +4,15 @@ import API from "../../utils/API";
 import Stage from "./Stage/Stage";
 import Marquee from "./Marquee/Marquee";
 import Chat from "./Chat/Chat";
-import Chatlog from "./Chat/Chatlog";
 import Perform from "./Perform"
 import './Venue.css';
 import io from 'socket.io-client';
-
 const socket = io();
 
 class Venue extends Component {
 
   state = {
-    performer: null,
+    performer: null,    
     isPerformer: false,
   };
 
@@ -26,7 +24,7 @@ class Venue extends Component {
 
   startPerformance = () => {
     //change emission to this.props.name;
-    socket.emit('start', "John");
+    socket.emit('start', this.props.userInfo);
     this.setState({ isPerformer: true })
   }
 
@@ -37,6 +35,7 @@ class Venue extends Component {
   }
 
   render() {
+    
     return (
       <div className="">
         <div className="">
@@ -44,7 +43,8 @@ class Venue extends Component {
             startPerformance={this.startPerformance}
             stopPerformance={this.stopPerformance}
             performer={this.state.performer}
-            isPerformer={this.state.isPerformer} />
+            isPerformer={this.state.isPerformer}
+            userInfo={this.props.userInfo} />
         </div>
 
         <Stage

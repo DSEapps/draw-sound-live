@@ -8,16 +8,32 @@ import LoginPage from './components/Auth/LoginPage';
 import io from 'socket.io-client';
 
 class App extends Component {
+
+  //Hard-coded user info; waiting for auth process
+  //Will both need to be NULL initially
+  state = {
+    name: "John",
+    id: "555",
+    upClaps: "25",
+    downClaps: "66"
+  }
+
   render() {
+    const returnVenue = () => {
+      return (
+        <Venue
+          userInfo={this.state}
+        />
+      );
+    }
+
+
     return (
       <Router>
         <div>
           <Switch>
-
             {/* for testing... */}
-          <Route exact path="/" component={Venue} />
-            
-
+            <Route exact path="/" render={returnVenue} />
 
             {/* <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={LoginPage} />
