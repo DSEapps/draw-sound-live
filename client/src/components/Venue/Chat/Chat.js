@@ -5,6 +5,7 @@ class Chat extends Component {
     state = {
         chats: [],
         chat: "",
+        expanded: false
     }
 
     componentDidMount() {
@@ -15,12 +16,20 @@ class Chat extends Component {
         });
     }
 
+    toggleChat = () => {
+        if (this.state.expanded === true) {
+            this.setState({ expanded: false })
+        } else {
+            this.setState({ expanded: true })
+        }
+    }
+
     handleChange = (event) => {
         this.setState({ chat: event.target.value })
     }
 
     handleClick = () => {
-        this.setState({chat:""});
+        this.setState({ chat: "" });
         this.props.socket.emit('chat msg', this.state.chat);
     }
 
@@ -28,24 +37,21 @@ class Chat extends Component {
 
         return (
             <div className="form-group">
-                <label htmlFor="chatArea" className="col-lg-2 control-label">Chat Text</label>
-                <div className="col-lg-10">
-                    <textarea value= {this.state.chat} onChange={this.handleChange} className="form-control" rows="1" col="5" id="chatArea"></textarea>
-                </div>
-
-                <div className="col-lg-10 col-lg-offset-2">
-                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Submit</button>
-                </div>
-
                 {this.state.chats.map(chat =>
-                    <div className="panel panel-default">
+                    <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="panel panel-default">
                         {/* <div className="panel-heading">Audience member: {props.name}</div> */}
                         <div className="panel-body">
-                            {chat}
+                            {this.props.userInfo.name}{": " + chat}
                         </div>
                     </div>
                 )}
-
+                <button onClick={this.toggleChat}>Toggle chat</button>
+                <div className="col-lg-10">
+                    <textarea value={this.state.chat} onChange={this.handleChange} className="form-control" rows="1" col="5" id="chatArea"></textarea>
+                </div>
+                <div className="col-lg-10 col-lg-offset-2">
+                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Submit</button>
+                </div>
             </div>
         );
     }
