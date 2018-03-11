@@ -43,20 +43,20 @@ http.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
 
-io.on('connection', function (socket) {
-  
+io.on('connection', (socket) => {
+
   console.log('a user connected');
 
-  socket.on('chat msg', function (msg) {
+  socket.on('chat msg', (msg) => {
     io.emit('chat msg', msg);
   });
 
-  socket.on('startPerformance', function (msg) {
-    io.emit('startPerformance', true);
+  socket.on('start', (performer) => {
+    io.emit('start', performer);
   });
 
-  socket.on('performance', function (msg) {
-    socket.broadcast.emit('performance', msg)
+  socket.on('performance', (msg) => {
+    socket.broadcast.emit('performance', msg);
   });
 
 });

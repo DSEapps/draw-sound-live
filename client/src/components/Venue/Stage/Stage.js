@@ -9,26 +9,12 @@ const audioURLS = [
 
 class Stage extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      performanceOn: false
-    }
-    this.props.socket.on('startPerformance', (msg) => {
-      this.setState({ performanceOn: msg })
-    })
-  }
-
   //if someone has chosen to perform, update performanceOn to true
-  componentWillUpdate(nextProps, nextState) {
-    if (!this.state.performanceOn && nextProps.isPerformer) {
-      this.props.socket.emit('startPerformance', true)
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (!prevState.performanceOn && this.state.performanceOn) {
-      this.setUpInstrument()
+  componentDidUpdate() {
+    if (this.props.performer) {
+      this.setUpInstrument();
+    } else {
+      //possibly tear down instrument?
     }
   }
 
@@ -119,10 +105,10 @@ class Stage extends Component {
       const pitchVal = x * (72 / w) - 36;
       const wetVal = y * (1 / h);
       this.fx.pitchShift.wet.val = wetVal;
-      this.fx.pitchShift.pitch = null;
+      this.fx.pitchShift.pitch = pitchVal;
     },
 
-    tremolo: (x, y, w, h) => { 
+    tremolo: (x, y, w, h) => {
       const frequencyVal = x * (30 / w);
       const wetVal = y * (1 / h);
       this.fx.tremolo.frequency.value = frequencyVal;
@@ -135,7 +121,10 @@ class Stage extends Component {
 
     return (
       <div className="stage">
-        <Instrument socket={this.props.socket} performanceOn={this.props.performanceOn} isPerformer={this.props.isPerformer} soundUpdaters={this.soundUpdaters} />
+        <Instrument 
+        socket={this.props.socket} 
+        isPerformer={this.props.isPerformer} 
+        soundUpdaters={this.soundUpdaters} />
       </div>
     );
   }

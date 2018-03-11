@@ -14,21 +14,43 @@ const socket = io();
 class Venue extends Component {
 
   state = {
+    performer: null,
     isPerformer: false,
   };
 
+  componentDidMount() {
+    socket.on('start', (performer) => {
+      this.setState({ performer: performer });
+    });
+  }
+
   startPerformance = () => {
+    //change emission to this.props.name;
+    socket.emit('start', "John");
     this.setState({ isPerformer: true })
+  }
+
+  stopPerformance = () => {
+    this.setState({ performer: null })
+
+    //do everything that needs happen when perf ends
   }
 
   render() {
     return (
       <div className="">
         <div className="">
-          <Perform onClick={this.startPerformance} />
+          <Perform
+            startPerformance={this.startPerformance}
+            stopPerformance={this.stopPerformance}
+            performer={this.state.performer}
+            isPerformer={this.state.isPerformer} />
         </div>
 
-        <Stage socket={socket} isPerformer={this.state.isPerformer} />
+        <Stage
+          socket={socket}
+          performer={this.state.performer}
+          isPerformer={this.state.isPerformer} />
         {/* <div className="">
           <Marquee name="Scott" perf="11" last="Jan 5, 2018" claps="314" />
         </div> */}

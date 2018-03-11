@@ -3,7 +3,7 @@ import Art from "./Art/Art";
 import Music from "./Music/Music";
 
 class Instrument extends Component {
-
+    //note from Evan: should try componentDidMount instead of constructor
     constructor(props) {
         super(props)
         this.state = {
@@ -42,6 +42,7 @@ class Instrument extends Component {
                 <Art location={this.state} />
                 <Music
                     location={this.state}
+                    isPerformer = {this.props.isPerformer}
                     handleNodeChange={this.handleNodeChange}
                     handleClick={this.handleClick}
                     handleMouseMove={this.handleMouseMove}

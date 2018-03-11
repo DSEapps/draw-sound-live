@@ -68,8 +68,9 @@ class Square extends Component {
     }
 
     render() {
-        return (
-            <div
+        let square = null;
+        if (this.props.isPerformer) {
+            square = <div
                 onMouseEnter={this.handleMouseEnter}
                 onMouseDown={this.handleMouseDown}
                 onMouseMove={this.handleMouseMove}
@@ -78,7 +79,10 @@ class Square extends Component {
                 className="square"
                 id={"square" + this.props.name}>
             </div>
-        );
+        } else {
+            square = <div className="square" id={"square" + this.props.name}></div>
+        }
+        return square;
     }
 }
 
