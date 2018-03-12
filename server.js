@@ -71,8 +71,15 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('performance', msg);
   }); 
 
-  console.log(io.engine.clientsCount);
+  console.log("Number of clients connected: " + io.engine.clientsCount);
+  
   io.sockets.emit('clientsCount',(io.engine.clientsCount));
+
+  socket.on('disconnect', () => {
+    io.sockets.emit('clientsCount',(io.engine.clientsCount));
+    console.log('Socket disconnected');
+  })
+
   // calls clients to query all unique client connections in the "/" namespace
   // console.logs array with unique client identifiers
   // io.clients((error, clients) => {
