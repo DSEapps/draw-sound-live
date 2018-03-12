@@ -18,7 +18,8 @@ class Art extends Component {
 
     // there is not currently code in here to handle clearing the canvas
     
-    componentWillUpdate(nextProps) {
+    componentWillUpdate(nextProps, nextState) {
+        // console.log(this.props.performer);
         // console.log("art will update " + " performer- " + this.performerer + " location-  " + this.location);
         // console.log("art will update " + " performer- " + this.props.performer + " location-  " + nextProps.performer);
         // init canvas
@@ -29,11 +30,15 @@ class Art extends Component {
         const now = this.props.location;
         const next = nextProps.location;
 
+        const offsetLeft = canvas.getBoundingClientRect().left;
+        const offsetTop = canvas.getBoundingClientRect().top;
+
         // correct for canvas placement
-        let nextX = next.x - canvas.getBoundingClientRect().left;
-        let nextY = next.y - canvas.getBoundingClientRect().top;
-        let nowX = now.x - canvas.getBoundingClientRect().left;
-        let nowY = now.y - canvas.getBoundingClientRect().top;
+        let nextX = next.x - offsetLeft;
+        let nextY = next.y - offsetTop;
+        let nowX = now.x - offsetLeft;
+        let nowY = now.y - offsetTop;
+
 
 
         //////////////// SET - KANDINSKY 01//////////////////////
@@ -115,7 +120,13 @@ class Art extends Component {
             ctx.fillStyle="Black";
             ctx.fillRect(nextX, nextY, 6, 6);
         } 
+
+        //////////////// Reset Canvas when Performer Clicked //////////////////////
+        if ( ( (nextX + offsetLeft) === 0 && (nextY + offsetTop) === 0 ) || ( (nowX + offsetLeft) === 0 && (nowY + offsetLeft) === 0 )){
+            ctx.clearRect(0, 0, canvas.width, canvas.height)  
+        }
     }
+
 
 
 
