@@ -1,8 +1,12 @@
 import React from "react";
 
-const Audience = () =>
+const Audience = (props) => {
+    return (
     <div>
+        <h3>This is the number of connected users: {props.clientsCount}</h3>
+    </div>        
+    );
+}; 
 
-    </div>
 
 export default Audience;

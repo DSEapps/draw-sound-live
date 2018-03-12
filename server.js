@@ -71,16 +71,28 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('performance', msg);
   }); 
 
+  console.log(io.engine.clientsCount);
+  io.sockets.emit('clientsCount',(io.engine.clientsCount));
   // calls clients to query all unique client connections in the "/" namespace
   // console.logs array with unique client identifiers
-  io.clients((error, clients) => {
-    if (error) throw error;
-    console.log(clients);
-  });
-
-
+  // io.clients((error, clients) => {
+  //   if (error) throw error;
+  //   console.log(clients);
+  // });
 });
 
+// io.on('connection', (socket) => {
 
+//   console.log('dk user connected');
 
+//   const users = io.clients((error, clients) => {
+//   // io.clients((error, clients) => {
+//       if (error) throw error;
+//     console.log(clients);
+//       socket.on('clients', () => {
+//         io.emit('clients');
+//       });
+//     });
+//   console.log(io.engine.clientsCount);
+// });
 

@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import API from "../../utils/API";
 import Stage from "./Stage/Stage";
 import Marquee from "./Marquee/Marquee";
+import Audience from "./Audience/Audience";
 import Chat from "./Chat/Chat";
 import Perform from "./Perform";
 import Applause from "./Applause";
@@ -15,6 +16,7 @@ class Venue extends Component {
   state = {
     performer: null,
     isPerformer: false,
+    clientsCount: 0
   };
 
   componentDidMount() {
@@ -23,6 +25,9 @@ class Venue extends Component {
     });   
     socket.on('stop', (performer) => {
       this.setState({ performer: null, isPerformer:false })
+    });
+    socket.on('clientsCount', (clientsCount) => {
+      this.setState({ clientsCount: clientsCount })
     });
   }
 
@@ -59,6 +64,10 @@ class Venue extends Component {
           socket={socket}
           performer={this.state.performer}
           isPerformer={this.state.isPerformer} />
+        <div className="row">
+          <Audience
+            clientsCount={this.state.clientsCount} />
+        </div>
         <div className="row">
           <Chat
             socket={socket}
