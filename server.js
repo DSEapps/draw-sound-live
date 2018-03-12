@@ -63,9 +63,20 @@ io.on('connection', (socket) => {
     io.emit('down');
   });
 
-
   socket.on('performance', (msg) => {
     socket.broadcast.emit('performance', msg);
+  }); 
+
+  // calls clients to query all unique client connections in the "/" namespace
+  // console.logs array with unique client identifiers
+  io.clients((error, clients) => {
+    if (error) throw error;
+    console.log(clients);
   });
 
+
 });
+
+
+
+
