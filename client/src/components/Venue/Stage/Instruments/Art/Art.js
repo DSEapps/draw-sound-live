@@ -2,25 +2,38 @@
 import React, { Component } from 'react';
 
 
-class Art extends Component {
-
+class Art extends Component { 
     
-    componentDidMount() {}     
+    setupCanvas = () => { }
 
+    componentDidMount() {}
+
+    // this clears the canvas ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // the problem is, i just discovered why the below code was the only wayt to get this to work
+    // it was rendering the render inside of itself
+
+    // the state above this needs to be reset back to defaults, 0s when
+    // user stops performing otherwise, when the next person starts performing
+    // the math here will be off
+
+    // there is not currently code in here to handle clearing the canvas
+    
     componentWillUpdate(nextProps) {
+        // console.log("art will update " + " performer- " + this.performerer + " location-  " + this.location);
+        // console.log("art will update " + " performer- " + this.props.performer + " location-  " + nextProps.performer);
         // init canvas
         const canvas = document.getElementById("art");
         const ctx = canvas.getContext("2d"); 
 
+        // nomralize props
         const now = this.props.location;
         const next = nextProps.location;
 
-        // coorect for canvas placement
+        // correct for canvas placement
         let nextX = next.x - canvas.getBoundingClientRect().left;
         let nextY = next.y - canvas.getBoundingClientRect().top;
         let nowX = now.x - canvas.getBoundingClientRect().left;
         let nowY = now.y - canvas.getBoundingClientRect().top;
-
 
 
         //////////////// SET - KANDINSKY 01//////////////////////
@@ -96,19 +109,22 @@ class Art extends Component {
             ctx.restore();
         }
 
-         //CURRENT MouseDown = TRUE, NEXT MouseDown = FALSE
+        //CURRENT MouseDown = TRUE, NEXT MouseDown = FALSE
         if ( (now.mouseDown) && (!next.mouseDown)) {
             // RECT 1
             ctx.fillStyle="Black";
             ctx.fillRect(nextX, nextY, 6, 6);
-       } 
+        } 
     }
 
+
+
     render() {
+        
         return (
             <div className="art">
                 <canvas id="art" width="750" height="500" >
-               
+                
                 </canvas>
             </div>
         );
