@@ -1,10 +1,10 @@
-# Draw <--> Sound
+# Draw <--> Sound <--> Live
 
-## About This Boilerplate
+## About
 
 Sound><Art is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by Soundspace at Durham Science Museum (https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art. 
 
-The app provides an endless participatory experience in which performers interact with the canvas DOM. They have a canvas on the screen--an instrument--which allows them to manipulate a sound track and generate sound based on input events (eg. mouse location, direction, velocity) which is seen both seen and heard by viewers. Each movement is drawn and viewable. The underlying rules are not explicit to the users. Simply, they are sketching “music”.
+The app provides an endless participatory experience in which performers interact with the canvas DOM. They have a canvas on the screen--an instrument--which allows them to manipulate a sound track and generate sound based on input events (eg. mouse location, direction, velocity) which is both seen and heard by viewers. Each movement is drawn and viewable. The underlying rules are not explicit to the users. Simply, they are sketching “music”.
 
 Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
 
@@ -54,3 +54,8 @@ yarn build
 3. Push to Heroku
 
 If all previous steps were followed correctly, your application should be deployed to Heroku!
+
+
+
+**Main screen of Draw <--> Sound <--> Live**
+![Main Screen 1](./client/src/components/Landing/images/dsl.jpeg)
