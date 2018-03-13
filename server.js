@@ -43,6 +43,10 @@ http.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
 
+//Global variable sent to each user when they connect
+let performerInfo = null;
+let performerSocketID = null;
+
 io.on('connection', (socket) => {
 
   console.log('a user connected');
@@ -51,33 +55,59 @@ io.on('connection', (socket) => {
     io.emit('chat msg', msg);
   });
 
+  //start of performance
   socket.on('start', (performer) => {
+    performerSocketID = socket.id;
+    performerInfo = performer;
     io.emit('start', performer);
   });
 
-  socket.on('stop', (performer) => {
-    io.emit('stop', performer);
+  //end of performance
+  socket.on('stop', () => {
+    performerInfo = null;
+    performerSocketID = null;
+    io.emit('stop');
   });
 
+  //initial check to see user has entered mid-performance
+  socket.on('performance check', () => {
+    socket.emit('performance check', performerInfo);
+  })
+
+  socket.on('disconnectTest', (msg) => {
+    console.log("someone left....")
+    console.log(msg)
+  })
+
+  //up vote
   socket.on('up', () => {
     io.emit('up');
   });
 
+  //down vote
   socket.on('down', () => {
     io.emit('down');
   });
 
+  //performer movement and action
   socket.on('performance', (msg) => {
     socket.broadcast.emit('performance', msg);
-  }); 
+  });
+
 
   console.log("Number of clients connected: " + io.engine.clientsCount);
-  
-  io.sockets.emit('clientsCount',(io.engine.clientsCount));
+
+  io.sockets.emit('clientsCount', (io.engine.clientsCount));
 
   socket.on('disconnect', () => {
-    io.sockets.emit('clientsCount',(io.engine.clientsCount));
+    io.sockets.emit('clientsCount', (io.engine.clientsCount));
     console.log('Socket disconnected');
+    if (performerSocketID === socket.id) {
+      console.log("the performer has quit!");
+      performerInfo = null;
+      performerSocketID = null;
+      io.emit('stop');
+    }
   })
 
   // calls clients to query all unique client connections in the "/" namespace

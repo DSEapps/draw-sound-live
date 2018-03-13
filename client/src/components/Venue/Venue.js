@@ -20,11 +20,20 @@ class Venue extends Component {
   };
 
   componentDidMount() {
+    //check server immediately to see if performance is happening
+    socket.on('connect', () => {
+      socket.emit('performance check');
+      socket.on('performance check', (response) => {
+        if (response) {
+          this.setState({ performer: response })
+        }
+      })
+    });
     socket.on('start', (performer) => {
       this.setState({ performer: performer });
-    });   
-    socket.on('stop', (performer) => {
-      this.setState({ performer: null, isPerformer:false })
+    });
+    socket.on('stop', () => {
+      this.setState({ performer: null, isPerformer: false })
     });
     socket.on('clientsCount', (clientsCount) => {
       this.setState({ clientsCount: clientsCount })
@@ -32,7 +41,6 @@ class Venue extends Component {
   }
 
   startPerformance = () => {
-    //change emission to this.props.name;
     socket.emit('start', this.props.userInfo);
     this.setState({ isPerformer: true })
   }
@@ -42,7 +50,6 @@ class Venue extends Component {
   }
 
   render() {
-
     return (
       <div className="">
         <div className="">

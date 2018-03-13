@@ -10,7 +10,7 @@ import io from 'socket.io-client';
 class App extends Component {
 
   //Hard-coded user info; waiting for auth process
-  //Will both need to be NULL initially
+  //Will all need to be NULL initially
   state = {
     name: "John",
     id: "555",
