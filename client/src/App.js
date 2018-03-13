@@ -30,16 +30,13 @@ class App extends Component {
 
     return (
       <Router>
-        <div>
           <Switch>
             {/* for testing... */}
             <Route exact path="/" render={returnVenue} />
-
-            {/* <Route exact path="/" component={Landing} />
-            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/landing" component={Landing} />
+            {/* <Route exact path="/login" component={LoginPage} />
             <Route exact path="/venue" component={Venue} /> */}
           </Switch>
-        </div>
       </Router>
     );
   }
