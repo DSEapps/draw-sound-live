@@ -2,6 +2,8 @@
 /* only Venue currently has nested css - it should probably be moved here */
 /* setting this up to be LESS or SASS enabled  - variables */
 
+/* border: 1px solid black; */
+
 /* Colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* color-beige 'rgba(237.233. 214. 1)' */
@@ -28,17 +30,25 @@ html, body, #root { width:100%; height:100%; margin:0;  }
     align-items: center;
   }
 
+/* HTML Components
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    color:#666666;
+    font-size:1rem;
+    padding-top:25px;
+}
 
 /* Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Landing */
 .landing-root { 
     background-color:rgba(237, 233, 214, 1);
-    border: 1px solid green;
+    
 }
 
 .landing-root .content { 
-    width:50%;
+    width:80%;
+    padding-top:15px;
 }
 
 .landing-root img { 

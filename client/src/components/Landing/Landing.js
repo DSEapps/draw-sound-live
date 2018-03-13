@@ -22,7 +22,9 @@ class Landing extends Component {
       <div className="landing-root wrapper">
         <div className="content center centerFlex">
           <img src={placeholder}  />
-          <button onClick={this.enterClick} className="btn btn-primary">Liver</button>
+          <button onClick={this.enterClick} className="btn btn-primary">Live</button>
+          <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
+
         </div>
       </div>      
     );
