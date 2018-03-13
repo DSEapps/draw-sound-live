@@ -15,8 +15,7 @@ class Venue extends Component {
 
   state = {
     performer: null,
-    isPerformer: false,
-    clientsCount: 0
+    isPerformer: false
   };
 
   componentDidMount() {
@@ -34,9 +33,6 @@ class Venue extends Component {
     });
     socket.on('stop', () => {
       this.setState({ performer: null, isPerformer: false })
-    });
-    socket.on('clientsCount', (clientsCount) => {
-      this.setState({ clientsCount: clientsCount })
     });
   }
 
@@ -73,7 +69,7 @@ class Venue extends Component {
           isPerformer={this.state.isPerformer} />
         <div className="row">
           <Audience
-            clientsCount={this.state.clientsCount} />
+            socket={socket} />
         </div>
         <div className="row">
           <Chat
