@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {withRouter} from "react-router-dom";
 import API from "../../utils/API";
+import placeholder from './images/drawsound.png';
 
 
 class Landing extends Component {
@@ -18,15 +19,10 @@ class Landing extends Component {
 
   render() {
     return(
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="jumbotron">
-                <h2>Draw &lt; &gt; Sound &lt; &gt; Live </h2>
-                <p>Explore the intersection of art, music and creative exploration.</p>
-                <button onClick={this.enterClick} className="btn btn-primary btn-lg">Enter</button>
-            </div>
-          </div>  
+      <div className="landing-root wrapper">
+        <div className="content center centerFlex">
+          <img src={placeholder}  />
+          <button onClick={this.enterClick} className="btn btn-primary">Enter</button>
         </div>
       </div>      
     );

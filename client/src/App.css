@@ -1,25 +1,52 @@
-.App {
-  text-align: center;
+
+/* only Venue currently has nested css - it should probably be moved here */
+/* setting this up to be LESS or SASS enabled  - variables */
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* color-beige 'rgba(237.233. 214. 1)' */
+
+/* Fill Viewport
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Global  */
+html, body, #root { width:100%; height:100%; margin:0;  }
+/* Page Wrappers  */
+.wrapper { width:100%; height:100%; margin:0;}
+
+
+/* Positioning
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.center {
+    margin: auto;
+    /* width: 50%; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.centerFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+/* Pages
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Landing */
+.landing-root { 
+    background-color:rgba(237, 233, 214, 1);
+    border: 1px solid green;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.landing-root .content { 
+    width:50%;
+    border: 1px solid blue;
 }
 
-.App-intro {
-  font-size: large;
+.landing-root .hero { 
+    border: 1px solid red;
 }
 
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.landing-root img { 
+    width:275px;
+    height:393px;
+    border: 1px solid orange;
 }
