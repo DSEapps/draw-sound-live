@@ -43,7 +43,6 @@ footer {
 /* Landing */
 .landing-root { 
     background-color:rgba(237, 233, 214, 1);
-    
 }
 
 .landing-root .content { 
@@ -52,7 +51,10 @@ footer {
 }
 
 .landing-root img { 
-    width:275px;
-    height:393px;
-    
+    width:40%;
+    height:40%; 
+}
+
+.landing-root button { 
+    margin-top:25px;
 }
