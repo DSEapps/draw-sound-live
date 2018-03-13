@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {withRouter} from "react-router-dom";
 import API from "../../utils/API";
-import placeholder from './images/drawsound.png';
+import Vector from './images/drawsound.svg';
 
 
 class Landing extends Component {
@@ -21,10 +21,9 @@ class Landing extends Component {
     return(
       <div className="landing-root wrapper">
         <div className="content center centerFlex">
-          <img src={placeholder}  />
+          <img src={Vector}  />
           <button onClick={this.enterClick} className="btn btn-primary">Live</button>
           <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
-
         </div>
       </div>      
     );
