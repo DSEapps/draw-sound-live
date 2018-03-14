@@ -35,7 +35,7 @@ class Stage extends Component {
     }
     this.player = new Tone.Player(audioURLS[2], console.log("loaded song"));
     // UNCOMMENT THIS to hear the music
-    this.player.autostart = true;
+    // this.player.autostart = true;
     this.player.volume.value = 10;
 
     //Default wetness
