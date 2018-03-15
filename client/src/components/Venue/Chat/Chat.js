@@ -37,19 +37,19 @@ class Chat extends Component {
         return (
             <div className="form-group">
                 {this.state.chats.map(chat =>
-                    <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="panel panel-default">
+                    <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="chat-data">
                         {/* <div className="panel-heading">Audience member: {props.name}</div> */}
                         <div className="panel-body">
                             {this.props.userInfo.name}{": " + chat}
                         </div>
                     </div>
                 )}
-                <button onClick={this.toggleChat}>Toggle chat</button>
-                <div className="col-lg-10">
+                <button  className="chat-toggle" onClick={this.toggleChat}>&#8593;</button>
+                <div className="chat-panel">
                     <textarea value={this.state.chat} onChange={this.handleChange} className="form-control" rows="1" col="5" id="chatArea"></textarea>
                 </div>
-                <div className="col-lg-10 col-lg-offset-2">
-                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Submit</button>
+                <div className="btn-chat">
+                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Chat</button>
                 </div>
             </div>
         );

@@ -1,13 +1,19 @@
 import React from "react";
 
+
 const Marquee = (props) => {
     return(
-        <div className="well well-lg">
-        <h1>This is the Marquee</h1>
-        <p>Current Performer: {props.name}</p>
-        <p>Performance Number: {props.perf}</p>
-        <p>Last Performance: {props.last}</p>
-        <p>Lifetime Claps: {props.claps}</p>
+        <div className="marquee">
+            <div className="perfomer-name">
+                <p>{props.name}</p>
+                <p>Performing</p>
+            </div>
+            <div className="perfomer-lifetimes">
+                <p>Lifetime: </p>
+                <p>+ {props.upClaps}</p>
+                <p> &#124; </p>
+                <p>- {props.downClaps}</p>
+            </div>
       </div>
     );
 }    

@@ -49,7 +49,7 @@ class Venue extends Component {
     return (
       <div className="venue-root">
         
-        <div className="perform">
+        <div className="perform-action">
           <Perform
             startPerformance={this.startPerformance}
             stopPerformance={this.stopPerformance}
