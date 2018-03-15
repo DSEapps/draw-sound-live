@@ -24,19 +24,19 @@ class Music extends Component {
                     name="B"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
-                    soundUpdater={soundUpdaters.distortion}
+                    soundUpdater={soundUpdaters.filter}
                 />
                 <Square
                     name="C"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
-                    soundUpdater={soundUpdaters.pingPongDelay}
+                    soundUpdater={soundUpdaters.vibratoTriangle}
                 />
                 <Square
                     name="D"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
-                    soundUpdater={soundUpdaters.tremolo}
+                    soundUpdater={soundUpdaters.vibratoSaw}
                 />
                 <Square
                     name="E"
@@ -50,6 +50,24 @@ class Music extends Component {
                     instrumentProps={this.props}
                     soundUpdater={soundUpdaters.phaser}
                 />
+                {/* <Square
+                    name="G"
+                    isPerformer={this.props.isPerformer}
+                    instrumentProps={this.props}
+                    soundUpdater={soundUpdaters.pingPongDelay}
+                /> */}
+                {/* <Square
+                    name="H"
+                    isPerformer={this.props.isPerformer}
+                    instrumentProps={this.props}
+                    soundUpdater={soundUpdaters.tremolo}
+                /> */}
+                 {/* <Square
+                    name="I"
+                    isPerformer={this.props.isPerformer}
+                    instrumentProps={this.props}
+                    soundUpdater={soundUpdaters.distortion}
+                /> */}
             </div>
         );
     }
