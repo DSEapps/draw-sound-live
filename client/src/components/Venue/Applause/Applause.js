@@ -38,14 +38,14 @@ class Applause extends Component {
     render() {
         let disable = null;
         this.props.isPerformer ? disable = true : disable = false;
-        return <div>
+        return <div className="applause fixed-right">
             <div>
                 <div>{this.state.upClaps}</div>
-                <button disabled={disable} onClick={() => this.handleClap("up")}>Up clap</button>
+                <button disabled={disable} onClick={() => this.handleClap("up")}>.</button>
             </div>
             <div>
                 <div>{this.state.downClaps}</div>
-                <button disabled={disable} onClick={() => this.handleClap("down")}>Down clap</button>
+                <button disabled={disable} onClick={() => this.handleClap("down")}>.</button>
 
             </div>
         </div>

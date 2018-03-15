@@ -16,6 +16,8 @@ html, body, #root { width:100%; height:100%; margin:0;  }
 .wrapper { width:100%; height:100%; margin:0;}
 
 
+
+
 /* Positioning
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .center {
@@ -58,3 +60,142 @@ footer {
 .landing-root button { 
     margin-top:25px;
 }
+
+
+/* Venue
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.venue-root .content { 
+    width:100%;
+}
+.venue-root > div {
+    border: 1px solid black;
+}
+/* > Perform 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* this is the fixed width of stage currently */
+.marquee {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:750px; 
+}
+
+.marquee * {
+    border: 1px solid black;
+}
+
+.performer-name * {
+    padding:0; 
+    margin:0;
+
+}
+
+
+
+/* Stage and Below
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.stage {
+    width:750px;
+    height:500px;
+    position:relative;
+    border: 1px solid gainsboro;
+  }
+
+.instrument {
+    width:750px;
+    height:500px;
+    z-index: 0;  
+    left:0;
+    top:0;
+    position:relative;
+    /* border: 1px solid gainsboro; */
+}
+
+.art {
+    width:100%;
+    height:100%;
+    z-index: 10;
+    left:0;
+    top:0; 
+    position:absolute;
+}
+
+canvas {
+}
+
+.music {
+/*this flex stuff is left over from previous..don't think we'll need unless we want to unfix size of .instrument*/
+    display: flex;
+    width:100%;
+    height:100%;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    z-index: 20;
+    left:0;
+    top:0; 
+    position:absolute;    
+}
+
+.square {    
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    background-color:#11ffee00;
+    border: 1px solid #f7f7f7;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+/* Applause
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.applause {
+    height:30vh;
+}
+
+.fixed-right {
+    position: fixed;
+    top: calc(50vh - 30vh / 2);
+    right: 0;
+  }
+
+/* Audience
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fixed-left {
+    position: fixed;
+    top: calc(50vh - 20vh);
+    left: 0;
+}
+
+.audience * {
+    padding:0; 
+    margin:0;
+}
+
+.audience {
+    width:20vh;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+}
+
+
+
+/* Chat
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chat {
+    width:40vw;
+}
+
+.chat *{
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: calc(50vw - 40vw / 2);
+  }
+
