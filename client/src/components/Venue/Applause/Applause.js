@@ -38,18 +38,19 @@ class Applause extends Component {
     render() {
         let disable = null;
         this.props.isPerformer ? disable = true : disable = false;
-        return 
-        <div className="audience">
-            <div className="voteUp">
+        return <div>
+            <div>
                 <div>{this.state.upClaps}</div>
                 <button disabled={disable} onClick={() => this.handleClap("up")}>Up clap</button>
             </div>
-            <div className="voteDown">
+            <div>
                 <div>{this.state.downClaps}</div>
                 <button disabled={disable} onClick={() => this.handleClap("down")}>Down clap</button>
+
             </div>
         </div>
     }
+
 }
 
 export default Applause;

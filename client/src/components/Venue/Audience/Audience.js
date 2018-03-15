@@ -21,9 +21,7 @@ class Audience extends Component {
     render() 
     {
         return (
-        <div>
-            <h3> ----> This is the number of connected users: {this.state.clientsCount}</h3>
-        </div>        
+        <p> {this.state.clientsCount} Humans Here</p>
         );
     }; 
 
