@@ -35,7 +35,7 @@ class Chat extends Component {
 
     render() {
         return (
-            <div className="form-group">
+            <div className="chat fixed-bottom form-group">
                 {this.state.chats.map(chat =>
                     <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="chat-data">
                         {/* <div className="panel-heading">Audience member: {props.name}</div> */}
@@ -46,10 +46,10 @@ class Chat extends Component {
                 )}
                 <button  className="chat-toggle" onClick={this.toggleChat}>&#8593;</button>
                 <div className="chat-panel">
-                    <textarea value={this.state.chat} onChange={this.handleChange} className="form-control" rows="1" col="5" id="chatArea"></textarea>
+                    <textarea value={this.state.chat} onChange={this.handleChange} rows="1" col="5" id="chatArea"></textarea>
                 </div>
                 <div className="btn-chat">
-                    <button onClick={this.handleClick} type="submit" className="btn btn-primary">Chat</button>
+                    <button onClick={this.handleClick} type="submit">Chat</button>
                 </div>
             </div>
         );

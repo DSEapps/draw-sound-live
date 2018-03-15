@@ -2,23 +2,47 @@ import React from "react";
 
 const Perform = props => {
     let display = null;
-    //If user is a performer, stop button shows
+    //If there is a performer and If user is a performer
     if (props.isPerformer) {
-        display = <button onClick={props.stopPerformance}>Get off stage</button>
+        display = 
+        <div className="marquee">
+            <div className="performer-name">
+                <p>{props.userInfo.name}</p>
+                <p>Performer</p>
+            </div>
+            <div className="btn-perform">
+                <button onClick={props.stopPerformance}>Leave Stage</button>
+            </div>
+            <div className="performer-stats">Lifetime: + {props.userInfo.upClaps}  &#124; - {props.userInfo.downClaps} </div>
+        </div>
     }
     
-    //If someone is performing, button is disabled
+    //If there is a performer and if user is an audience member
     else if (props.performer) {
-        display = <div className="marquee">
-            <div>Name: {props.userInfo.name}</div>
-            <div>Lifetime upclaps: {props.userInfo.upClaps}</div>
-            <div>Lifetime downclaps: {props.userInfo.downClaps}</div>
+        display =
+        <div className="marquee">
+            <div className="performer-name">
+                <p>{props.userInfo.name}</p>
+                <p>Performer</p>
+            </div>
+            <div className="btn-perform">&nbsp;</div>
+            <div className="performer-stats">Lifetime: + {props.userInfo.upClaps}  &#124; - {props.userInfo.downClaps} </div>
         </div>
     }
 
-    //If nobody is performing, start button shows
+    //If there is no performer
     else if (!props.performer) {
-        display = <button onClick={props.startPerformance}>Get on stage</button>
+        display = 
+        <div className="marquee">
+        <div className="performer-name">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+        <div className="btn-perform">
+            <button onClick={props.startPerformance}>Get On Stage</button>
+        </div>
+        <div className="performer-stats">&nbsp;</div>
+    </div>
     }
 
     return display;

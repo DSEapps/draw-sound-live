@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import API from "../../utils/API";
 import Stage from "./Stage/Stage";
-import Marquee from "./Marquee/Marquee";
+// import Marquee from "./Marquee/Marquee";
 import Audience from "./Audience/Audience";
 import Chat from "./Chat/Chat";
 import Perform from "./Perform";
 import Applause from "./Applause";
-import './Venue.css';
 import io from 'socket.io-client';
 const socket = io();
 
@@ -47,24 +46,21 @@ class Venue extends Component {
 
   render() {
     return (
-      <div className="venue-root">
-        
-        <div className="perform-action">
-          <Perform
-            startPerformance={this.startPerformance}
-            stopPerformance={this.stopPerformance}
-            performer={this.state.performer}
-            isPerformer={this.state.isPerformer}
-            userInfo={this.props.userInfo} />
+      <div className="venue-root wrapper">
+        <div className="content centerFlex">
+            <Perform
+              startPerformance={this.startPerformance}
+              stopPerformance={this.stopPerformance}
+              performer={this.state.performer}
+              isPerformer={this.state.isPerformer}
+              userInfo={this.props.userInfo} />
+          <div className="stage">
+            <Stage
+              socket={socket}
+              performer={this.state.performer}
+              isPerformer={this.state.isPerformer} />
+          </div>
         </div>
-
-        <div className="stage">
-          <Stage
-            socket={socket}
-            performer={this.state.performer}
-            isPerformer={this.state.isPerformer} />
-        </div>
-
          {this.state.performer
           ? <Applause
             socket={socket}
@@ -72,17 +68,14 @@ class Venue extends Component {
             performer={this.state.performer}
             isPerformer={this.state.isPerformer} />
           : null}
-
-        <div className="audience">
+        <div className="audience fixed-left">
           <Audience
             socket={socket} />
         </div>
-        
-        <div className="chat">
-          <Chat
-            socket={socket}
-            userInfo={this.props.userInfo} />
-        </div>
+        <Chat
+          socket={socket}
+          userInfo={this.props.userInfo} />
+
       </div>
 
     );
