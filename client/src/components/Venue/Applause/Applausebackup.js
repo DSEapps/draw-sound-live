@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import VectorBoo from '../_Assets/applause-boo.svg';
-import VectorClap from '../_Assets/applause-clap.svg';
-import VectorMinus from '../_Assets/icon-minus.svg';
-import VectorPlus from '../_Assets/icon-plus.svg';
 
 class Applause extends Component {
     state = {
@@ -42,24 +38,17 @@ class Applause extends Component {
     render() {
         let disable = null;
         this.props.isPerformer ? disable = true : disable = false;
-        return (
-        <div className="applause fixed-right">
-            <div className="top">
-                <div className="counts"><strong>{this.state.upClaps}</strong></div>
-                <div className="plus">
-                    <img src={VectorPlus} alt=" " width="14" height="14" />
-                </div>
-                <img src={VectorClap} alt="clap" disabled={disable} onClick={() => this.handleClap("up")} />
+        return <div className="applause fixed-right">
+            <div>
+                <div>{this.state.upClaps}</div>
+                <button disabled={disable} onClick={() => this.handleClap("up")}>.</button>
             </div>
-            <div className="bottom">
-                <img src={VectorBoo} alt="boo"disabled={disable} onClick={() => this.handleClap("down")} />
-                <div className="minus">
-                    <img src={VectorMinus} alt=" " width="14" height="14" />
-                </div>
-                <div className="counts"><strong>{this.state.downClaps}</strong></div>
+            <div>
+                <button disabled={disable} onClick={() => this.handleClap("down")}>.</button>
+                <div>{this.state.downClaps}</div>
+
             </div>
         </div>
-        )
     }
 
 }
