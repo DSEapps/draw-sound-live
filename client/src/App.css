@@ -99,7 +99,7 @@ footer {
 }
 
 .performer-name  {
-    min-width:200px;
+    width:calc(100%  /3);
 }
 
 .performer-name * {
@@ -108,12 +108,13 @@ footer {
 }
 
 .btn-perform {
+    width:calc(100%  /3);
     text-align: center;
 }
 
 
 .performer-stats  {
-    min-width:200px;
+    width:calc(100%  /3);
     text-align:right;
 }
 
