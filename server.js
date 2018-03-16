@@ -81,7 +81,7 @@ app.get('/auth/google/callback',
   }),
   (req, res) => { 
     req.session.token = req.user.token;
-    res.redirect('/');
+    res.redirect('http://localhost:3000');
   }
 );
 // passport.serializeUser(function (user, done) {
