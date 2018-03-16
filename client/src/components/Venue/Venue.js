@@ -66,14 +66,11 @@ class Venue extends Component {
             performer={this.state.performer}
             isPerformer={this.state.isPerformer} />
           : null}
-        <div className="audience fixed-left">
-          <Audience
+        <Audience
             socket={socket} />
-        </div>
         <Chat
           socket={socket}
           userInfo={this.props.userInfo} />
-
       </div>
 
     );

@@ -7,10 +7,12 @@
 /* Colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* color-beige 'rgba(237.233. 214. 1)' */
+/* color-gray 'rgba (128, 128, 128, 1)' */
 
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 * {font-family: 'Raleway', sans-serif;}
+/* {font-family: 'Arial', sans-serif;} */
 
 /* Fill Viewport
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -69,7 +71,7 @@ footer {
 /* Venue
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .venue-root  { 
-    background-color:pink;
+    background-color:rgba(237, 233, 214, 0.3);
 }
 
 /* inherits margin:auto from above */
@@ -78,17 +80,17 @@ footer {
 
 }
 /* for testing */
-.venue-root > div {
+/* .venue-root > div {
     border: 1px solid black;
-}
+} */
 
 
 /* > Perform 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* this is the fixed width of stage currently */
-.marquee-wrapper * {
+/* .marquee-wrapper * {
     border: 1px solid black;
-}
+} */
 
 .marquee-wrapper {
     display: flex;
@@ -183,33 +185,93 @@ canvas {
 
 /* Applause
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* top: calc(50vh - 30vh / 2); */
+/* .applause * { border: 1px solid red; } */
 .applause {
-    height:30vh;
+    /* height:30vh; */
+    width:66px;
+    padding-right:10px;
+    color: rgba(128, 128, 128, 1);
+    text-align:center;
+    line-height:0;
 }
 
 .fixed-right {
     position: fixed;
-    top: calc(50vh - 30vh / 2);
+    top: calc(50vh - 105px);
     right: 0;
-  }
+}
+
+.applause .top {
+    margin-bottom:10px;
+}
+
+.applause .counts {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.0rem;
+    line-height:2.5rem;
+}
+
+.applause .plus  {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.applause .minus  {
+    margin-top:5px;
+    margin-bottom:0px;
+}
+
+
 
 /* Audience
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .audience * { border: 1px solid red; }  */
+
+.audience  {
+    height:170px;
+    line-height:0;
+    color: rgba(128, 128, 128, 1);
+}
+
 .fixed-left {
     position: fixed;
-    top: calc(50vh - 20vh);
+    top: calc(50vh - 85px);
     left: 0;
 }
 
-.audience * {
-    padding:0; 
-    margin:0;
+.audience .top {
+    width:66px;
+    text-align:center;
 }
 
-.audience {
-    width:20vh;
+.audience .counts {
+    font-family: 'arial', sans-serif;
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+}
+
+.top img  {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.audience .bottom  {
+    position:relative; 
+}
+
+.audience .bottom .description {
+    position: absolute;
+    left:32px;
+    width:100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    background-color: red;
     transform: rotate(90deg);
-    transform-origin: bottom left;
+    transform-origin: top left;  
 }
 
 
