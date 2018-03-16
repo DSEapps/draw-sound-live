@@ -165,7 +165,7 @@ class Stage extends Component {
   render() {
 
     return (
-      <div className="stage">
+      <div className="stage-wrapper">
         <Instrument
           socket={this.props.socket}
           performer={this.props.performer}
