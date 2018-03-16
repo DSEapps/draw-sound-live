@@ -7,13 +7,16 @@ const bodyParser = require('body-parser');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+// Google Oauth
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+require('dotenv').config();
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -39,24 +42,51 @@ app.use(routes);
 // });
 
 //Google OAuth with Passport Code
-var passport = require('passport');
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function (id, done) {
+  User.findById(id, function (err, user) {
+    done(err, user);
+  });
+});
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and Google
 //   profile), and invoke a callback with a user object.
 passport.use(new GoogleStrategy({
-  clientID: GOOGLE_CLIENT_ID,
-  clientSecret: GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://www.example.com/auth/google/callback"
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: "http://localhost:3000/auth/google/callback"
 },
   function (accessToken, refreshToken, profile, done) {
+    console.log("This is a log from the server.js");
     User.findOrCreate({ googleId: profile.id }, function (err, user) {
       return done(err, user);
     });
   }
 ));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+// GET /auth/google/callback
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  If authentication fails, the user will be redirected back to the
+//   login page.  Otherwise, the primary route function function will be called,
+//   which, in this example, will redirect the user to the home page.
+app.get('/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function (req, res) {
+    console.log("Return Route Contacted");
+    res.redirect('/');
+  });
 // End of Google OAuth additions
 
 http.listen(PORT, function () {
