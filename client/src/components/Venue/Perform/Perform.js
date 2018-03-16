@@ -5,7 +5,7 @@ const Perform = props => {
     //If there is a performer and If user is a performer
     if (props.isPerformer) {
         display = 
-        <div className="marquee">
+        <div className="marquee-wrapper">
             <div className="performer-name">
                 <p>{props.userInfo.name}</p>
                 <p>Performer</p>
@@ -33,7 +33,7 @@ const Perform = props => {
     //If there is no performer
     else if (!props.performer) {
         display = 
-        <div className="marquee">
+        <div className="marquee-wrapper">
         <div className="performer-name">
             <p>&nbsp;</p>
             <p>&nbsp;</p>

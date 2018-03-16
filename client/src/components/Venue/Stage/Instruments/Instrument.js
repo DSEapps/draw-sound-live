@@ -65,7 +65,7 @@ class Instrument extends Component {
 
     render() {
         return (
-            <div className="instrument">
+            <div className="instrument-wrapper">
                 <Art
                     location={this.state}
                     performer={this.props.performer}

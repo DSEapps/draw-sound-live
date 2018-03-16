@@ -50,34 +50,50 @@ class Art extends Component {
         // create color variable based on current box
         switch(next.activeNode) {
             case "A":
-            colorSet1 = "rgba(150, 39, 15,1)";
+            colorSet1 = "rgba(150, 39, 15, 1)";
             colorSet2 = "rgba(150, 39, 15, 0.7)";
             break;
 
             case "B":
-            colorSet1 = "rgba(82, 98, 130,1)";
+            colorSet1 = "rgba(82, 98, 130, 1)";
             colorSet2 = "rgba(82, 98, 130, 0.7)";
             break;
             
             case "C":
-            colorSet1 = "rgba(228, 190, 80,1)";
+            colorSet1 = "rgba(228, 190, 80, 1)";
             colorSet2 = "rgba(228, 190, 80, 0.7)";
             break;
             
             case "D":
-            colorSet1 = "rgba(78, 68, 31,1)";
+            colorSet1 = "rgba(78, 68, 31, 1)";
             colorSet2 = "rgba(78, 68, 31, 0.7)";
             break;
 
             case "E":
-            colorSet1 = "rgba(212, 82, 3,1)";
+            colorSet1 = "rgba(212, 82, 3, 1)";
             colorSet2 = "rgba(212, 82, 3, 0.7)";
             break;
 
             case "F":
-            colorSet1 = "rgba(77, 109, 13,1)";
+            colorSet1 = "rgba(77, 109, 13, 1)";
             colorSet2 = "rgba(77, 109, 13, 0.7)";
             break;
+
+            case "G":
+            colorSet1 = "rgba(205, 48, 23, 1)";
+            colorSet2 = "rgba(205, 48, 23, 0.7)";
+            break;
+
+            case "H":
+            colorSet1 = "rgba(138, 148, 167, 1)";
+            colorSet2 = "rgba(138, 148, 167, 0.7)";
+            break;
+
+            case "I":
+            colorSet1 = "rgba(152, 108, 25, 1)";
+            colorSet2 = "rgba(152, 108, 25, 0.7)";
+            break;
+
 
 
             default:
@@ -133,8 +149,8 @@ class Art extends Component {
     render() {
         
         return (
-            <div className="art">
-                <canvas id="art" width="750" height="500" >
+            <div className="art-wrapper">
+                <canvas id="art" width="750" height="480" >
                 
                 </canvas>
             </div>

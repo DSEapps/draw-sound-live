@@ -8,6 +8,10 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* color-beige 'rgba(237.233. 214. 1)' */
 
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {font-family: 'Raleway', sans-serif;}
+
 /* Fill Viewport
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Global  */
@@ -64,16 +68,25 @@ footer {
 
 /* Venue
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.venue-root  { 
+    background-color:pink;
+}
+
+/* inherits margin:auto from above */
 .venue-root .content { 
     width:100%;
+
 }
+/* for testing */
 .venue-root > div {
     border: 1px solid black;
 }
+
+
 /* > Perform 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* this is the fixed width of stage currently */
-.marquee {
+.marquee-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -81,7 +94,7 @@ footer {
     width:750px; 
 }
 
-.marquee * {
+.marquee-wrapper * {
     border: 1px solid black;
 }
 
@@ -95,16 +108,17 @@ footer {
 
 /* Stage and Below
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.stage {
+/* by order in which they are declared */
+.stage-wrapper {
     width:750px;
-    height:500px;
+    height:480px;
     position:relative;
     border: 1px solid gainsboro;
   }
 
-.instrument {
+.instrument-wrapper {
     width:750px;
-    height:500px;
+    height:480px;
     z-index: 0;  
     left:0;
     top:0;
@@ -112,7 +126,7 @@ footer {
     /* border: 1px solid gainsboro; */
 }
 
-.art {
+.art-wrapper {
     width:100%;
     height:100%;
     z-index: 10;
@@ -122,9 +136,11 @@ footer {
 }
 
 canvas {
+    background-color: white;
+    
 }
 
-.music {
+.music-wrapper {
 /*this flex stuff is left over from previous..don't think we'll need unless we want to unfix size of .instrument*/
     display: flex;
     width:100%;
@@ -139,10 +155,12 @@ canvas {
 
 .square {    
     width: 250px;
-    height: 250px;
-    box-sizing: border-box;
+    height: 160px;
+    margin:0;
+    padding:0;
     background-color:#11ffee00;
     border: 1px solid #f7f7f7;
+    flex-grow:1;
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
     -ms-user-select: none; /* IE 10+ */
