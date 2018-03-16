@@ -20,7 +20,7 @@ const Perform = props => {
     //If there is a performer and if user is an audience member
     else if (props.performer) {
         display =
-        <div className="marquee">
+        <div className="marquee-wrapper">
             <div className="performer-name">
                 <p>{props.userInfo.name}</p>
                 <p>Performer</p>
@@ -34,13 +34,13 @@ const Perform = props => {
     else if (!props.performer) {
         display = 
         <div className="marquee-wrapper">
-        <div className="performer-name">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-        </div>
-        <div className="btn-perform">
-            <button onClick={props.startPerformance}>Get On Stage</button>
-        </div>
+            <div className="performer-name">
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div className="btn-perform">
+                <button onClick={props.startPerformance}>Get On Stage</button>
+            </div>
         <div className="performer-stats">&nbsp;</div>
     </div>
     }
