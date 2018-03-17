@@ -42,16 +42,14 @@ class Login extends Component {
 
   render() {
     return(
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="jumbotron">
-              <h1>Login</h1>
-              <p>This is in the render return statement in Component/Login</p>
-              <p>Google OAuth goes here...</p>
-              <button onClick={this.loginClick} className="btn btn-primary btn-lg">Login with Google</button>
-            </div>
-          </div>  
+      <div className="login-root wrapper center centerFlex">
+        <div className="content ">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"  />
+          <p>To continue to the performace space you will need to login with your Google account.</p>
+          <div className="actions">
+            <button onClick={this.cancelClick}>Cancel</button>
+            <button onClick={this.loginClick} className="button-primary">Continue</button>
+          </div>
         </div>
       </div>      
     );
