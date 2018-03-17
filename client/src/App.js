@@ -34,8 +34,8 @@ class App extends Component {
             {/* for testing... */}
             <Route exact path="/" render={returnVenue} />
             <Route exact path="/landing" component={Landing} />
-            {/* <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/venue" component={Venue} /> */}
+            <Route exact path="/login" component={Login} />
+            {/*<Route exact path="/venue" component={Venue} /> */}
           </Switch>
       </Router>
     );
