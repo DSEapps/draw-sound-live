@@ -9,22 +9,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
+  find: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .find({id:req.params.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    console.log("We are in the Controller create module");
-    // req.body = {
-    //     "google_id": "XYZ12345",
-    //     "google_email": "acb@gmail.com",
-    //     "in_venue": true,
-    //     "lifetime_claps": 231,
-    //     "perf_num": 21,
-    //     "last_perf": "Thu Jul 18 2013 15:48:59 GMT+0400"
-    //   };
+    console.log("We are in the Controller create module");    
     db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))
@@ -34,13 +26,13 @@ module.exports = {
     console.log("This is a test of data coming from client to update controller:")   
     console.log(req.body)    
     db.User
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
     db.User
-      .findById({ _id: req.params.id })
+      .findById({ id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

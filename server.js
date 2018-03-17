@@ -7,13 +7,28 @@ const bodyParser = require('body-parser');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+// Google Oauth
+const passport = require('passport');
+// const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+require('dotenv').config();
+const auth = require("./auth");
+const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
+
+auth(passport);
+app.use(passport.initialize());
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ['123']
+}));
+app.use(cookieParser());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -30,13 +45,58 @@ mongoose.connect(
 );
 
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
-// Send every request to the React app
-// Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+//Google OAuth with Passport Code
+app.get('/', (req, res) => {
+  if (req.session.token) {
+    res.cookie('token', req.session.token);
+    res.json({
+      status: 'session cookie set'
+    });
+  } else {
+    res.cookie('token', '')
+    res.json({
+      status: 'session cookie not set'
+    });
+  }
+});
+app.get('/logout', (req, res) => {
+  req.logout();
+  req.session = null;
+  res.redirect('/');
+});
+app.get('/auth/google', passport.authenticate('google', {
+  scope: ['https://www.googleapis.com/auth/userinfo.profile']
+}));
+app.get('/auth/google/callback',
+  passport.authenticate('google', {
+    failureRedirect: '/'
+  }),
+  (req, res) => { 
+    req.session.token = req.user.token;
+    // res.redirect('/');
+  }
+);
+
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function (obj, done) {
+  done(null, obj);
+});
+
+// passport.serializeUser(function (user, done) {
+//   done(null, user.id);
 // });
+
+// passport.deserializeUser(function (id, done) {
+//   User.findById(id, function (err, user) {
+//     done(err, user);
+//   });
+// });
+
 
 
 http.listen(PORT, function () {
