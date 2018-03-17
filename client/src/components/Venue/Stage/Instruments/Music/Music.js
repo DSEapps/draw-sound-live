@@ -7,7 +7,7 @@ class Music extends Component {
     render() {
         const soundUpdaters = this.props.soundUpdaters;
         return (
-            <div className="music">
+            <div className="music-wrapper">
                 <Keyboard
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
@@ -50,24 +50,24 @@ class Music extends Component {
                     instrumentProps={this.props}
                     soundUpdater={soundUpdaters.phaser}
                 />
-                {/* <Square
+                <Square
                     name="G"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
                     soundUpdater={soundUpdaters.pingPongDelay}
-                /> */}
-                {/* <Square
+                />
+                <Square
                     name="H"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
                     soundUpdater={soundUpdaters.tremolo}
-                /> */}
-                 {/* <Square
+                />
+                 <Square
                     name="I"
                     isPerformer={this.props.isPerformer}
                     instrumentProps={this.props}
                     soundUpdater={soundUpdaters.distortion}
-                /> */}
+                />
             </div>
         );
     }

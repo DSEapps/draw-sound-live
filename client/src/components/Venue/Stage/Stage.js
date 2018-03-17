@@ -19,7 +19,6 @@ class Stage extends Component {
 
   stopInstrument = () => {
     console.log("stop the instrument...");
-    console.log(this.player);
     this.player.stop();
   }
 
@@ -27,6 +26,7 @@ class Stage extends Component {
   setUpInstrument = () => {
     this.fx = {
       //default values
+      compressor: new Tone.Compressor(-30, 3),
       distortion: new Tone.Distortion(0),
       filter: new Tone.Filter({
         type: 'lowpass',
@@ -67,9 +67,10 @@ class Stage extends Component {
 
 
     //Final connect to speaker
-    this.fx.filter.toMaster();
+    this.fx.compressor.toMaster();
 
     //Effects chain
+    this.fx.filter.connect(this.fx.compressor);
     this.fx.vibratoSaw.connect(this.fx.filter);
     this.fx.vibratoTriangle.connect(this.fx.vibratoSaw);
     this.fx.phaser.connect(this.fx.vibratoTriangle);
@@ -105,7 +106,7 @@ class Stage extends Component {
       const frequency = x * (700 / w) + 100;
       this.fx.filter.frequency.value = frequency;
     },
-  
+
     jcReverb: (x, y, w, h) => {
       const roomsizeVal = x * (1 / w);
       const wetVal = y * (1 / h);
@@ -163,7 +164,7 @@ class Stage extends Component {
   render() {
 
     return (
-      <div className="stage">
+      <div className="stage-wrapper">
         <Instrument
           socket={this.props.socket}
           performer={this.props.performer}

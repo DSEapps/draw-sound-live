@@ -2,11 +2,17 @@ import axios from "axios";
 
 export default {
   // Gets all audience members
-  getAudience: function() {
+  getAudience: function () {
     return axios.get("/venue");
   },
 
-  saveUser: function(userData) {
+  //Updates lifetime claps and boos
+  updateClaps: function (id, data) {
+    console.log("updating claps in API");
+    return axios.put("/venue/" + id, data)
+  },
+
+  saveUser: function (userData) {
     console.log("This is the data passed to the API: " + userData.google_id);
     console.log("This is the data passed to the API: " + userData.google_email);
     console.log("This is the data passed to the API: " + userData.in_venue);

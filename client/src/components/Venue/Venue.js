@@ -47,35 +47,31 @@ class Venue extends Component {
   render() {
     return (
       <div className="venue-root wrapper">
-        <div className="content centerFlex">
+        <div className="content center centerFlex">
             <Perform
               startPerformance={this.startPerformance}
               stopPerformance={this.stopPerformance}
               performer={this.state.performer}
               isPerformer={this.state.isPerformer}
               userInfo={this.props.userInfo} />
-          <div className="stage">
             <Stage
               socket={socket}
               performer={this.state.performer}
-              isPerformer={this.state.isPerformer} />
-          </div>
+              isPerformer={this.state.isPerformer} />     
         </div>
          {this.state.performer
           ? <Applause
             socket={socket}
+            userInfo={this.props.userInfo}
             stopPerformance={this.stopPerformance}
             performer={this.state.performer}
             isPerformer={this.state.isPerformer} />
           : null}
-        <div className="audience fixed-left">
-          <Audience
+        <Audience
             socket={socket} />
-        </div>
         <Chat
           socket={socket}
           userInfo={this.props.userInfo} />
-
       </div>
 
     );

@@ -5,7 +5,8 @@ class Chat extends Component {
     state = {
         chats: [],
         chat: "",
-        expanded: false
+        expanded: false,
+        toggleAffordance: "\u25B2"
     }
 
     componentDidMount() {
@@ -18,9 +19,9 @@ class Chat extends Component {
 
     toggleChat = () => {
         if (this.state.expanded === true) {
-            this.setState({ expanded: false })
+            this.setState({ expanded: false, toggleAffordance: "\u25B2" })
         } else {
-            this.setState({ expanded: true })
+            this.setState({ expanded: true , toggleAffordance: "\u25BC"})
         }
     }
 
@@ -33,23 +34,29 @@ class Chat extends Component {
         this.props.socket.emit('chat msg', this.state.chat);
     }
 
+    
+
     render() {
+        const chatName = {
+            fontSize: '11px',
+            fontEeight: '600',
+            letterSpacing: '.1rem',
+            textTransform: 'uppercase'
+          };
+
         return (
-            <div className="chat fixed-bottom form-group">
+            <div className="chat fixed-bottom">
                 {this.state.chats.map(chat =>
                     <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="chat-data">
-                        {/* <div className="panel-heading">Audience member: {props.name}</div> */}
-                        <div className="panel-body">
-                            {this.props.userInfo.name}{": " + chat}
+                        <div className="chat-body">
+                            <span style={chatName}>{this.props.userInfo.name}</span>{": " + chat}
                         </div>
                     </div>
                 )}
-                <button  className="chat-toggle" onClick={this.toggleChat}>&#8593;</button>
                 <div className="chat-panel">
-                    <textarea value={this.state.chat} onChange={this.handleChange} rows="1" col="5" id="chatArea"></textarea>
-                </div>
-                <div className="btn-chat">
-                    <button onClick={this.handleClick} type="submit">Chat</button>
+                    <div className="chat-toggler" onClick={this.toggleChat}>&nbsp;{this.state.toggleAffordance}&nbsp;</div>
+                    <input type="text" value={this.state.chat} placeholder="say something..." onChange={this.handleChange} ></input>
+                    <div className="chat-submitter" onClick={this.handleClick}><strong>Speak</strong></div>
                 </div>
             </div>
         );
