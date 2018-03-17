@@ -14,8 +14,8 @@ class App extends Component {
   state = {
     name: "John",
     id: "555",
-    upClaps: "25",
-    downClaps: "66"
+    upClaps: 25,
+    downClaps: 66
   }
 
   render() {
