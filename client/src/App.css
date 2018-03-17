@@ -11,7 +11,8 @@
 
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-* {font-family: 'Raleway', sans-serif;}
+/* change this */
+.landing-root, .venue-root {font-family: 'Raleway', sans-serif;}
 /* {font-family: 'Arial', sans-serif;} */
 
 /* Fill Viewport
@@ -278,18 +279,67 @@ canvas {
 
 /* Chat
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* .chat *{
+    border: 1px solid red;
+} */
+
 .chat {
     width:40vw;
-}
-
-.chat *{
-    display: inline-block;
-    border: 1px solid black;
+    font-size:11px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    background-color:rgba(128, 128, 128, 0.1);
 }
 
 .fixed-bottom {
     position: fixed;
     bottom: 0;
     left: calc(50vw - 40vw / 2);
-  }
+}
+.chat-body {
+    line-height: 2rem;
+    padding:5px 10px;
+}
+.chat-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.chat-panel input[type=text] {
+    width: 60%;
+    padding: 4px 16px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 0;
+    border-left: 1px solid rgba(128, 128, 128, 1);
+    font-size:11px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    background-color:transparent;
+}
+
+.chat-panel input::placeholder{
+    color:rgba(128, 128, 128, 0.5);
+}
+
+.chat-toggler {
+    width:20%;
+    text-align:center;
+    color:rgba(128, 128, 128, 0.7);
+
+}
+
+.chat-submitter {
+    width:20%;
+    text-align:center;
+    text-transform: uppercase;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
 
