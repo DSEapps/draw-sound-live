@@ -30,7 +30,9 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function(req, res) {
+  update: function(req, res) { 
+    console.log("This is a test of data coming from client to update controller:")   
+    console.log(req.body)    
     db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))

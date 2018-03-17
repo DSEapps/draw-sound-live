@@ -19,7 +19,6 @@ class Stage extends Component {
 
   stopInstrument = () => {
     console.log("stop the instrument...");
-    console.log(this.player);
     this.player.stop();
   }
 
