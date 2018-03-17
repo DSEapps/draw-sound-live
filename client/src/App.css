@@ -97,18 +97,35 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width:750px; 
+    padding-top:8px;
+    margin-bottom:-3px;
 }
+
+/* .performer-name * {
+    
+} */
 
 .performer-name  {
     width:calc(100%  /3);
+    /* line-height:0; */
 }
 
-.performer-name * {
-    padding:0; 
-    margin:0;
+.performer-name div:first-child  {
+    /* line-height:2rem; */
+    font-family: 'Raleway Bold', sans-serif;
+    font-size:1.3rem;
+    letter-spacing: .1rem;
 }
+.performer-name div:last-child  {
+    /* line-height:1rem; */
+    font-size:0.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
 
 .btn-perform {
     width:calc(100%  /3);
@@ -119,6 +136,24 @@ footer {
 .performer-stats  {
     width:calc(100%  /3);
     text-align:right;
+    vertical-align: center;
+}
+
+.performer-stats .aa  {
+    font-size:0.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.performer-stats .ba, .performer-stats .bb  {
+    font-size:1.1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.performer-stats .ca  {
+
 }
 
 
@@ -209,7 +244,7 @@ canvas {
 
 .applause .counts {
     font-family: 'Arial', sans-serif;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     line-height:2.5rem;
 }
 
@@ -248,7 +283,7 @@ canvas {
 
 .audience .counts {
     font-family: 'arial', sans-serif;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     line-height: 2.5rem;
     font-weight: 900;
 }
@@ -266,7 +301,7 @@ canvas {
     position: absolute;
     left:32px;
     width:100px;
-    font-size: 11px;
+    font-size:1.1rem;
     font-weight: 600;
     letter-spacing: .1rem;
     text-transform: uppercase;
@@ -286,10 +321,14 @@ canvas {
 
 .chat {
     width:40vw;
-    font-size:11px;
+    font-size:1.1rem;
     font-weight: 600;
     letter-spacing: .1rem;
     background-color:rgba(128, 128, 128, 0.1);
+}
+
+.chat:hover {
+    background-color:rgba(128, 128, 128, 0.15);
 }
 
 .fixed-bottom {
@@ -316,7 +355,7 @@ canvas {
     border: none;
     border-radius: 0;
     border-left: 1px solid rgba(128, 128, 128, 1);
-    font-size:11px;
+    font-size:1.1rem;
     font-weight: 600;
     letter-spacing: .1rem;
     background-color:transparent;
