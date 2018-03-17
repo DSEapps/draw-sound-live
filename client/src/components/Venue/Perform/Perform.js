@@ -7,13 +7,13 @@ const Perform = props => {
         display = 
         <div className="marquee-wrapper">
             <div className="performer-name">
-                <p>{props.userInfo.name}</p>
-                <p>Performer</p>
+                <div>{props.userInfo.name}</div>
+                <div><strong>Performer</strong></div>
             </div>
             <div className="btn-perform">
                 <button onClick={props.stopPerformance}>Leave Stage</button>
             </div>
-            <div className="performer-stats">Lifetime: + {props.userInfo.upClaps}  &#124; - {props.userInfo.downClaps} </div>
+            <div className="performer-stats"><span class="aa">Lifetime:</span> + <span class="ba"> {props.userInfo.upClaps}</span>  <span class="ca">&#124;</span> <span class="bb">{props.userInfo.downClaps}</span> - </div>
         </div>
     }
     
@@ -22,11 +22,11 @@ const Perform = props => {
         display =
         <div className="marquee-wrapper">
             <div className="performer-name">
-                <p>{props.userInfo.name}</p>
-                <p>Performer</p>
+                <div>{props.userInfo.name}</div>
+                <div><strong>Performer</strong></div>
             </div>
             <div className="btn-perform">&nbsp;</div>
-            <div className="performer-stats">Lifetime: + {props.userInfo.upClaps}  &#124; - {props.userInfo.downClaps} </div>
+            <div className="performer-stats"><span class="aa">Lifetime:</span> + <span class="ba"> {props.userInfo.upClaps}</span>  <span class="ca">&#124;</span> <span class="bb">{props.userInfo.downClaps}</span> - </div>
         </div>
     }
 
@@ -35,8 +35,7 @@ const Perform = props => {
         display = 
         <div className="marquee-wrapper">
             <div className="performer-name">
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
+
             </div>
             <div className="btn-perform">
                 <button onClick={props.startPerformance}>Get On Stage</button>
