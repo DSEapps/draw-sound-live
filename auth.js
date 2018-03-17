@@ -1,5 +1,5 @@
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const User = require('./models/user');
+const db = require('./models');
 
 module.exports = (passport) => {
     passport.serializeUser((user, done) => {
@@ -12,23 +12,22 @@ module.exports = (passport) => {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: "http://localhost:3001/auth/google/callback"
-        },
+    },
         (token, refreshToken, profile, done) => {
-            // check if user already exists in our own db
-            User.findById({ id: profile.id }).then((currentUser) => {
-                if (currentUser) {
-                    // already have this user
-                    console.log('user is: ', currentUser);
-                    done(null, currentUser);
+            console.log("check for profile")
+            db.User.findOne({ id: profile.id }).then((user) => {
+                if (user) {
+                    return done(null, user);
                 } else {
-                    // if not, create user in our db
-                    new User({
+                    db.User.create({
+                        name: profile.name.givenName,
                         id: profile.id,
-                        name: profile.displayName
-                    }).save().then((newUser) => {
-                        console.log('created new user: ', newUser);
-                        done(null, newUser);
-                    });
+                        upClaps: 0,
+                        downClaps: 0
+                    }).then((user) => {
+                        console.log(user);
+                        return done(null, user);
+                    })
                 }
             });
         })

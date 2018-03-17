@@ -10,7 +10,7 @@ router.route("/")
 // Matches with "/venue/:id"
 router
   .route("/:id")
-  .get(Controller.findById)
+  .get(Controller.find)
   .put(Controller.update)
   .delete(Controller.remove);
 

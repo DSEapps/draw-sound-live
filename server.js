@@ -47,12 +47,6 @@ mongoose.connect(
 // Add routes, both API and view
 // app.use(routes);
 
-// Send every request to the React app
-// Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
 //Google OAuth with Passport Code
 app.get('/', (req, res) => {
   if (req.session.token) {
@@ -81,9 +75,18 @@ app.get('/auth/google/callback',
   }),
   (req, res) => { 
     req.session.token = req.user.token;
-    res.redirect('http://localhost:3000');
+    // res.redirect('/');
   }
 );
+
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function (obj, done) {
+  done(null, obj);
+});
+
 // passport.serializeUser(function (user, done) {
 //   done(null, user.id);
 // });
@@ -94,41 +97,7 @@ app.get('/auth/google/callback',
 //   });
 // });
 
-// Use the GoogleStrategy within Passport.
-//   Strategies in Passport require a `verify` function, which accept
-//   credentials (in this case, an accessToken, refreshToken, and Google
-//   profile), and invoke a callback with a user object.
-// passport.use(new GoogleStrategy({
-//   clientID: process.env.GOOGLE_CLIENT_ID,
-//   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-//   callbackURL: "http://localhost:3000/auth/google/callback"
-// },
-//   function (accessToken, refreshToken, profile, done) {
-//     console.log("This is a log from the server.js");
-//     User.findOrCreate({ googleId: profile.id }, function (err, user) {
-//       return done(err, user);
-//     });
-//   }
-// ));
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// app.get('/auth/google',
-//   passport.authenticate('google', { scope: ['profile', 'email'] }));
-
-// // GET /auth/google/callback
-// //   Use passport.authenticate() as route middleware to authenticate the
-// //   request.  If authentication fails, the user will be redirected back to the
-// //   login page.  Otherwise, the primary route function function will be called,
-// //   which, in this example, will redirect the user to the home page.
-// app.get('/auth/google/callback',
-//   passport.authenticate('google', { failureRedirect: '/login' }),
-//   function (req, res) {
-//     console.log("Return Route Contacted");
-//     res.redirect('/');
-//   });
-// End of Google OAuth additions
 
 http.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
