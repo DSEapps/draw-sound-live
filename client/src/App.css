@@ -275,14 +275,54 @@ canvas {
     line-height:2.5rem;
 }
 
-.applause .plus  {
+.applause .plus-box  {
     margin-top:5px;
     margin-bottom:5px;
 }
 
-.applause .minus  {
+.applause .minus-box  {
     margin-top:5px;
     margin-bottom:0px;
+}
+
+
+
+.applause .btn-voting .st1 {
+    fill:#808080;
+    opacity: 1;
+}
+
+.applause .btn-voting .st0 {
+    fill:#EDE9D6;
+    opacity: 1;
+}
+
+.applause .btn-voting:hover .st0 {
+    fill:#EDE9D6;
+    opacity: 0.5;
+}
+
+
+
+.applause .btn-voting:hover .st1 {
+    fill:#000000;
+    opacity: 1;
+}
+
+
+/* used in audience and applause  */
+.indicators {
+    width:14px;
+    height:14px;
+}
+
+.indicators .m1{
+    fill:none;
+    stroke:#808080;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
 }
 
 
@@ -315,7 +355,7 @@ canvas {
     font-weight: 900;
 }
 
-.top img  {
+.top .indicators  {
     margin-top:5px;
     margin-bottom:5px;
 }
