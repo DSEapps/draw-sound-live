@@ -6,7 +6,7 @@ class Chat extends Component {
         chats: [],
         chat: "",
         expanded: false,
-        toggleAffordance: "&#9650;"
+        toggleAffordance: "\u25B2"
     }
 
     componentDidMount() {
@@ -19,9 +19,9 @@ class Chat extends Component {
 
     toggleChat = () => {
         if (this.state.expanded === true) {
-            this.setState({ expanded: false, toggleAffordance: "&#9650;" })
+            this.setState({ expanded: false, toggleAffordance: "\u25B2" })
         } else {
-            this.setState({ expanded: true , toggleAffordance: "&#9660;"})
+            this.setState({ expanded: true , toggleAffordance: "\u25BC"})
         }
     }
 
