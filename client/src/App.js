@@ -4,7 +4,6 @@ import './App.css';
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
-import LoginPage from './components/Auth/LoginPage';
 import io from 'socket.io-client';
 
 class App extends Component {
