@@ -27,7 +27,7 @@ class Stage extends Component {
     this.fx = {
       //default values
       compressor: new Tone.Compressor(-30, 3),
-      distortion: new Tone.Distortion(0),
+      distortion: new Tone.BitCrusher(0),
       filter: new Tone.Filter({
         type: 'lowpass',
         frequency: 1000,
@@ -53,7 +53,7 @@ class Stage extends Component {
     }
 
     this.player = new Tone.Player(audioURLS[3], console.log("loaded song"));
-    // UNCOMMENT THIS to hear the music
+    // COMMENT/UNCOMMENT THIS to toggle the music
     this.player.autostart = true;
     this.player.volume.value = 10;
 
@@ -94,7 +94,7 @@ class Stage extends Component {
     },
 
     distortion: (x, y, w, h) => {
-      const val = x * (1 / w);
+      const val = x * (8 / w);
       const wetVal = y * (1 / h);
       this.fx.distortion.distortion = val;
       this.fx.distortion.wet.value = wetVal;
@@ -108,7 +108,7 @@ class Stage extends Component {
     },
 
     jcReverb: (x, y, w, h) => {
-      const roomsizeVal = x * (1 / w);
+      const roomsizeVal = x * (.9 / w);
       const wetVal = y * (1 / h);
       const jcreverb = this.fx.jcreverb;
       if (roomsizeVal < .01) {
