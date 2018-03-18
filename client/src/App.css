@@ -394,6 +394,18 @@ canvas {
     background-color:rgba(128, 128, 128, 0.1);
 }
 
+.chat-data {
+    height:35px;
+    animation: openpanel 0.5s 1;
+}
+
+
+@keyframes openpanel {
+    0%   {height:0px; background: rgba(255, 255, 255, 1);}
+    15%  {background: rgba(255, 255, 255, 1);}
+    100% {height:35px; background: rgba(128, 128, 128, 0);}
+}
+
 .chat:hover {
     background-color:rgba(128, 128, 128, 0.15);
 }
