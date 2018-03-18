@@ -103,11 +103,13 @@ class Art extends Component {
             
             //CURRENT MouseDown = FALSE, NEXT MouseDown = TRUE
             if ( (!now.mouseDown) && (next.mouseDown)) {
+
+                let rW1 = Math.random() * (12 - 3) + 3;
                 //CIRCLE 1
                 ctx.beginPath();
-                ctx.arc(nextX, nextY, 7, 0, 2 * Math.PI, false);
+                ctx.arc(nextX, nextY, rW1, 0, 2 * Math.PI, false);
                 ctx.strokeStyle = colorSet1;
-                ctx.lineWidth = 7;
+                ctx.lineWidth = rW1;
                 ctx.stroke();
                 ctx.closePath();   
             }
