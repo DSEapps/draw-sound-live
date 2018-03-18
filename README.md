@@ -11,24 +11,53 @@ Viewers can rate and comment on the performance. Performers stats (eg. # of perf
 ## Application
 The main landing page of the app has a "Live" button, which re-directs the user to Google Authenticaion screen to validate their credentials. 
 
-**Main screen of Draw <--> Sound <--> Live**
-![Main Screen 1](./client/src/components/Landing/images/dsl.jpeg)
+**Landing Page of Draw <--> Sound <--> Live**
+![Landing Page](./images/dsl.jpeg)
 
-The user is then directed to the Venue.  In the venue there are several 
+The login page will offer an options to proceed.
+
+**Authentication Page of Draw <--> Sound <--> Live**
+![Authentication Page](./images/google-login.jpeg)
+
+Once authenticated, the user is then directed to the Venue.  In the venue the user is presented with the stage, a chat area and a button "Get On Stage" to allow any audience member to perform.
+
+**In the Venue, waiting for Performer**
+![Venue - No Performers](./images/venue-page.jpeg)
+
+If an audience member decides to get on stage, they can then explore the canvas and keyboard and begin to create.  Draw.  Sound.  Live.
+
+During the performance, the audience members can chat, boo or cheer the performance.  This info persists with the performer, and at the end of the performance is added to their lifetime totals.
+
+**On Stage, Draw. Sound. Live.**
+![Venue - On-stage](./images/venue-stage.jpeg)
 
 
 
-## Components
+## Design
 
-### 
+Behind the scenes there are many moving parts.  The venue contains various components that interact with eachother.  The primary component is the canvas, which is the source of visual and audio "art".  The performer is invited to explore the possibilities of the stage and the "instruments" that are hidden within.
+
+During the performance, the audience is encouraged to express their emotions, via applause or booing.  And they can even comment to fellow travelers via chat.
+
+![Venue Structure](./images/venue-structure.jpeg)
 
 
-### Google Signin
+Looking deeper within the app, there is bi-directional, event-based realtime communications that enable the performer to project their performance to the audience, and for the audience to express their sentiment back to the performer.
+
+![Socket Data Flow](./images/socket-dataflow.jpeg)
+
+
+
+The application is based on React, which encourages reusable UI components with dynamically rendered data.  To better understand the organization, the app has a root, called App, which has 3 main components: Login, Landing and Venue.  Within this structure the state of the app is managed.
+  
+
+![Application Organization](./images/component-hierarchy.jpeg)
+
 
 
 ## Running the App
 
-You can run a hosted version on Heroku [here](https://nameless-falls-98591.herokuapp.com/). 
+You can run a hosted version on Heroku [here](https://drawsound.herokuapp.com/). 
 
 Alternatively you can install and run the app locally.  Do do this, first you have to clone the git repo and then install.
 
