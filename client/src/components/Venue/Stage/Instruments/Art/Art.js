@@ -11,9 +11,6 @@ class Art extends Component {
  
     
     componentWillUpdate(nextProps, nextState) {
-        // console.log(this.props.performer);
-        // console.log("art will update " + " performer- " + this.performerer + " location-  " + this.location);
-        // console.log("art will update " + " performer- " + this.props.performer + " location-  " + nextProps.performer);
         // init canvas
         const canvas = document.getElementById("art");
         const ctx = canvas.getContext("2d"); 
@@ -25,10 +22,8 @@ class Art extends Component {
         const offsetLeft = canvas.getBoundingClientRect().left;
         const offsetTop = canvas.getBoundingClientRect().top;
 
-        // const nowPerformer = this.props.live;
-        // const nextPerformer = nextProps.live;
-
-        // if (nextProps.live) {console.log("there is a performer");}
+        const nowLiveStatus = this.props.live;
+        const nextLiveStatus = nextProps.live;
 
         // correct for canvas placement
         let nextX = next.x - offsetLeft;
@@ -36,9 +31,14 @@ class Art extends Component {
         let nowX = now.x - offsetLeft;
         let nowY = now.y - offsetTop;
 
+        // get canvas width
+        let canvasObj = document.querySelector("#art");
+        let currentWidth = canvasObj.width;
+        let currentHeight = canvasObj.height;
+        
 
-
-        //////////////// SET - KANDINSKY 01//////////////////////
+        //////////////////////////////////////////////////////////////////////////////
+        //////////////// SET - KANDINSKY 01 /////////////////////////////////////////
         // global
         let colorSet1; // current cursor lcation - full opacity
         let colorSet2; // current cursor lcation - 0.7 opacity
@@ -91,71 +91,73 @@ class Art extends Component {
             colorSet2 = "rgba(152, 108, 25, 0.7)";
             break;
 
-
-
             default:
         }
 
-        // ctx.strokeStyle=colorSet1;
-        // ctx.fillStyle=lcolorSet1;
+        //////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////
 
 
-        //CURRENT MouseDown = FALSE, NEXT MouseDown = TRUE
-        if ( (!now.mouseDown) && (next.mouseDown)) {
-            //CIRCLE 1
-            ctx.beginPath();
-            ctx.arc(nextX, nextY, 7, 0, 2 * Math.PI, false);
-            ctx.strokeStyle = colorSet1;
-            ctx.lineWidth = 7;
-            ctx.stroke();
-            ctx.closePath();   
-        }
-        
-        //CURRENT MouseDown = TRUE, NEXT MouseDown = TRUE
-        if ( (now.mouseDown) && (next.mouseDown)) {
-            //DRAW 1
-            ctx.save();
-            ctx.beginPath();
-            ctx.shadowBlur=50;
-            ctx.shadowColor=colorSet2;   
-            ctx.shadowOffsetX=5;
-            ctx.shadowOffsetY=-5;
-            ctx.lineWidth = 1;
-            ctx.lineTo(nowX, nowY);
-            ctx.lineTo(nextX, nextY);
-            ctx.stroke();
-            ctx.restore();
-        }
+        //////////////// There is a performer so draw to canvas //////////////////////
+        if (nextLiveStatus) {
+            
+            //CURRENT MouseDown = FALSE, NEXT MouseDown = TRUE
+            if ( (!now.mouseDown) && (next.mouseDown)) {
+                //CIRCLE 1
+                ctx.beginPath();
+                ctx.arc(nextX, nextY, 7, 0, 2 * Math.PI, false);
+                ctx.strokeStyle = colorSet1;
+                ctx.lineWidth = 7;
+                ctx.stroke();
+                ctx.closePath();   
+            }
+            
+            //CURRENT MouseDown = TRUE, NEXT MouseDown = TRUE
+            if ( (now.mouseDown) && (next.mouseDown)) {
+                //DRAW 1
+                ctx.save();
+                ctx.beginPath();
+                ctx.shadowBlur=50;
+                ctx.shadowColor=colorSet2;   
+                ctx.shadowOffsetX=5;
+                ctx.shadowOffsetY=-5;
+                ctx.lineWidth = 1;
+                ctx.lineTo(nowX, nowY);
+                ctx.lineTo(nextX, nextY);
+                ctx.stroke();
+                ctx.restore();
+            }
 
-        //CURRENT MouseDown = TRUE, NEXT MouseDown = FALSE
-        if ( (now.mouseDown) && (!next.mouseDown)) {
-            // RECT 1
-            ctx.fillStyle="Black";
-            ctx.fillRect(nextX, nextY, 6, 6);
-        } 
-
-
-
-
-
-        //////////////// Reset Canvas when Performer Clicked //////////////////////
-        if ( ( (nextX + offsetLeft) === 0 && (nextY + offsetTop) === 0 ) || ( (nowX + offsetLeft) === 0 && (nowY + offsetLeft) === 0 )){
-            ctx.clearRect(0, 0, canvas.width, canvas.height)  
+            //CURRENT MouseDown = TRUE, NEXT MouseDown = FALSE
+            if ( (now.mouseDown) && (!next.mouseDown)) {
+                // RECT 1
+                ctx.fillStyle="Black";
+                ctx.fillRect(nextX, nextY, 6, 6);
+            } 
+         //////////////// There is no performer clear the canvas //////////////////////    
+        } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
         }
 
-        //////////////// Keyboard Events //////////////////////
+
+        ////////////// Keyboard Events //////////////////////
         if ( (!now.keyDown) && (next.keyDown)) {
-            // RECT 1
-            ctx.fillStyle="Black";
-            ctx.fillRect(0, 0, 50, 50);
+            let rX = Math.random() * (currentWidth - 1) + 1;
+            let rY = Math.random() * (currentWidth - 1) + 1;
+            let rD = Math.random() * (360 - 1) + 1;
+            ctx.fillStyle = colorSet1;
+            ctx.globalAlpha=0.05;
+            // ctx.rotate(rD*Math.PI/180);
+            // ctx.translate(nowX, nowY)
+            ctx.fillRect(nowX/3, nowY/3, nowX/4, rY/6);
+            // ctx.fillRect(nowX/2, nowY/2, nowX+5, nowY+5);
+            ctx.globalAlpha=1;
+            // ctx.setTransform(1, 0, 0, 1, 0, 0);
+            // ctx.resetTransform();
         } 
     }
 
-
-
-
     render() {
-        
         return (
             <div className="art-wrapper">
                 <canvas id="art" width="750" height="480" >
