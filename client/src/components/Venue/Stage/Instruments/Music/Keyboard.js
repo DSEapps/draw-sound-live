@@ -32,11 +32,11 @@ class Keyboard extends Component {
     }
 
     initKeyBoard = () => {
-        this.reverb = new Tone.JCReverb(.5).toMaster();
+        this.reverb = new Tone.Freeverb(.5).toMaster();
         this.key = new Tone.Synth(
             {
                 oscillator: {
-                    type: 'sawtooth'
+                    type: 'sine'
                 },
                 envelope: {
                     attack: 0,
@@ -46,7 +46,7 @@ class Keyboard extends Component {
                 }
             }
         ).connect(this.reverb);
-        this.key.volume.value = -20;
+        this.key.volume.value = -10;
     }
 
     //Fired by performer's actual key press
@@ -64,14 +64,17 @@ class Keyboard extends Component {
         switch (key) {
             case 'a':
             case 'q':
+            case 'z':
                 n = "c";
                 break;
             case 's':
             case 'w':
+            case 'x':
                 n = "c#";
                 break;
             case 'd':
             case 'e':
+            case 'c':
                 n = "d";
                 break;
             case 'f':
@@ -80,14 +83,17 @@ class Keyboard extends Component {
                 break;
             case 'g':
             case 't':
+            case 'b':
                 n = "e";
                 break;
             case 'h':
             case 'y':
+            case 'n':
                 n = "f";
                 break;
             case 'j':
             case 'u':
+            case 'm':
                 n = "f#";
                 break;
             case 'k':
@@ -102,8 +108,11 @@ class Keyboard extends Component {
 
         let octave;
         const highNotes = ["q", "w", "e", "r", "t", "y", "u", "i", "o"];
+        const midNotes = ["a", "s", "d", "f", "g", "h", "j","k","l"];
         if (highNotes.includes(key)) {
-            octave = "3"
+            octave = "4"
+        } else if (midNotes.includes(key)) {
+            octave = "3";
         } else {
             octave = "2";
         }
