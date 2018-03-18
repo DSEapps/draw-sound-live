@@ -8,54 +8,39 @@ The app provides an endless participatory experience in which performers interac
 
 Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
 
-## Components
-### Okta Signin
-We decided to use Okta for for a simple authentication scheme.  Okta provides a sign-in widget that makes this process pretty easy.  Users are managed from the Okta website dashboard.
+## MERN Basic Components
 
-#### References:
-* [Okta] https://developer.okta.com
-* [NPM Okta-Signin-Widget] https://www.npmjs.com/package/@okta/okta-signin-widget
+Our application starts off with the basic MERN components (MongoDB, Express, React and Node).
 
+References: 
+* [MongoDB] - https://www.mongodb.com
+* [Express] - https://expressjs.com
+* [React] - https://reactjs.org/
+* [Node.js] - https://nodejs.org/en/
 
+### Authentication
 
+Our application just needed a basic authentication component as we're primarily interested in obtaining a user's name and a unique id for tracking the user's participation on our app.  We decided to accomplish this using Passport.js, Passport-Google-Oauth and React-Google-Login.
 
-## Starting the app locally
+#### Passport.js
+* [Passport.js] - http://www.passportjs.org/
+* [Passport-Google-Oauth] - https://www.npmjs.com/package/passport-google-oauth
 
-Start by installing front and backend dependencies. While in this directory, run the following commands:
-
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
-
-1. Build the React app for production by running the following command:
-
-```
-yarn build
-```
-> Note: A yarn build will be required to register any new Post requests from any front-end JavaScript to to prevent any proxy server errors.
-
-2. Add and commit all changes to git
-
-3. Push to Heroku
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
-```
+#### Google-React-Login
+* [Google-React-Login] - https://www.npmjs.com/package/react-google-login
 
 
-**Main screen of Draw <--> Sound <--> Live**
-![Main Screen 1](./client/src/components/Landing/images/dsl.jpeg)
+## UI Components
+
+## Sound Components
+
+
+
+
+## Demo the App
+
+### Starting the app locally
+
+Clone the GitHub Repo on your local machine.  Then complete the yarn install process which will install the dependencies.  After this, start your local MongoDB server and do a yarn start. 
+
+Note:  You will need to include a .env file in your root directory with GOOGLE_CLIENT_ID & GOOGLE_CLIENT_SECRET variables which will need to be obtained from Google.  You will also need to specify in your Google Dev Dashboard the origin and callback routes from the application.
