@@ -4,39 +4,36 @@ import './App.css';
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
-import LoginPage from './components/Auth/LoginPage';
 import io from 'socket.io-client';
+import { GoogleLogin } from 'react-google-login';
+import { Redirect } from 'react-router';
 
 class App extends Component {
 
-  //Hard-coded user info; waiting for auth process
-  //Will all need to be NULL initially
   state = {
-    name: "John",
-    id: "555",
-    upClaps: 25,
-    downClaps: 66
+    name: null,
+    id: null,
+    upClaps: null,
+    downClaps: null
+  }
+
+  handleUserData = (data) => {
+    this.setState({
+      name: data.data.name,
+      id: data.data.id,
+      upClaps: data.data.upClaps,
+      downClaps: data.data.downClaps
+    })
   }
 
   render() {
-    const returnVenue = () => {
-      return (
-        <Venue
-          userInfo={this.state}
-        />
-      );
-    }
-
-
     return (
       <Router>
-          <Switch>
-            {/* for testing... */}
-            <Route exact path="/" render={returnVenue} />
-            <Route exact path="/landing" component={Landing} />
-            <Route exact path="/login" component={Login} />
-            {/*<Route exact path="/venue" component={Venue} /> */}
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/venue" render={() => <Venue userInfo={this.state} />} />
+          <Route exact path="/login" render={() => <Login handleUserData={this.handleUserData} userInfo={this.state} />} />
+        </Switch>
       </Router>
     );
   }

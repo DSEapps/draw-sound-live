@@ -10,12 +10,11 @@ class Audience extends Component {
     }
 
     componentDidMount() {
+        //Note from Evan: we could also try asking for the current client here instead of merely listening
+        //This might address the issue with 0 people showing until someone else joins.
         this.props.socket.on('clientsCount', (clientsCount) => {
             this.setState({ clientsCount: clientsCount })
           });
-    }
-
-    componentDidUpdate() {
     }
 
     render() 

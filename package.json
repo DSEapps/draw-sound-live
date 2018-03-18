@@ -9,7 +9,7 @@
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd client && yarn install && yarn build" 
+    "postinstall": "cd client && yarn install && yarn build"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "mongoose": "^5.0.8",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
+    "react-google-login": "^3.0.10",
     "socket.io": "^2.0.4"
   }
 }

@@ -12,6 +12,10 @@ export default {
     return axios.put("/venue/" + id, data)
   },
 
+  findOrCreateUser: function (data) {
+    return axios.post("/venue", data)
+  },
+
   saveUser: function (userData) {
     console.log("This is the data passed to the API: " + userData.google_id);
     console.log("This is the data passed to the API: " + userData.google_email);
