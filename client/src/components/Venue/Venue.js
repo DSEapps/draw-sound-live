@@ -68,6 +68,7 @@ class Venue extends Component {
          {this.state.performer
           ? <Applause
             socket={socket}
+            updateClaps={this.props.updateClaps}
             userInfo={this.props.userInfo}
             stopPerformance={this.stopPerformance}
             performer={this.state.performer}

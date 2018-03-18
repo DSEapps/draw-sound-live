@@ -26,12 +26,19 @@ class App extends Component {
     })
   }
 
+  updateClaps = (data) => {
+    this.setState({
+      upClaps: data.upClaps,
+      downClaps: data.downClaps
+    })
+  }
+
   render() {
     return (
       <Router>
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/venue" render={() => <Venue userInfo={this.state} />} />
+          <Route exact path="/venue" render={() => <Venue userInfo={this.state} updateClaps={this.updateClaps} />} />
           <Route exact path="/login" render={() => <Login handleUserData={this.handleUserData} userInfo={this.state} />} />
         </Switch>
       </Router>
