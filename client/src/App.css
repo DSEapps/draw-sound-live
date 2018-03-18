@@ -124,7 +124,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width:750px; 
+    width:80vw; 
     padding-top:8px;
     margin-bottom:-3px;
 }

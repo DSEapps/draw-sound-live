@@ -49,6 +49,10 @@
   optionalDependencies:
     fsevents "*"
 
+"@types/react@*":
+  version "16.0.40"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.40.tgz#caabc2296886f40b67f6fc80f0f3464476461df9"
+
 Base64@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.3.0.tgz#6da261a4e80d4fa0f5c684254e5bccd16bbdce9f"
@@ -5425,6 +5429,13 @@ react-dom@^16.0.0:
 react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
+
+react-google-login@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.0.10.tgz#161066f811db1d99fa94b0ebc5a878ff5665a1bd"
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
 
 react-router-dom@^4.2.2:
   version "4.2.2"
