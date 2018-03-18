@@ -52,8 +52,8 @@ class Applause extends Component {
                             <g>
                                 <rect className="m0" />
                                 <g>
-                                    <line class="m1" x1="12" y1="7.1" x2="2" y2="7.1"/>
-		                            <line class="m1" x1="7" y1="2.1" x2="7" y2="12.1"/>
+                                    <line className="m1" x1="12" y1="7.1" x2="2" y2="7.1"/>
+		                            <line className="m1" x1="7" y1="2.1" x2="7" y2="12.1"/>
                                 </g>
                             </g>
                         </svg>

@@ -13,7 +13,7 @@ const Perform = props => {
             <div className="btn-perform">
                 <button onClick={props.stopPerformance}>Leave Stage</button>
             </div>
-            <div className="performer-stats"><span class="aa">Lifetime:</span> + <span class="ba"> {props.userInfo.upClaps}</span>  <span class="ca">&#124;</span> <span class="bb">{props.userInfo.downClaps}</span> - </div>
+            <div className="performer-stats"><span className="aa">Lifetime:</span> + <span className="ba"> {props.userInfo.upClaps}</span>  <span className="ca">&#124;</span> <span className="bb">{props.userInfo.downClaps}</span> - </div>
         </div>
     }
     
@@ -26,7 +26,7 @@ const Perform = props => {
                 <div><strong>Performer</strong></div>
             </div>
             <div className="btn-perform">&nbsp;</div>
-            <div className="performer-stats"><span class="aa">Lifetime:</span> + <span class="ba"> {props.userInfo.upClaps}</span>  <span class="ca">&#124;</span> <span class="bb">{props.userInfo.downClaps}</span> - </div>
+            <div className="performer-stats"><span className="aa">Lifetime:</span> + <span className="ba"> {props.userInfo.upClaps}</span>  <span className="ca">&#124;</span> <span className="bb">{props.userInfo.downClaps}</span> - </div>
         </div>
     }
 

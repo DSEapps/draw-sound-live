@@ -68,7 +68,7 @@ class Instrument extends Component {
             <div className="instrument-wrapper">
                 <Art
                     location={this.state}
-                    performer={this.props.performer}
+                    live={this.props.isPerformer}
                 />
                 <Music
                     location={this.state}
