@@ -5,7 +5,7 @@ const Controller = require("../controllers/Controller");
 // .get will all users in venue
 router.route("/")
   .get(Controller.findAll)
-  .post(Controller.create);
+  .post(Controller.findOrCreateUser);
 
 // Matches with "/venue/:id"
 router

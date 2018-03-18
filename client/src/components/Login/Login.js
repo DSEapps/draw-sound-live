@@ -1,62 +1,65 @@
 import React, { Component } from "react";
-import {withRouter} from "react-router-dom";
+import { Redirect } from 'react-router';
 import API from "../../utils/API";
+import { GoogleLogin } from "react-google-login";
+import { withRouter } from "react-router-dom";
+
 
 class Login extends Component {
-  state = {
 
-  };
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (!prevProps.userInfo.id && this.props.userInfo.id) {
+  //     this.props.history.push("/venue");
+  //   }
+  // }
 
-  componentDidMount() {
-    // In case we need 
+  componentWillUpdate(nextProps, nextState) {
+    if (nextProps.userInfo.id && !this.props.userInfo.id) {
+      this.props.history.push("/venue");
+    }
   }
 
-//   loginClick = () => {
-//     // redirect to Googe oAuth code
-//     console.log("Login button clicked");
-//     API.saveUser({
-//       "google_id": "XYX987654321",
-//       "google_email": "ejk@gmail.com",
-//       "in_venue": true,
-//       "lifetime_claps": 999,
-//       "perf_num": 99,
-//       "last_perf": "Thu Mar 17 2013 15:48:59 GMT+0400"
-//     })
-//       .then(res => this.props.history.push("/venue"))
-//       .then(res => console.log("User saved to database"))
-//       .catch(err => console.log(err));
+  handleSuccess = (response) => {
+    const google_id = response.profileObj.googleId;
+    const name = response.profileObj.givenName;
+    API.findOrCreateUser({ id: google_id, name: name }).then(userData => {
+      this.props.handleUserData(userData);
+    }).catch(err => console.log(err))
+  }
 
-// }
+  handleFailure = () => {
+    console.log("fail.")
+  }
 
-
-// handleFormSubmit = event => {
-//     event.preventDefault();
-//       API.saveUser({
-//         title: this.state.title,
-//         author: this.state.author,
-//         synopsis: this.state.synopsis
-//       })
-//         .then(res => this.loadBooks())
-//         .catch(err => console.log(err));
-//   };
+  cancelClick=()=>{
+    this.props.history.push("/");    
+  }
 
   render() {
-    return(
+    return (
+
       <div className="login-root wrapper center centerFlex">
         <div className="content ">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"  />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
           <p>To continue to the performace space you will need to login with your Google account.</p>
           <div className="actions">
             <button onClick={this.cancelClick}>Cancel</button>
-            <button onClick={this.loginClick} className="button-primary">Continue</button>
+            <GoogleLogin
+              clientId="265275680499-5g10j3l9srs97m57iffmn0riqk9p5evf.apps.googleusercontent.com"
+              buttonText="Continue"
+              onSuccess={this.handleSuccess}
+              onFailure={this.handleFailure}
+              className="button-primary"
+            />
           </div>
         </div>
-      </div>      
+      </div>
+
     );
   }
 }
 
-export default Login;
+export default withRouter(Login);
 
 
 

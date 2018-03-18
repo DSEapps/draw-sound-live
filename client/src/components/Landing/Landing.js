@@ -1,17 +1,10 @@
 import React, { Component } from "react";
-import {withRouter} from "react-router-dom";
+// EH: I don't think this being used...
+// import {withRouter} from "react-router-dom";
 import API from "../../utils/API";
 import Vector from './images/drawsound.svg';
 
-
 class Landing extends Component {
-  state = {
-
-  };
-
-  componentDidMount() {
-    // In case we need 
-  }
 
   enterClick = () => {
     this.props.history.push("/login");
