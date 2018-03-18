@@ -1,0 +1,13 @@
+/* override sksleton.css button styles */
+
+
+.unstyle
+ {
+    border:0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    line-height: 0;
+    overflow: visible;
+    padding: 0;
+}
