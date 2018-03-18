@@ -148,12 +148,14 @@ class Art extends Component {
             let mX = currentWidth/2;
             ctx.fillStyle = colorSet1;
             ctx.globalAlpha=0.05;
-            ctx.fillRect(nowX-(rX/2-3), nowY-5, nowX-(rX/2+3), nowY+5 );
+            ctx.translate(nowX/3, nowY/3)
+            ctx.rotate(rD*Math.PI/180);
+            ctx.fillRect(nowX-(rX/2-3), nowY/2, nowX-(rX/2+3), nowY+5 );
             // ctx.rotate(rD*Math.PI/180);
             // ctx.translate(nowX, nowY)
             ctx.globalAlpha=1;
-            // ctx.setTransform(1, 0, 0, 1, 0, 0);
-            // ctx.resetTransform();
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.resetTransform();
         } 
     }
 
