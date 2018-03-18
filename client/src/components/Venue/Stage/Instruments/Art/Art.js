@@ -8,15 +8,7 @@ class Art extends Component {
 
     componentDidMount() {}
 
-    // this clears the canvas ctx.clearRect(0, 0, canvas.width, canvas.height)
-    // the problem is, i just discovered why the below code was the only wayt to get this to work
-    // it was rendering the render inside of itself
-
-    // the state above this needs to be reset back to defaults, 0s when
-    // user stops performing otherwise, when the next person starts performing
-    // the math here will be off
-
-    // there is not currently code in here to handle clearing the canvas
+ 
     
     componentWillUpdate(nextProps, nextState) {
         // console.log(this.props.performer);
@@ -32,6 +24,11 @@ class Art extends Component {
 
         const offsetLeft = canvas.getBoundingClientRect().left;
         const offsetTop = canvas.getBoundingClientRect().top;
+
+        // const nowPerformer = this.props.live;
+        // const nextPerformer = nextProps.live;
+
+        // if (nextProps.live) {console.log("there is a performer");}
 
         // correct for canvas placement
         let nextX = next.x - offsetLeft;
@@ -137,10 +134,21 @@ class Art extends Component {
             ctx.fillRect(nextX, nextY, 6, 6);
         } 
 
+
+
+
+
         //////////////// Reset Canvas when Performer Clicked //////////////////////
         if ( ( (nextX + offsetLeft) === 0 && (nextY + offsetTop) === 0 ) || ( (nowX + offsetLeft) === 0 && (nowY + offsetLeft) === 0 )){
             ctx.clearRect(0, 0, canvas.width, canvas.height)  
         }
+
+        //////////////// Keyboard Events //////////////////////
+        if ( (!now.keyDown) && (next.keyDown)) {
+            // RECT 1
+            ctx.fillStyle="Black";
+            ctx.fillRect(0, 0, 50, 50);
+        } 
     }
 
 
