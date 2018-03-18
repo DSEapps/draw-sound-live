@@ -4,3 +4,4 @@ node_modules
 /client/build
 .env
 npm-debug.log
+.vs
