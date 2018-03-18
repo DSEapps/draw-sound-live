@@ -18,6 +18,12 @@ class Venue extends Component {
   };
 
   componentDidMount() {
+
+    //Kick person back to landing if they have no id in the App's state.
+    if (!this.props.userInfo.id) {
+      this.props.history.push("/");
+    }
+    
     //check server immediately to see if performance is happening
     socket.on('connect', () => {
       socket.emit('performance check');
@@ -80,6 +86,6 @@ class Venue extends Component {
 
 
 
-export default Venue;
+export default withRouter(Venue);
 
 
