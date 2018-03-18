@@ -33,6 +33,13 @@ class Chat extends Component {
         this.setState({ chat: "" });
         this.props.socket.emit('chat msg', this.state.chat);
     }
+    
+    handleEnter = (event) => {
+        if (event.keyCode === 13) {
+        this.setState({ chat: "" });
+        this.props.socket.emit('chat msg', this.state.chat);
+        }
+    }
 
     
 
@@ -55,7 +62,7 @@ class Chat extends Component {
                 )}
                 <div className="chat-panel">
                     <div className="chat-toggler" onClick={this.toggleChat}>&nbsp;{this.state.toggleAffordance}&nbsp;</div>
-                    <input type="text" value={this.state.chat} placeholder="say something..." onChange={this.handleChange} ></input>
+                    <input type="text" value={this.state.chat} placeholder="say something..." onChange={this.handleChange} onKeyUp={this.handleEnter} ></input>
                     <div className="chat-submitter" onClick={this.handleClick}><strong>Speak</strong></div>
                 </div>
             </div>
