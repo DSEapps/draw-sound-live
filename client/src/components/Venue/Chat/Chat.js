@@ -54,7 +54,7 @@ class Chat extends Component {
         return (
             <div className="chat fixed-bottom">
                 {this.state.chats.map(chat =>
-                    <div style={this.state.expanded ? { display: 'block' } : { display: 'none' }} className="chat-data">
+                    <div className="chat-data" style={this.state.expanded ? { display: 'block' } : { display: 'none' }} >
                         <div className="chat-body">
                             <span style={chatName}>{this.props.userInfo.name}</span>{": " + chat}
                         </div>
