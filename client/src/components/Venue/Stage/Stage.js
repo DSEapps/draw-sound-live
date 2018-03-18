@@ -120,12 +120,12 @@ class Stage extends Component {
     },
 
     pingPongDelay: (x, y, w, h) => {
-      const delayVal = x * (.5 / w);
+      const delayVal = x * (1 / w);
       const wetVal = y * (1 / h);
       const pingpong = this.fx.pingpong;
       pingpong.delayTime.value = {
         delayTime: delayVal,
-        // maxDelayTime: 5
+        maxDelayTime: 1
       };
       if (delayVal < .01) {
         pingpong.wet.value = 0;
