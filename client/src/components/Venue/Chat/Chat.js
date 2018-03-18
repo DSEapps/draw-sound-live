@@ -12,7 +12,7 @@ class Chat extends Component {
     componentDidMount() {
         this.props.socket.on('chat msg', (msg) => {
             const chatsArray = this.state.chats.slice();
-            chatsArray.splice(0, 0, msg);
+            chatsArray.push(msg);
             this.setState({ chats: chatsArray });
         });
     }
