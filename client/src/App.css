@@ -189,15 +189,15 @@ footer {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* by order in which they are declared */
 .stage-wrapper {
-    width:750px;
-    height:480px;
+    width:80vw;
+    height:70vh;
     position:relative;
     border: 1px solid gainsboro;
   }
 
 .instrument-wrapper {
-    width:750px;
-    height:480px;
+    width:100%;
+    height:100%;
     z-index: 0;  
     left:0;
     top:0;
@@ -234,8 +234,8 @@ canvas {
 }
 
 .square {    
-    width: 250px;
-    height: 160px;
+    width: 33.333333%;
+    height: 33.33333%;
     margin:0;
     padding:0;
     background-color:#11ffee00;
