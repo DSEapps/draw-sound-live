@@ -21,7 +21,7 @@ class Chat extends Component {
         if (this.state.expanded === true) {
             this.setState({ expanded: false, toggleAffordance: "\u25B2" })
         } else {
-            this.setState({ expanded: true , toggleAffordance: "\u25BC"})
+            this.setState({ expanded: true, toggleAffordance: "\u25BC" })
         }
     }
 
@@ -29,35 +29,29 @@ class Chat extends Component {
         this.setState({ chat: event.target.value })
     }
 
-    handleClick = () => {
+    emitChat = () => {
+        const name = this.props.userInfo.name.toUpperCase();
         this.setState({ chat: "" });
-        this.props.socket.emit('chat msg', this.state.chat);
+        this.props.socket.emit('chat msg', name + ": " + this.state.chat);
     }
-    
+
+    handleClick = () => {
+        this.emitChat();
+    }
+
     handleEnter = (event) => {
         if (event.keyCode === 13) {
-        this.setState({ chat: "" });
-        this.props.socket.emit('chat msg', this.state.chat);
+            this.emitChat();
         }
     }
 
-    
 
     render() {
-        const chatName = {
-            fontSize: '11px',
-            fontEeight: '600',
-            letterSpacing: '.1rem',
-            textTransform: 'uppercase'
-          };
-
         return (
             <div className="chat fixed-bottom">
                 {this.state.chats.map(chat =>
                     <div className="chat-data" style={this.state.expanded ? { display: 'block' } : { display: 'none' }} >
-                        <div className="chat-body">
-                            <span style={chatName}>{this.props.userInfo.name}</span>{": " + chat}
-                        </div>
+                        <div className="chat-body">{chat}</div>
                     </div>
                 )}
                 <div className="chat-panel">
