@@ -16,15 +16,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findOrCreateUser: function (req, res) {
-    console.log("this is the top of findOrCreateUser controller");
     db.User
       .findOne({ id: req.body.id })
       .then(user => {
         if (user) {
-          console.log("there's already a user!")
           res.json(user)
         } else {
-          console.log("time to create a user...")
           console.log(req.body)
           db.User
             .create({ name: req.body.name, id: req.body.id, upClaps: 0, downClaps: 0 })
@@ -36,8 +33,10 @@ module.exports = {
   },
   update: function (req, res) {
     db.User
-      .findOneAndUpdate({ id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
+      .findOneAndUpdate({ id: req.params.id }, req.body,{new:true})
+      .then(data => {
+        res.json(data);
+      })
       .catch(err => res.status(422).json(err));
   },
   remove: function (req, res) {
