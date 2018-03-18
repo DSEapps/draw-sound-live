@@ -6,7 +6,6 @@ class Art extends Component {
 
     savedCanvas = null;
 
-
     setCanvasSize = () => {
         //See dimensions of canvas to whatever .stage-wrapper is        
         const canvas = document.getElementById("art");
@@ -16,9 +15,8 @@ class Art extends Component {
         canvas.width = stageWrapperWidth;
         canvas.height = stageWrapperHeight;
         if (this.savedCanvas) {
-            this.savedCanvas.restore();
+            canvas.getContext('2d').putImageData(this.savedCanvas, 0, 0);
         }
-
     }
 
     //Run the setCanvasSize when component mounts and every time the browser is resized
@@ -178,8 +176,9 @@ class Art extends Component {
             ctx.setTransform(1, 0, 0, 1, 0, 0);
             ctx.resetTransform();
         }
-        console.log(ctx);
-        this.savedCanvas = ctx.save();
+        this.savedCanvas = ctx.getImageData(canvas.offsetLeft, canvas.offsetTop, canvas.offsetWidth, canvas.offsetHeight);
+
+
     }
 
     render() {
