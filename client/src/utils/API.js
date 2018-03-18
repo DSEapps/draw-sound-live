@@ -8,7 +8,6 @@ export default {
 
   //Updates lifetime claps and boos
   updateClaps: function (id, data) {
-    console.log("updating claps in API");
     return axios.put("/venue/" + id, data)
   },
 

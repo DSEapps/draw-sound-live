@@ -11,10 +11,16 @@ class Applause extends Component {
     //Set up socket listeners for session claps
     componentDidMount() {
         this.props.socket.on("up", clap => {
+            //check to make sure not setting state on unmounted component
+            if (this.refs.applause) {
             this.setState({ upClaps: this.state.upClaps + 1 })
+            }
         })
         this.props.socket.on("down", clap => {
+            //check to make sure not setting state on unmounted component
+            if (this.refs.applause) {
             this.setState({ downClaps: this.state.downClaps + 1 })
+            }
         })
     }
 
@@ -25,7 +31,9 @@ class Applause extends Component {
         if (this.props.isPerformer) {
             API.updateClaps(this.props.userInfo.id,
                 { upClaps: newUpClaps, downClaps: newDownClaps }
-            ).catch(err => console.log(err));;
+            ).then(newData=>{  
+                this.props.updateClaps(newData.data);
+            }).catch(err => console.log(err));;
         }
     }
 
@@ -44,7 +52,7 @@ class Applause extends Component {
         let disable = null;
         this.props.isPerformer ? disable = true : disable = false;
         return (
-            <div className="applause fixed-right">
+            <div ref="applause" className="applause fixed-right">
                 <div className="top">
                     <div className="counts"><strong>{this.state.upClaps}</strong></div>
                     <div className="plus-box">
