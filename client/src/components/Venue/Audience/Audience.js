@@ -10,11 +10,19 @@ class Audience extends Component {
     }
 
     componentDidMount() {
-        //Note from Evan: we could also try asking for the current client here instead of merely listening
-        //This might address the issue with 0 people showing until someone else joins.
+        // Socket.on listener waiting for emissions from the server when a new client joins
         this.props.socket.on('clientsCount', (clientsCount) => {
-            this.setState({ clientsCount: clientsCount })
+            this.setState({ clientsCount: clientsCount });
           });
+
+        // Socket.emits signal "get initial number of clients" using getInitialClientsCount "channel"
+        this.props.socket.emit('getInitialClientsCount', true);
+
+        // Socket.on listener waits for response (data) using initialClientsCount "channel"    
+        this.props.socket.on('initialClientClount', (data) => {
+            this.setState({ clientsCount: data});
+        });
+
     }
 
     render() 

@@ -96,6 +96,10 @@ io.on('connection', (socket) => {
 
   io.sockets.emit('clientsCount', (io.engine.clientsCount));
 
+  socket.on('getInitialClientsCount', () => {
+    io.sockets.emit('initialClientClount', (io.engine.clientsCount));
+  })
+
   socket.on('disconnect', () => {
     io.sockets.emit('clientsCount', (io.engine.clientsCount));
     console.log('Socket disconnected');
