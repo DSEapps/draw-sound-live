@@ -26,7 +26,7 @@ const Perform = props => {
                 <div><strong>Performer</strong></div>
             </div>
             <div className="btn-perform">&nbsp;</div>
-            <div className="performer-stats"><span className="aa">Lifetime:</span> + <span className="ba"> {props.userInfo.upClaps}</span>  <span className="ca">&#124;</span> <span className="bb">{props.userInfo.downClaps}</span> - </div>
+            <div className="performer-stats"><span className="aa">Lifetime:</span> + <span className="ba"> {props.performer.upClaps}</span>  <span className="ca">&#124;</span> <span className="bb">{props.performer.downClaps}</span> - </div>
         </div>
     }
 
