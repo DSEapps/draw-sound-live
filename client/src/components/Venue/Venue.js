@@ -25,14 +25,13 @@ class Venue extends Component {
     }
     
     //check server immediately to see if performance is happening
-    socket.on('connect', () => {
       socket.emit('performance check');
       socket.on('performance check', (response) => {
         if (response) {
           this.setState({ performer: response })
         }
       })
-    });
+
     socket.on('start', (performer) => {
       this.setState({ performer: performer });
     });
