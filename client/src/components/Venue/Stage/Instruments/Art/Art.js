@@ -41,6 +41,7 @@ class Art extends Component {
 
         const nowLiveStatus = this.props.live;
         const nextLiveStatus = nextProps.live;
+        console.log(nextLiveStatus);
 
         // correct for canvas placement
         let nextX = next.x - offsetLeft;
@@ -116,7 +117,7 @@ class Art extends Component {
 
 
         //////////////// There is a performer so draw to canvas //////////////////////
-        if (nextLiveStatus) {
+        if (nextLiveStatus !== null) {
 
             //CURRENT MouseDown = FALSE, NEXT MouseDown = TRUE
             if ((!now.mouseDown) && (next.mouseDown)) {
