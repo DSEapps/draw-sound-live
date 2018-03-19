@@ -19,7 +19,8 @@ class Stage extends Component {
 
   stopInstrument = () => {
     console.log("stop the instrument...");
-    this.player.stop();
+    this.fx.pingpong.dispose();
+    this.player.dispose();    
   }
 
   //TODO - put this function in utils
