@@ -147,13 +147,13 @@ class Stage extends Component {
       this.fx.tremolo.depth.value = 1;
       this.fx.tremolo.wet.value = wetVal;
     },
-    vibratoSaw: (x, y, w, h) => {
+    vibratoSaw: (x, y, w, h) => {           
       const frequency = x * (8 / w);
       const wetVal = y * (1 / h);
       this.fx.vibratoSaw.frequency.value = frequency;
       this.fx.vibratoSaw.wet.value = wetVal;
     },
-    vibratoTriangle: (x, y, w, h) => {
+    vibratoTriangle: (x, y, w, h) => {      
       const frequency = x * (10 / w);
       const wetVal = y * (.8 / h);
       this.fx.vibratoTriangle.frequency.value = frequency;

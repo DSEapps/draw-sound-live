@@ -41,7 +41,7 @@ class Art extends Component {
 
         const nowLiveStatus = this.props.live;
         const nextLiveStatus = nextProps.live;
-        console.log(nextLiveStatus);
+        // console.log(nextLiveStatus);
 
         // correct for canvas placement
         let nextX = next.x - offsetLeft;

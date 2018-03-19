@@ -5,9 +5,11 @@ import Music from "./Music/Music";
 class Instrument extends Component {
 
     state = {
-        //title of div that mouse is in, e.g. "distortion"
         activeNode: null,
-        //is mouse held down?
+        left: 0,
+        top: 0,
+        width: 0,
+        height: 0,
         mouseDown: false,
         x: 0,
         y: 0,
@@ -18,7 +20,18 @@ class Instrument extends Component {
     //Get state updates from server
     componentDidMount() {
         this.props.socket.on('performance', (msg) => {
-            this.setState({ activeNode: msg.activeNode, mouseDown: msg.mouseDown, x: msg.x, y: msg.y, keyVal: msg.keyVal, keyDown: msg.keyDown })
+            this.setState({
+                activeNode: msg.activeNode,
+                left:msg.left,
+                top:msg.top,
+                width:msg.width,
+                height:msg.height,
+                mouseDown: msg.mouseDown, 
+                x: msg.x, 
+                y: msg.y, 
+                keyVal: msg.keyVal, 
+                keyDown: msg.keyDown,
+            })
         })
     }
 
@@ -32,6 +45,10 @@ class Instrument extends Component {
         if (!prevProps.performer && this.props.performer) {
             this.setState({
                 activeNode: null,
+                left: 0,
+                top: 0,
+                width: 0,
+                height: 0,
                 mouseDown: false,
                 x: 0,
                 y: 0,
@@ -50,8 +67,8 @@ class Instrument extends Component {
         this.setState({ mouseDown: boolean })
     }
 
-    handleNodeChange = (node) => {
-        this.setState({ activeNode: node });
+    handleNodeChange = (node, left, top, width, height) => {
+        this.setState({ activeNode: node, left: left, top: top, width: width, height: height });
     }
 
     handleKeyDown = (val) => {
