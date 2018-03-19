@@ -26,7 +26,7 @@ Once authenticated, the user is then directed to the Venue.  In the venue the us
 
 If an audience member decides to get on stage, they can then explore the canvas and keyboard and begin to create.  Draw.  Sound.  Live.
 
-During the performance, the audience members can chat, boo or cheer the performance.  This info persists with the performer, and at the end of the performance is added to their lifetime totals.
+During the performance, the audience is encouraged to express their feelings/emotions via applause, booing or chat.  This info persists with the performer, and at the end of the performance is added to their lifetime totals.  Note that performers that receive too many "boos" are kicked off stage.
 
 **On Stage, Draw. Sound. Live.**
 ![Venue - On-stage](./images/venue-stage.jpeg)
@@ -35,21 +35,19 @@ During the performance, the audience members can chat, boo or cheer the performa
 
 ## Design
 
-Behind the scenes there are many moving parts.  The venue contains various components that interact with eachother.  The primary component is the canvas, which is the source of visual and audio "art".  The performer is invited to explore the possibilities of the stage and the "instruments" that are hidden within.
+Behind the scenes there are many moving parts.  The venue contains various components that interact with eachother.  The primary composition element is the canvas.  It renders the performer's mouse movements into a drawing that manipulates settings of the sound effects.  The result is a continously evolving visual-musical performance art experience, where the performer is invited to explore the possibilities of the canvas and the "instruments" that are hidden within. 
 
-During the performance, the audience is encouraged to express their emotions, via applause or booing.  And they can even comment to fellow travelers via chat.
 
 ![Venue Structure](./images/venue-structure.jpeg)
 
 
-Looking deeper within the app, there is bi-directional, event-based realtime communications that enable the performer to project their performance to the audience, and for the audience to express their sentiment back to the performer.
+Looking deeper within the app, socket.io is used for bi-directional, event-based realtime communications which enable the performer to project their performance to the audience.  It also provides a means for chat, so the audience can have an ongoing discussion and convey their sentiments.
 
 ![Socket Data Flow](./images/socket-dataflow.jpeg)
 
 
 
-The application is based on React, which encourages reusable UI components with dynamically rendered data.  To better understand the organization, the app has a root, called App, which has 3 main components: Login, Landing and Venue.  Within this structure the state of the app is managed.
-  
+The application is based on React, which encourages reusable UI components with dynamically rendered views.  To better understand the organization, the app has a root, called App, which has 3 main components: Login, Landing and Venue.  Within this structure the state of the participants and their interactions is managed.
 
 ![Application Organization](./images/component-hierarchy.jpeg)
 
@@ -69,6 +67,23 @@ cd client
 yarn install
 cd ..
 ```
+
+Next, MongoDB is required for user data.  Install requires the following:
+
+For Mac:
+```
+brew install mongodb
+```
+Open two separate terminals and type in the first terminal:
+```
+mongod
+```
+Type the following in the second:
+```
+mongo
+```
+
+
 
 After both installations complete, run the following command in your terminal:
 
