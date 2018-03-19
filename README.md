@@ -2,7 +2,10 @@
 
 ## About
 
-Sound><Art is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by [Soundspace at Durham Science Museum](https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art. 
+Draw <--> Sound <--> Live is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by [Soundspace at Durham Science Museum](https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art.
+
+![Soundspace](./images/soundspace.jpeg)
+
 
 The app provides an endless participatory experience in which performers interact with the canvas DOM. They have a canvas on the screen--an instrument--which allows them to manipulate a sound track and generate sound based on input events (eg. mouse location, direction, velocity) which is both seen and heard by viewers. Each movement is drawn and viewable. The underlying rules are not explicit to the users. Simply, they are sketching “music”.
 
@@ -19,7 +22,7 @@ The login page will offer an options to proceed.
 **Authentication Page of Draw <--> Sound <--> Live**
 ![Authentication Page](./images/google-login.jpeg)
 
-Once authenticated, the user is then directed to the Venue.  In the venue the user is presented with the stage, a chat area and a button "Get On Stage" to allow any audience member to perform.
+Once authenticated, the user is then directed to the Venue.  In the venue, the user is presented with the stage, a chat area and a button "Get On Stage" to allow any audience member to perform.
 
 **In the Venue, waiting for Performer**
 ![Venue - No Performers](./images/venue-page.jpeg)
@@ -101,18 +104,29 @@ That's it, your app should be running on <https://localhost:3000>. The server wi
 Our application starts off with the basic MERN components (MongoDB, Express, React and Node).
 
 References: 
-* [MongoDB] - https://www.mongodb.com
-* [Express] - https://expressjs.com
-* [React] - https://reactjs.org/
-* [Node.js] - https://nodejs.org/en/
+* [MongoDB](https://www.mongodb.com)
+* [Express](https://expressjs.com)
+* [React](https://reactjs.org/)
+* [Node.js](https://nodejs.org/en/)
 
 ### Authentication
 
 Our application just needed a basic authentication component as we're primarily interested in obtaining a user's name and a unique id for tracking the user's participation on our app.  We decided to accomplish this using Passport.js, Passport-Google-Oauth and React-Google-Login.
 
 #### Passport.js
-* [Passport.js] - http://www.passportjs.org/
-* [Passport-Google-Oauth] - https://www.npmjs.com/package/passport-google-oauth
+* [Passport.js](http://www.passportjs.org/)
+* [Passport-Google-Oauth](https://www.npmjs.com/package/passport-google-oauth)
 
 #### Google-React-Login
-* [Google-React-Login] - https://www.npmjs.com/package/react-google-login
+* [Google-React-Login](https://www.npmjs.com/package/react-google-login)
+
+
+### Other Technologies
+
+In additional to MERN, Draw - Sound - Live also relied heavily on the following technologies for visual and audio affects.
+
+* [Web Audio APIs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+* [Socket.io](https://socket.io/)
+
+
+
