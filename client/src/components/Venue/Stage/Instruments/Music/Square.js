@@ -12,8 +12,8 @@ class Square extends Component {
     componentDidUpdate() {
         const props = this.props.instrumentProps;
         if (props.location.mouseDown && this.props.name === props.location.activeNode) {
-            let h = this.dimensions.height;
-            let w = this.dimensions.width;
+            let h = props.location.height;
+            let w = props.location.width;
             if (w < 1) {
                 w = 100
             }
@@ -21,8 +21,8 @@ class Square extends Component {
                 h = 100
             }
             this.props.soundUpdater(
-                props.location.x - this.dimensions.left,
-                props.location.y - this.dimensions.top,
+                props.location.x - props.location.left,
+                props.location.y - props.location.top,
                 w,
                 h
             )
@@ -35,7 +35,7 @@ class Square extends Component {
         this.dimensions.top = rect.top;
         this.dimensions.width = rect.width;
         this.dimensions.height = rect.height;
-        this.props.instrumentProps.handleNodeChange(this.props.name);
+        this.props.instrumentProps.handleNodeChange(this.props.name, this.dimensions.left, this.dimensions.top, this.dimensions.width, this.dimensions.height);
     }
 
     handleMouseDown = event => {
