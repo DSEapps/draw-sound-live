@@ -9,6 +9,8 @@ const audioURLS = [
 ];
 
 class Stage extends Component {
+
+
   componentDidUpdate(prevProps) {
     if (this.props.performer) {
       this.setUpInstrument();
@@ -18,12 +20,10 @@ class Stage extends Component {
   }
 
   stopInstrument = () => {
-    console.log("stop the instrument...");
     this.fx.pingpong.dispose();
     this.player.dispose();    
   }
 
-  //TODO - put this function in utils
   setUpInstrument = () => {
     this.fx = {
       //default values
@@ -45,7 +45,6 @@ class Stage extends Component {
         type: 'triangle'
       }),
       vibratoSaw: new Tone.Vibrato({
-        //change from .005 to .05  
         maxDelay: .4,
         frequency: 0,
         depth: .2,
@@ -66,7 +65,6 @@ class Stage extends Component {
     this.fx.vibratoTriangle.wet.value = 0;
     this.fx.vibratoSaw.wet.value = 0;
 
-
     //Final connect to speaker
     this.fx.compressor.toMaster();
 
@@ -85,7 +83,6 @@ class Stage extends Component {
     this.player.connect(this.fx.distortion);
   }
 
-  //TODO - put this functin in utils  
   soundUpdaters = {
     phaser: (x, y, w, h) => {
       const freqVal = x * (10 / w);
@@ -93,7 +90,6 @@ class Stage extends Component {
       this.fx.phaser.frequency.value = freqVal;
       this.fx.phaser.wet.value = wetVal;
     },
-
     distortion: (x, y, w, h) => {
       const val = x * (8 / w);
       const wetVal = y * (1 / h);
@@ -107,7 +103,6 @@ class Stage extends Component {
       const frequency = x * (700 / w) + 100;
       this.fx.filter.frequency.value = frequency;
     },
-
     jcReverb: (x, y, w, h) => {
       const roomsizeVal = x * (.9 / w);
       const wetVal = y * (1 / h);
@@ -119,7 +114,6 @@ class Stage extends Component {
       }
       jcreverb.roomSize.value = roomsizeVal;
     },
-
     pingPongDelay: (x, y, w, h) => {
       const delayVal = x * (1 / w);
       const wetVal = y * (1 / h);
@@ -134,7 +128,6 @@ class Stage extends Component {
         pingpong.wet.value = wetVal;
       }
     },
-
     pitchShift: (x, y, w, h) => {
       const pitchVal = x * (72 / w) - 36;
       const wetVal = y * (1 / h);
@@ -163,7 +156,6 @@ class Stage extends Component {
   }
 
   render() {
-
     return (
       <div className="stage-wrapper">
         <Instrument

@@ -4,9 +4,8 @@ import './App.css';
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Venue from "./components/Venue";
-import io from 'socket.io-client';
 import { GoogleLogin } from 'react-google-login';
-import { Redirect } from 'react-router';
+import io from 'socket.io-client';
 
 class App extends Component {
 

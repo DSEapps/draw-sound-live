@@ -40,7 +40,7 @@ class Square extends Component {
 
     handleMouseDown = event => {
         this.props.instrumentProps.handleClick(true);
-        // added this to enable acces to xy onClick
+        // added this to enable access to xy onClick
         this.props.instrumentProps.handleMouseMove(event.pageX, event.pageY);
     }
 

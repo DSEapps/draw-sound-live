@@ -8,16 +8,7 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 // Google Oauth
-// const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 require('dotenv').config();
-const cookieParser = require('cookie-parser');
-const cookieSession = require('cookie-session');
-
-app.use(cookieSession({
-  name: 'session',
-  keys: ['123']
-}));
-app.use(cookieParser());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -33,9 +24,9 @@ mongoose.connect(
 );
 
 app.use(express.static("client/build"));
+
 // Add routes, both API and view
 app.use(routes);
-
 
 http.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
@@ -46,8 +37,6 @@ let performerInfo = null;
 let performerSocketID = null;
 
 io.on('connection', (socket) => {
-
-  console.log('a user connected');
 
   socket.on('chat msg', (msg) => {
     io.emit('chat msg', msg);
@@ -72,11 +61,6 @@ io.on('connection', (socket) => {
     socket.emit('performance check', performerInfo);
   })
 
-  socket.on('disconnectTest', (msg) => {
-    console.log("someone left....")
-    console.log(msg)
-  })
-
   //up vote
   socket.on('up', () => {
     io.emit('up');
@@ -92,9 +76,6 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('performance', msg);
   });
 
-
-  console.log("Number of clients connected: " + io.engine.clientsCount);
-
   io.sockets.emit('clientsCount', (io.engine.clientsCount));
 
   socket.on('getInitialClientsCount', () => {
@@ -103,35 +84,10 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     io.sockets.emit('clientsCount', (io.engine.clientsCount));
-    console.log('Socket disconnected');
     if (performerSocketID === socket.id) {
-      console.log("the performer has quit!");
       performerInfo = null;
       performerSocketID = null;
       io.emit('stop');
     }
   })
-
-  // calls clients to query all unique client connections in the "/" namespace
-  // console.logs array with unique client identifiers
-  // io.clients((error, clients) => {
-  //   if (error) throw error;
-  //   console.log(clients);
-  // });
 });
-
-// io.on('connection', (socket) => {
-
-//   console.log('dk user connected');
-
-//   const users = io.clients((error, clients) => {
-//   // io.clients((error, clients) => {
-//       if (error) throw error;
-//     console.log(clients);
-//       socket.on('clients', () => {
-//         io.emit('clients');
-//       });
-//     });
-//   console.log(io.engine.clientsCount);
-// });
-

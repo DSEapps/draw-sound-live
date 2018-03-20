@@ -1,17 +1,9 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router';
 import API from "../../utils/API";
 import { GoogleLogin } from "react-google-login";
 import { withRouter } from "react-router-dom";
 
-
 class Login extends Component {
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (!prevProps.userInfo.id && this.props.userInfo.id) {
-  //     this.props.history.push("/venue");
-  //   }
-  // }
 
   componentWillUpdate(nextProps, nextState) {
     if (nextProps.userInfo.id && !this.props.userInfo.id) {

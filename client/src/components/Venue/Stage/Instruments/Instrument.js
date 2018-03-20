@@ -22,14 +22,14 @@ class Instrument extends Component {
         this.props.socket.on('performance', (msg) => {
             this.setState({
                 activeNode: msg.activeNode,
-                left:msg.left,
-                top:msg.top,
-                width:msg.width,
-                height:msg.height,
-                mouseDown: msg.mouseDown, 
-                x: msg.x, 
-                y: msg.y, 
-                keyVal: msg.keyVal, 
+                left: msg.left,
+                top: msg.top,
+                width: msg.width,
+                height: msg.height,
+                mouseDown: msg.mouseDown,
+                x: msg.x,
+                y: msg.y,
+                keyVal: msg.keyVal,
                 keyDown: msg.keyDown,
             })
         })
@@ -58,7 +58,6 @@ class Instrument extends Component {
         }
     }
 
-
     handleMouseMove = (x, y) => {
         this.setState({ x: x, y: y });
     }
@@ -73,7 +72,6 @@ class Instrument extends Component {
 
     handleKeyDown = (val) => {
         this.setState({ keyVal: val, keyDown: true })
-
     }
 
     handleKeyUp = () => {

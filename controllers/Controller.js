@@ -22,7 +22,6 @@ module.exports = {
         if (user) {
           res.json(user)
         } else {
-          console.log(req.body)
           db.User
             .create({ name: req.body.name, id: req.body.id, upClaps: 0, downClaps: 0 })
             .then(user => { res.json(user) })
