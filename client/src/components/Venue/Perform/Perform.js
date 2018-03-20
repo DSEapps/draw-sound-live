@@ -2,7 +2,8 @@ import React from "react";
 
 const Perform = props => {
     let display = null;
-    //If there is a performer and If user is a performer
+    
+    //If there is a performer and if user is a performer
     if (props.isPerformer) {
         display = 
         <div className="marquee-wrapper">

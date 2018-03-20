@@ -23,14 +23,14 @@ class Venue extends Component {
     if (!this.props.userInfo.id) {
       this.props.history.push("/");
     }
-    
+
     //check server immediately to see if performance is happening
-      socket.emit('performance check');
-      socket.on('performance check', (response) => {
-        if (response) {
-          this.setState({ performer: response })
-        }
-      })
+    socket.emit('performance check');
+    socket.on('performance check', (response) => {
+      if (response) {
+        this.setState({ performer: response })
+      }
+    })
 
     socket.on('start', (performer) => {
       this.setState({ performer: performer });
@@ -53,18 +53,18 @@ class Venue extends Component {
     return (
       <div className="venue-root wrapper">
         <div className="content center centerFlex">
-            <Perform
-              startPerformance={this.startPerformance}
-              stopPerformance={this.stopPerformance}
-              performer={this.state.performer}
-              isPerformer={this.state.isPerformer}
-              userInfo={this.props.userInfo} />
-            <Stage
-              socket={socket}
-              performer={this.state.performer}
-              isPerformer={this.state.isPerformer} />     
+          <Perform
+            startPerformance={this.startPerformance}
+            stopPerformance={this.stopPerformance}
+            performer={this.state.performer}
+            isPerformer={this.state.isPerformer}
+            userInfo={this.props.userInfo} />
+          <Stage
+            socket={socket}
+            performer={this.state.performer}
+            isPerformer={this.state.isPerformer} />
         </div>
-         {this.state.performer
+        {this.state.performer
           ? <Applause
             socket={socket}
             updateClaps={this.props.updateClaps}
@@ -74,7 +74,7 @@ class Venue extends Component {
             isPerformer={this.state.isPerformer} />
           : null}
         <Audience
-            socket={socket} />
+          socket={socket} />
         <Chat
           socket={socket}
           userInfo={this.props.userInfo} />

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
 
 class Chat extends Component {
     state = {
@@ -44,7 +43,6 @@ class Chat extends Component {
             this.emitChat();
         }
     }
-
 
     render() {
         return (

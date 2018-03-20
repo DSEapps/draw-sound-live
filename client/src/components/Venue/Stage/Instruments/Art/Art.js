@@ -1,13 +1,12 @@
 
 import React, { Component } from 'react';
 
-
 class Art extends Component {
 
     savedCanvas = null;
 
     setCanvasSize = () => {
-        //See dimensions of canvas to whatever .stage-wrapper is        
+        //Set dimensions of canvas to whatever .stage-wrapper is        
         const canvas = document.getElementById("art");
         const stageWrapper = document.querySelector(".stage-wrapper");
         const stageWrapperWidth = stageWrapper.offsetWidth;
@@ -25,8 +24,6 @@ class Art extends Component {
         window.addEventListener('resize', this.setCanvasSize);
     }
 
-
-
     componentWillUpdate(nextProps, nextState) {
         // init canvas
         const canvas = document.getElementById("art");
@@ -41,7 +38,6 @@ class Art extends Component {
 
         const nowLiveStatus = this.props.live;
         const nextLiveStatus = nextProps.live;
-        // console.log(nextLiveStatus);
 
         // correct for canvas placement
         let nextX = next.x - offsetLeft;
@@ -54,13 +50,11 @@ class Art extends Component {
         let currentWidth = canvasObj.width;
         let currentHeight = canvasObj.height;
 
-
         //////////////////////////////////////////////////////////////////////////////
         //////////////// SET - KANDINSKY 01 /////////////////////////////////////////
         // global
         let colorSet1; // current cursor lcation - full opacity
         let colorSet2; // current cursor lcation - 0.7 opacity
-
 
         // create color variable based on current box
         switch (next.activeNode) {
@@ -171,22 +165,17 @@ class Art extends Component {
             ctx.translate(nowX / 3, nowY / 3)
             ctx.rotate(rD * Math.PI / 180);
             ctx.fillRect(nowX - (rX / 2 - 3), nowY / 2, nowX - (rX / 2 + 3), nowY + 5);
-            // ctx.rotate(rD*Math.PI/180);
-            // ctx.translate(nowX, nowY)
             ctx.globalAlpha = 1;
             ctx.setTransform(1, 0, 0, 1, 0, 0);
             ctx.resetTransform();
         }
         this.savedCanvas = ctx.getImageData(canvas.offsetLeft, canvas.offsetTop, canvas.offsetWidth, canvas.offsetHeight);
-
-
     }
 
     render() {
         return (
             <div className="art-wrapper">
                 <canvas id="art" width="750" height="480" >
-
                 </canvas>
             </div>
         );

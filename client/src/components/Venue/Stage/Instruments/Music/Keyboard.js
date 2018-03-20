@@ -18,7 +18,6 @@ class Keyboard extends Component {
             window.removeEventListener("keydown", this.keyDown);
             window.removeEventListener("keyup", this.keyUp);
         }
-        
         //Register key up keyDown was true and is now false
         if (prevProps.instrumentProps.location.keyDown && !this.props.instrumentProps.location.keyDown) {
             this.registerKeyup();
@@ -57,7 +56,6 @@ class Keyboard extends Component {
     keyUp = () => {
         this.props.handleKeyUp();
     }
-
     //Fired by props update
     registerKeyDown = (key) => {
         let n;
@@ -133,7 +131,6 @@ class Keyboard extends Component {
             display: 'none'
         }
 
-        //add display none
         return <div style={divStyle}></div>
     }
 }
