@@ -38,7 +38,7 @@ During the performance, the audience is encouraged to express their feelings/emo
 
 ## Design
 
-Behind the scenes there are many moving parts.  The venue contains various components that interact with eachother.  The primary composition element is the canvas.  It renders the performer's mouse movements into a drawing that manipulates settings of the sound effects.  The result is a continously evolving visual-musical performance art experience, where the performer is invited to explore the possibilities of the canvas and the "instruments" that are hidden within. 
+Behind the scenes there are many moving parts.  The venue contains various components that interact with each other.  The primary composition element is the canvas.  It renders the performer's mouse movements into a drawing that manipulates settings of the sound effects.  The result is a continously evolving visual-musical performance art experience, where the performer is invited to explore the possibilities of the canvas and the "instruments" that are hidden within. 
 
 
 ![Venue Structure](./images/venue-structure.jpeg)
@@ -111,15 +111,11 @@ References:
 
 ### Authentication
 
-Our application just needed a basic authentication component as we're primarily interested in obtaining a user's name and a unique id for tracking the user's participation on our app.  We decided to accomplish this using Passport.js, Passport-Google-Oauth and React-Google-Login.
-
-#### Passport.js
-* [Passport.js](http://www.passportjs.org/)
-* [Passport-Google-Oauth](https://www.npmjs.com/package/passport-google-oauth)
+Our application just needed a basic authentication component as we're primarily interested in obtaining a user's name and a unique id for tracking the user's participation on our app.  We decided to accomplish this using React-Google-Login.
 
 #### Google-React-Login
-* [Google-React-Login](https://www.npmjs.com/package/react-google-login)
 
+* [Google-React-Login](https://www.npmjs.com/package/react-google-login)
 
 ### Other Technologies
 
