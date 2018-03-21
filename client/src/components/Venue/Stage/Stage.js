@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Instrument from "./Instruments/Instrument";
 import Tone from "tone";
+import JellyfishInSpace from "./Songs/JellyfishInSpace.mp3";
 const audioURLS = [
   "https://ia600206.us.archive.org/11/items/AliceColtrane-TuriyaAndRamakrishna/AliceColtrane-TuriyaAndRamakrishna.mp3",
   "https://ia801200.us.archive.org/4/items/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a/I%20Want%20A%20Hippopotamus%20For%20Christmas%20-%20Vicki%20Dale.mp3",
   "https://ia800405.us.archive.org/24/items/DEBUSSYStringQuartetInGMinor-NEWTRANSFER/01.I.AnimEtTrsDecid.mp3",
-  "https://ia800708.us.archive.org/34/items/Classical_Sampler-9615/Kevin_MacLeod_-_Gymnopedie_No_1.mp3"
+  "https://ia800708.us.archive.org/34/items/Classical_Sampler-9615/Kevin_MacLeod_-_Gymnopedie_No_1.mp3",
+  JellyfishInSpace
 ];
 
 class Stage extends Component {
@@ -52,7 +54,7 @@ class Stage extends Component {
       })
     }
 
-    this.player = new Tone.Player(audioURLS[0], console.log("loaded song"));
+    this.player = new Tone.Player(audioURLS[4], console.log("loaded song"));
     // COMMENT/UNCOMMENT THIS to toggle the music
     this.player.autostart = true;
     this.player.volume.value = 10;
