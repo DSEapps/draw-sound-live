@@ -52,7 +52,7 @@ class Stage extends Component {
       })
     }
 
-    this.player = new Tone.Player(audioURLS[3], console.log("loaded song"));
+    this.player = new Tone.Player(audioURLS[0], console.log("loaded song"));
     // COMMENT/UNCOMMENT THIS to toggle the music
     this.player.autostart = true;
     this.player.volume.value = 10;
