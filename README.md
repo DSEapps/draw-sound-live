@@ -1,5 +1,3 @@
-(Note, this project is forked in order to include custom music.) If you install Draw Sound Live properly using the instructions below and then navigate through this file path `draw-sound-live/client/src/components/Venue/Stage/` you can find the Songs folder. Put your song (your-song.mp3) in the Songs folder, then edit `Stage.js`. Above the `audioURLS` variable on line 5 write `import YourSong from "../Songs/your-song.mp3"` replacing your-song.mp3 with the song of your choosing. Inside of audioURLS, add `YourSong` to the array. Then, staying inside the `Stage.js` file, press `control-f / command-f` and type in `audioURLS` to find where the array is referenced. Enter the index at which `YourSong` exists in the array. After following these steps, you should be able to input your own custom song.
-
 # Draw <--> Sound <--> Live
 
 Draw <--> Sound <--> Live is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by [Soundspace at Durham Science Museum](https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art.
@@ -10,6 +8,10 @@ Draw <--> Sound <--> Live is an application that allows users to either perform,
 The app provides an endless participatory experience in which performers interact with the canvas DOM. They have a canvas on the screen--an instrument--which allows them to manipulate a sound track and generate sound based on input events (eg. mouse location, direction, velocity) which is both seen and heard by viewers. Each movement is drawn and viewable. The underlying rules are not explicit to the users. Simply, they are sketching “music”.
 
 Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
+
+## Adding Custom Music
+
+(Note, this project is forked in order to include custom music.) If you install Draw Sound Live properly using the instructions below and then navigate through this file path `draw-sound-live/client/src/components/Venue/Stage/` you can find the Songs folder. Put your song (your-song.mp3) in the Songs folder, then edit `Stage.js`. Above the `audioURLS` variable on line 5 write `import YourSong from "../Songs/your-song.mp3"` replacing your-song.mp3 with the song of your choosing. Inside of audioURLS, add `YourSong` to the array. Then, staying inside the `Stage.js` file, press `control-f / command-f` and type in `audioURLS` to find where the array is referenced. Enter the index at which `YourSong` exists in the array. After following these steps, you should be able to input your own custom song.
 
 ## Application
 The main landing page of the app has a "Live" button, which re-directs the user to Google Authenticaion screen to validate their credentials. 
