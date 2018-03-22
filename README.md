@@ -1,7 +1,5 @@
 # Draw <--> Sound <--> Live
 
-## About
-
 Draw <--> Sound <--> Live is an application that allows users to either perform, or watch the performance of, a user who draws music and sound. That is, they create a sound performance by doing art and drawing with their mouse. Our digital space is inspired by [Soundspace at Durham Science Museum](https://www.lifeandscience.org/soundspace), which merges movement, sound, and visual art.
 
 ![Soundspace](./images/soundspace.jpeg)
@@ -97,7 +95,9 @@ yarn start
 
 That's it, your app should be running on <https://localhost:3000>. The server will proxy requests from the client on <https://localhost:3001>.  To simulate multiple clients, open additional broswer tabs to view performances or get on the stage.
 
+## Adding Custom Music
 
+(Note, this project is forked in order to include custom music.) If you install Draw Sound Live properly using the instructions below and then navigate through this file path `draw-sound-live/client/src/components/Venue/Stage/` you can find the Songs folder. Put your song (your-song.mp3) in the Songs folder, then edit `Stage.js`. Above the `audioURLS` variable on line 5 write `import YourSong from "./Songs/your-song.mp3"` replacing your-song.mp3 with the song of your choosing. Inside of audioURLS, add `YourSong` to the array. Then, staying inside the `Stage.js` file, press `control-f / command-f` and type in `audioURLS` to find where the array is referenced. Enter the index at which `YourSong` exists in the array. After following these steps, you should be able to input your own custom song.
 
 ## MERN Basic Components
 
