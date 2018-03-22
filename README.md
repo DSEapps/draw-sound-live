@@ -9,10 +9,6 @@ The app provides an endless participatory experience in which performers interac
 
 Viewers can rate and comment on the performance. Performers stats (eg. # of performances, ratings) are displayed.
 
-## Adding Custom Music
-
-(Note, this project is forked in order to include custom music.) If you install Draw Sound Live properly using the instructions below and then navigate through this file path `draw-sound-live/client/src/components/Venue/Stage/` you can find the Songs folder. Put your song (your-song.mp3) in the Songs folder, then edit `Stage.js`. Above the `audioURLS` variable on line 5 write `import YourSong from "./Songs/your-song.mp3"` replacing your-song.mp3 with the song of your choosing. Inside of audioURLS, add `YourSong` to the array. Then, staying inside the `Stage.js` file, press `control-f / command-f` and type in `audioURLS` to find where the array is referenced. Enter the index at which `YourSong` exists in the array. After following these steps, you should be able to input your own custom song.
-
 ## Application
 The main landing page of the app has a "Live" button, which re-directs the user to Google Authenticaion screen to validate their credentials. 
 
@@ -99,7 +95,9 @@ yarn start
 
 That's it, your app should be running on <https://localhost:3000>. The server will proxy requests from the client on <https://localhost:3001>.  To simulate multiple clients, open additional broswer tabs to view performances or get on the stage.
 
+## Adding Custom Music
 
+(Note, this project is forked in order to include custom music.) If you install Draw Sound Live properly using the instructions below and then navigate through this file path `draw-sound-live/client/src/components/Venue/Stage/` you can find the Songs folder. Put your song (your-song.mp3) in the Songs folder, then edit `Stage.js`. Above the `audioURLS` variable on line 5 write `import YourSong from "./Songs/your-song.mp3"` replacing your-song.mp3 with the song of your choosing. Inside of audioURLS, add `YourSong` to the array. Then, staying inside the `Stage.js` file, press `control-f / command-f` and type in `audioURLS` to find where the array is referenced. Enter the index at which `YourSong` exists in the array. After following these steps, you should be able to input your own custom song.
 
 ## MERN Basic Components
 
