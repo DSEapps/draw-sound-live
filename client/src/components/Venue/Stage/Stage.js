@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Instrument from "./Instruments/Instrument";
 import Tone from "tone";
 const audioURLS = [
@@ -9,20 +9,18 @@ const audioURLS = [
 ];
 
 class Stage extends Component {
-
-
   componentDidUpdate(prevProps) {
     if (this.props.performer) {
       this.setUpInstrument();
     } else if (prevProps.performer && !this.props.performer) {
-      this.stopInstrument()
+      this.stopInstrument();
     }
   }
 
   stopInstrument = () => {
     this.fx.pingpong.dispose();
-    this.player.dispose();    
-  }
+    this.player.dispose();
+  };
 
   setUpInstrument = () => {
     this.fx = {
@@ -30,29 +28,32 @@ class Stage extends Component {
       compressor: new Tone.Compressor(-30, 3),
       distortion: new Tone.BitCrusher(0),
       filter: new Tone.Filter({
-        type: 'lowpass',
-        frequency: 1000,
+        type: "lowpass",
+        frequency: 1000
       }),
       tremolo: new Tone.Tremolo(0, 0).start(),
-      pingpong: new Tone.PingPongDelay(0, .1),
+      pingpong: new Tone.PingPongDelay(0, 0.1),
       jcreverb: new Tone.JCReverb(0),
       pitchShift: new Tone.PitchShift(0),
       phaser: new Tone.Phaser(0),
       vibratoTriangle: new Tone.Vibrato({
         maxDelay: 0.5,
         frequency: 5,
-        depth: .1,
-        type: 'triangle'
+        depth: 0.1,
+        type: "triangle"
       }),
       vibratoSaw: new Tone.Vibrato({
-        maxDelay: .4,
+        maxDelay: 0.4,
         frequency: 0,
-        depth: .2,
-        type: 'sawtooth'
+        depth: 0.2,
+        type: "sawtooth"
       })
-    }
+    };
 
-    this.player = new Tone.Player(audioURLS[3], console.log("loaded song"));
+    this.player = new Tone.Player(
+      "music/satie.mp3",
+      console.log("loaded song")
+    );
     // COMMENT/UNCOMMENT THIS to toggle the music
     this.player.autostart = true;
     this.player.volume.value = 10;
@@ -81,7 +82,7 @@ class Stage extends Component {
 
     //Sound source
     this.player.connect(this.fx.distortion);
-  }
+  };
 
   soundUpdaters = {
     phaser: (x, y, w, h) => {
@@ -95,7 +96,7 @@ class Stage extends Component {
       const wetVal = y * (1 / h);
       this.fx.distortion.distortion = val;
       this.fx.distortion.wet.value = wetVal;
-      if (val < .01) {
+      if (val < 0.01) {
         this.fx.distortion.wet.value = 0;
       }
     },
@@ -104,10 +105,10 @@ class Stage extends Component {
       this.fx.filter.frequency.value = frequency;
     },
     jcReverb: (x, y, w, h) => {
-      const roomsizeVal = x * (.9 / w);
+      const roomsizeVal = x * (0.9 / w);
       const wetVal = y * (1 / h);
       const jcreverb = this.fx.jcreverb;
-      if (roomsizeVal < .01) {
+      if (roomsizeVal < 0.01) {
         jcreverb.wet.value = 0;
       } else {
         jcreverb.wet.value = wetVal;
@@ -122,7 +123,7 @@ class Stage extends Component {
         delayTime: delayVal,
         maxDelayTime: 1
       };
-      if (delayVal < .01) {
+      if (delayVal < 0.01) {
         pingpong.wet.value = 0;
       } else {
         pingpong.wet.value = wetVal;
@@ -141,19 +142,19 @@ class Stage extends Component {
       this.fx.tremolo.depth.value = 1;
       this.fx.tremolo.wet.value = wetVal;
     },
-    vibratoSaw: (x, y, w, h) => {           
+    vibratoSaw: (x, y, w, h) => {
       const frequency = x * (8 / w);
       const wetVal = y * (1 / h);
       this.fx.vibratoSaw.frequency.value = frequency;
       this.fx.vibratoSaw.wet.value = wetVal;
     },
-    vibratoTriangle: (x, y, w, h) => {      
+    vibratoTriangle: (x, y, w, h) => {
       const frequency = x * (10 / w);
-      const wetVal = y * (.8 / h);
+      const wetVal = y * (0.8 / h);
       this.fx.vibratoTriangle.frequency.value = frequency;
       this.fx.vibratoTriangle.wet.value = wetVal;
-    },
-  }
+    }
+  };
 
   render() {
     return (
@@ -162,7 +163,8 @@ class Stage extends Component {
           socket={this.props.socket}
           performer={this.props.performer}
           isPerformer={this.props.isPerformer}
-          soundUpdaters={this.soundUpdaters} />
+          soundUpdaters={this.soundUpdaters}
+        />
       </div>
     );
   }
