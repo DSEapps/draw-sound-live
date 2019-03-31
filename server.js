@@ -38,8 +38,10 @@ let performerSocketID = null;
 
 io.on('connection', (socket) => {
 
+  console.log("user-connected");
   socket.on('chat msg', (msg) => {
     io.emit('chat msg', msg);
+    console.log("chat-message: " + msg);
   });
 
   //start of performance
@@ -47,6 +49,8 @@ io.on('connection', (socket) => {
     performerSocketID = socket.id;
     performerInfo = performer;
     io.emit('start', performer);
+    console.log("performer:"+JSON.stringify(performer));
+    console.log("performance-started");
   });
 
   //end of performance
@@ -54,6 +58,7 @@ io.on('connection', (socket) => {
     performerInfo = null;
     performerSocketID = null;
     io.emit('stop');
+    console.log("performance-ended");
   });
 
   //initial check to see user has entered mid-performance
@@ -64,11 +69,13 @@ io.on('connection', (socket) => {
   //up vote
   socket.on('up', () => {
     io.emit('up');
+    console.log("performer-up-vote");
   });
 
   //down vote
   socket.on('down', () => {
     io.emit('down');
+    console.log("performer-down-vote");
   });
 
   //performer movement and action
@@ -84,6 +91,7 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     io.sockets.emit('clientsCount', (io.engine.clientsCount));
+    console.log("user-disconnected");
     if (performerSocketID === socket.id) {
       performerInfo = null;
       performerSocketID = null;
