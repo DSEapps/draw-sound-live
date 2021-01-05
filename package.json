@@ -18,7 +18,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv": "^5.0.1",
     "express": "^4.15.4",
     "mongoose": "^5.0.8",
