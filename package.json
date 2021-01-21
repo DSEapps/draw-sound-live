@@ -25,6 +25,6 @@
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
     "react-google-login": "^3.0.10",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.4.0"
   }
 }
