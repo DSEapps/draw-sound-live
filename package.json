@@ -20,7 +20,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^5.0.1",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "mongoose": "^5.0.8",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
