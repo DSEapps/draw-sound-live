@@ -24,7 +24,6 @@
     "mongoose": "^9.9.1",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
-    "react-google-login": "^3.0.10",
     "socket.io": "^2.0.4"
   }
 }
