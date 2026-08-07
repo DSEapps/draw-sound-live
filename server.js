@@ -20,7 +20,8 @@ app.use(bodyParser.json())
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/DSLUsers"
+  process.env.MONGODB_URI || "mongodb://localhost/DSLUsers",
+  { dbName: "DSLUsers" }
 );
 
 app.use(express.static("client/build"));
