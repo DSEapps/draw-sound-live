@@ -59,12 +59,11 @@ class Login extends Component {
     return (
 
       <div className="login-root wrapper center centerFlex">
-        <div className="content ">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
-          <p>To continue to the performace space you will need to login with your Google account.</p>
+        <div className="content">
+          <p>You can only access the performance space with a Google account.</p>
           <div className="actions">
-            <button onClick={this.cancelClick}>Cancel</button>
             <div id="google-login-button"></div>
+            <button onClick={this.cancelClick}>Nevermind</button>
           </div>
         </div>
       </div>

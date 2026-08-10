@@ -1,0 +1,6 @@
+[    2450ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
+[    2477ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
+[    2640ms] [WARNING] Error while trying to use the following icon from the Manifest: https://draw-sound-live.onrender.com/favicon.ico (Resource size is not correct - typo in the Manifest?) @ https://draw-sound-live.onrender.com/:0
+[    2808ms] [LOG] Content is cached for offline use. @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
+[  874710ms] [ERROR] WebSocket connection to 'wss://draw-sound-live.onrender.com/socket.io/?EIO=3&transport=websocket&sid=hl6qGKoNSb1YlscdAAAB' failed:  @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
+[ 1081309ms] [WARNING] [GSI_LOGGER]: google.accounts.id.initialize() is called multiple times. This could cause unexpected behavior and only the last initialized instance will be used. @ https://accounts.google.com/gsi/client:86

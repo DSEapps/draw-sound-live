@@ -91,28 +91,47 @@ footer {
 }
 
 /* Login */
-.login-root { 
+.login-root {
     background-color:rgba(237, 233, 214, 1);
+    background-image: url('./components/Landing/images/splashimage.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
 }
 
-.login-root .content { 
+/* Opaque so the background art reads as being behind the card, not through it */
+.login-root .content {
     width:50%;
+    max-width:400px;
     text-align:center;
-    padding:15px;
+    padding:40px 32px;
+    background-color: rgba(237, 233, 214, 1);
+    border-radius:6px;
     box-shadow:0px 0px 70px 10px rgba(128, 128, 128, 0.3);
 }
 
-.login-root img{ 
-    width:10%; 
-    height:10%; 
+.login-root p {
+    line-height:1.5;
 }
 
-.login-root p{ 
-    padding-top:15px;
+.login-root .actions {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:25px;
 }
 
-.login-root .actions button:last-child{ 
-    margin-left:25px;
+.login-root .actions button {
+    margin-top:15px;
+    background:none;
+    border:none;
+    color:rgba(128, 128, 128, 1);
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.login-root .actions button:hover {
+    color:#333;
 }
 
 

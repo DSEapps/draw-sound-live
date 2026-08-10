@@ -1,0 +1,3 @@
+[   14923ms] [INFO] This document requires 'TrustedHTML' assignment. The policy is report-only, so the violation has been logged but no further action has been taken. @ https://www.google.com/gmail/about/signup_complete.html:64
+[   14924ms] [INFO] This document requires 'TrustedScriptURL' assignment. The policy is report-only, so the violation has been logged but no further action has been taken. @ https://www.google.com/js/google.js:6
+[   15426ms] [LOG] redirecting... @ https://www.google.com/gmail/about/signup_complete.html:101
