@@ -14,8 +14,8 @@ class Landing extends Component {
         <div className="content center centerFlex">
           <img src={Vector} />
           <button className="button-primary" onClick={this.enterClick}>Live</button>
-          <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
         </div>
+        <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
       </div>
     );
   }

@@ -1,0 +1,4 @@
+- generic [ref=f10e3]:
+  - button "Live" [ref=f10e6] [cursor=pointer]
+  - contentinfo [ref=f10e7]:
+    - emphasis [ref=f10e8]: All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.

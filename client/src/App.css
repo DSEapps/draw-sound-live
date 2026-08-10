@@ -50,19 +50,40 @@ footer {
 /* Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Landing */
-.landing-root { 
+.landing-root {
     background-color:rgba(237, 233, 214, 1);
+    background-image: url('./components/Landing/images/splashimage.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.landing-root .content { 
+.landing-root .content {
     width:80%;
     vertical-align: middle;
     padding-top:15px;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
 }
 
-.landing-root img { 
-    width:40%;
-    height:40%; 
+/* Pushes the footer flush with the bottom (in line with the background art)
+   whenever there's spare room. As the window gets shorter, .content simply
+   stops growing and the footer falls in right after the button instead of
+   overlapping it or the artwork. */
+.landing-root footer {
+    flex-shrink: 0;
+    padding-bottom: 20px;
+}
+
+.landing-root img {
+    width: auto;
+    max-width: 40%;
+    height: auto;
+    max-height: 50vh;
 }
 
 .landing-root button { 

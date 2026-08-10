@@ -1,0 +1,53 @@
+[     159ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[     166ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[     192ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ http://localhost:3000/static/js/bundle.js:60685
+[     218ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[     218ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[     271ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[     907ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     907ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[     908ms] [WARNING] ./src/components/Login/Login.js
+  Line 63:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[     908ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     908ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     908ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[  240275ms] [ERROR] WebSocket connection to 'ws://localhost:3000/socket.io/?EIO=3&transport=websocket&sid=IeYvY-ku1H3LXl7lAAAM' failed: WebSocket opening handshake timed out @ http://localhost:3000/static/js/bundle.js:8091
+[  240277ms] [ERROR] WebSocket connection to 'ws://localhost:3000/sockjs-node/694/3tp4nicy/websocket' failed: WebSocket opening handshake timed out @ http://localhost:3000/static/js/bundle.js:56426
+[  415251ms] [INFO] The development server has disconnected.
+Refresh the page if necessary. @ http://localhost:3000/static/js/bundle.js:14998
+[  415279ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBUpU&sid=IeYvY-ku1H3LXl7lAAAM:0
+[  415281ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBYRs&sid=IeYvY-ku1H3LXl7lAAAM:0
+[  416670ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBYnV:0
+[  418268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBZAX:0
+[  420579ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBZkb:0
+[  425583ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBayo:0
+[  430587ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBcAz:0
+[  435593ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBdPB:0
+[  440621ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBedm:0
+[  445625ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBfrz:0
+[  450634ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBh49:0
+[  455640ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBiIQ:0
+[  460646ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBjWe:0
+[  465652ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBkks:0
+[  470656ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBlz4:0
+[  475662ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBnBG:0
+[  480667ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBoPU:0
+[  485674ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBpdi:0
+[  490681ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_jBqrx:0

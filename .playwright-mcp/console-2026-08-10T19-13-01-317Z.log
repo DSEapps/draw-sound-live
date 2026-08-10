@@ -1,0 +1,73 @@
+[     125ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[     131ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[     151ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ http://localhost:3000/static/js/bundle.js:60685
+[     172ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[     172ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[     220ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[     853ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     853ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[     853ms] [WARNING] ./src/components/Login/Login.js
+  Line 63:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[     853ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     853ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[     853ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[  240220ms] [ERROR] WebSocket connection to 'ws://localhost:3000/socket.io/?EIO=3&transport=websocket&sid=QdIml4lXLe2uMjhIAAAE' failed: WebSocket opening handshake timed out @ http://localhost:3000/static/js/bundle.js:8091
+[  240221ms] [ERROR] WebSocket connection to 'ws://localhost:3000/sockjs-node/661/b5g1qco4/websocket' failed: WebSocket opening handshake timed out @ http://localhost:3000/static/js/bundle.js:56426
+[  489409ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[  489416ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[  489467ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[  489467ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[  489531ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[  490147ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  490147ms] [WARNING] ./src/components/Login/Login.js
+  Line 63:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[  490147ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  490147ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  490147ms] [WARNING] ./src/components/Venue/Stage/Instruments/Instrument.js
+  Line 40:  Expected an assignment or function call and instead saw an expression  no-unused-expressions @ http://localhost:3000/static/js/bundle.js:15060
+[  490147ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[  495720ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  495720ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[  495720ms] [WARNING] ./src/components/Login/Login.js
+  Line 63:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[  495720ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  495720ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[  495720ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
