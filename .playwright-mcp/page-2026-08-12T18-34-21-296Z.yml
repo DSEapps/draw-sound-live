@@ -1,0 +1,8 @@
+- generic [active] [ref=f22e1]:
+  - paragraph [ref=f22e2]: "performer-name (target style):"
+  - generic [ref=f22e3]:
+    - generic [ref=f22e4]: Scott Bower
+    - generic [ref=f22e5]: Performer
+  - separator [ref=f22e6]
+  - paragraph [ref=f22e7]: "chat-body / chat-name (should match the bold + normal-case treatment above):"
+  - generic [ref=f22e8]: "Scott Bower: hey everyone, testing chat!"

@@ -64214,3 +64214,340 @@ Refresh the page if necessary. @ http://localhost:3000/static/js/bundle.js:14998
 [166183764ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAoN_:0
 [166188768ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tApcB:0
 [166193771ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAqqN:0
+[166198776ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAs2Y:0
+[166203782ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAtGl:0
+[166208787ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAuUz:0
+[166213793ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAvjB:0
+[166218799ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAwxO:0
+[166223804ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAy9d:0
+[166228808ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tAzNp:0
+[166233814ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tA-b_:0
+[166238820ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tA_qD:0
+[166243824ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB12R:0
+[166248829ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB2Gd:0
+[166253834ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB3Uq:0
+[166258840ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB4j2:0
+[166263845ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB5xF:0
+[166268849ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB79S:0
+[166273855ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB8Ne:0
+[166278860ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB9bs:0
+[166283864ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBAq4:0
+[166288867ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBC2F:0
+[166293871ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBDGQ:0
+[166298876ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBEUd:0
+[166303880ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBFio:0
+[166308885ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBGx0:0
+[166313888ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBI9D:0
+[166318892ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBJNO:0
+[166323895ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBKbY:0
+[166328901ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBLpk:0
+[166333905ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBN1y:0
+[166338908ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBOG8:0
+[166343913ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBPUJ:0
+[166348920ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBQiX:0
+[166353926ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBRwm:0
+[166358932ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBT8-:0
+[166363935ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBUNB:0
+[166368940ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBVbM:0
+[166373944ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBWpZ:0
+[166378949ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBY1m:0
+[166383954ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBZFy:0
+[166388959ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBaU9:0
+[166393964ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBbiL:0
+[166398969ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBcwZ:0
+[166403974ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBe8m:0
+[166408981ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBfM-:0
+[166413984ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBgbB:0
+[166418988ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBhpM:0
+[166423996ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBj1a:0
+[166429000ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBkFo:0
+[166431264ms] TypeError: Cannot read properties of null (reading 'offsetWidth')
+    at Art._this.setCanvasSize (http://localhost:3000/static/js/bundle.js:86615:50)
+[166431164ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:0
+[166434108ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBlU8:0
+[166439117ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBmjs:0
+[166444125ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBny4:0
+[166449130ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBpAK:0
+[166454136ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBqOY:0
+[166459142ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBrcm:0
+[166464149ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBsq-:0
+[166469155ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBu3D:0
+[166474162ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBvHS:0
+[166479167ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBwVe:0
+[166484173ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tBxjs:0
+[166489177ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tByy4:0
+[166494182ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB-AG:0
+[166499187ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tB_OU:0
+[166504192ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC0cg:0
+[166509199ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC1qu:0
+[166514205ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC336:0
+[166519207ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC4HJ:0
+[166524212ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC5VU:0
+[166529217ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC6ji:0
+[166534223ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC7xu:0
+[166539228ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC9A5:0
+[166544233ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCAOJ:0
+[166549240ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCBcX:0
+[166554243ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCCql:0
+[166559249ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCE2w:0
+[166564256ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCFH8:0
+[166569259ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCGVN:0
+[166574268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCHjZ:0
+[166579277ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCIxq:0
+[166584281ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCKA4:0
+[166589283ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCLOF:0
+[166594289ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCMcR:0
+[166599296ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCNqf:0
+[166604299ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCP2t:0
+[166609302ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCQH2:0
+[166614306ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCRVD:0
+[166619311ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCSjO:0
+[166624318ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCTxd:0
+[166629322ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCV9q:0
+[166634328ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCWO2:0
+[166639333ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCXcG:0
+[166644337ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCYqS:0
+[166649343ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCa2e:0
+[166654346ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCbGr:0
+[166659350ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCcV1:0
+[166664356ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCdjD:0
+[166669360ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCexQ:0
+[166674363ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCg9d:0
+[166679369ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tChNp:0
+[166684375ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCic1:0
+[166689381ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCjqF:0
+[166694385ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCl2T:0
+[166699391ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCmGe:0
+[166704397ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCnUs:0
+[166709402ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCoj4:0
+[166714408ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCpxI:0
+[166719414ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCr9V:0
+[166724417ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCsNj:0
+[166729421ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCtbu:0
+[166734425ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCuq4:0
+[166739428ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCw2F:0
+[166744432ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCxGS:0
+[166749438ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCyUe:0
+[166754444ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tCzir:0
+[166759450ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tC-x4:0
+[166764453ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD09H:0
+[166769459ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD1NT:0
+[166774464ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD2bg:0
+[166779467ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD3pu:0
+[166784470ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD522:0
+[166789473ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD6GE:0
+[166794480ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD7UO:0
+[166799486ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD8id:0
+[166804492ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD9wr:0
+[166809502ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDB94:0
+[166814509ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDCNM:0
+[166819512ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDDba:0
+[166824518ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDEpl:0
+[166829523ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDG1z:0
+[166834530ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDHGB:0
+[166839538ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDIUP:0
+[166844543ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDJif:0
+[166849551ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDKwt:0
+[166854557ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDM96:0
+[166859562ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDNNK:0
+[166864567ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDObW:0
+[166869572ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDPpk:0
+[166871213ms] TypeError: Cannot read properties of null (reading 'offsetWidth')
+    at Art._this.setCanvasSize (http://localhost:3000/static/js/bundle.js:86615:50)
+[166870837ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:0
+[166874581ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDR1y:0
+[166879585ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDSGC:0
+[166884590ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDTUO:0
+[166889594ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDUib:0
+[166894597ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDVwo:0
+[166899600ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDX8y:0
+[166904604ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDYN7:0
+[166909609ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDZbJ:0
+[166914614ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDapV:0
+[166919621ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDc1k:0
+[166924626ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDdFx:0
+[166929631ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDeUA:0
+[166934637ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDfiM:0
+[166939645ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDgwb:0
+[166944650ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDi8q:0
+[166949660ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDjN2:0
+[166954665ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDkbJ:0
+[166959673ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDlpX:0
+[166964678ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDn1m:0
+[166969682ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDoF-:0
+[166974688ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDpU9:0
+[166979694ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDqiN:0
+[166984697ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDrwb:0
+[166989703ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDt8n:0
+[166994710ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDuM_:0
+[166999717ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDvbE:0
+[167004723ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDwpT:0
+[167009726ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDy1g:0
+[167014729ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tDzFr:0
+[167019736ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD-U1:0
+[167024738ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tD_iE:0
+[167029741ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE0wP:0
+[167034747ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE28a:0
+[167039753ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE3Mo:0
+[167044760ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE4b0:0
+[167049764ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE5pE:0
+[167054774ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE71R:0
+[167059781ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE8Fk:0
+[167064787ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE9Ty:0
+[167069791ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEAi9:0
+[167074797ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEBwN:0
+[167079803ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tED8a:0
+[167084809ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEEMo:0
+[167089814ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEFb0:0
+[167094818ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEGpD:0
+[167099822ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEI1P:0
+[167104830ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEJFb:0
+[167109836ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEKTs:0
+[167114840ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tELi3:0
+[167119846ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEMwG:0
+[167124850ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEO8T:0
+[167129856ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEPMf:0
+[167134862ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEQat:0
+[167139867ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tERp5:0
+[167144872ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tET1I:0
+[167149875ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEUFV:0
+[167154883ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEVTh:0
+[167159886ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEWhw:0
+[167164892ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEXw5:0
+[167169897ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEZ8I:0
+[167174900ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEaMW:0
+[167179903ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEbah:0
+[167184909ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEcos:0
+[167189915ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEe15:0
+[167194921ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEfFI:0
+[167199927ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEgTX:0
+[167204931ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEhhj:0
+[167209936ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEivw:0
+[167214943ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEk87:0
+[167219949ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tElMM:0
+[167224959ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEmaa:0
+[167229964ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEnos:0
+[167234968ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEp13:0
+[167239975ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEqFF:0
+[167244978ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tErTT:0
+[167249983ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEshf:0
+[167254990ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEtvt:0
+[167259994ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEv85:0
+[167264997ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEwMH:0
+[167270002ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tExaS:0
+[167275007ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tEyof:0
+[167280012ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE-0t:0
+[167285017ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tE_F4:0
+[167290022ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF0TG:0
+[167295027ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF1hT:0
+[167300033ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF2vg:0
+[167305037ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF47u:0
+[167310041ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF5M3:0
+[167315044ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF6aG:0
+[167320047ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF7oR:0
+[167325051ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tF90c:0
+[167330057ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFAEp:0
+[167335062ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFBT1:0
+[167340067ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFChE:0
+[167345070ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFDvP:0
+[167350073ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFF7b:0
+[167355080ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFGLm:0
+[167360085ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFHZ_:0
+[167365090ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFIoD:0
+[167370095ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFK0P:0
+[167375098ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFLEc:0
+[167380102ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFMSn:0
+[167385109ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFNgz:0
+[167390115ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFOvC:0
+[167395117ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFQ7Q:0
+[167400121ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFRLa:0
+[167405126ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFSZl:0
+[167410131ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFTny:0
+[167415133ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFV0A:0
+[167420137ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFWEK:0
+[167425140ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFXSW:0
+[167430144ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFYgh:0
+[167435149ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFZuu:0
+[167440154ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFb75:0
+[167445157ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFcLH:0
+[167450160ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFdZS:0
+[167455163ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFend:0
+[167460166ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFf_o:0
+[167465169ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFhDz:0
+[167470172ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFiS8:0
+[167475176ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFjgJ:0
+[167480180ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFkuV:0
+[167485185ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFm6h:0
+[167490190ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFnKu:0
+[167495193ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFoZ5:0
+[167500198ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFpnG:0
+[167505202ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFq_U:0
+[167510205ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFsDf:0
+[167515210ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFtRq:0
+[167520218ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFug1:0
+[167525225ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFvuH:0
+[167530227ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tFx6W:0
+[167530639ms] TypeError: Cannot read properties of null (reading 'offsetWidth')
+    at Art._this.setCanvasSize (http://localhost:3000/static/js/bundle.js:86615:50)
+[167532028ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[167532034ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[167532056ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ http://localhost:3000/static/js/bundle.js:60685
+[167532077ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167532078ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167532120ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[167532761ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167532761ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167532761ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[167532761ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167532761ms] [WARNING] ./src/components/Venue/Stage/Instruments/Instrument.js
+  Line 40:  Expected an assignment or function call and instead saw an expression  no-unused-expressions @ http://localhost:3000/static/js/bundle.js:15060
+[167532761ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[167642673ms] [ERROR] WebSocket connection to 'ws://localhost:3000/socket.io/?EIO=3&transport=websocket&sid=3gpvhEYmQUcg4Ld8AAAB' failed:  @ http://localhost:3000/static/js/bundle.js:8091
+[167642673ms] [ERROR] WebSocket connection to 'ws://localhost:3000/sockjs-node/316/jarm3ouf/websocket' failed:  @ http://localhost:3000/static/js/bundle.js:56426
+[167642673ms] [INFO] The development server has disconnected.
+Refresh the page if necessary. @ http://localhost:3000/static/js/bundle.js:14998
+[167643772ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGMqc:0
+[167645485ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGNFN:0
+[167647782ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGNpI:0
+[167652785ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGP1U:0
+[167657789ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGQFf:0
+[167662794ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGRTq:0
+[167667800ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGSi2:0
+[167672806ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGTwG:0
+[167677812ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGV8U:0
+[167682814ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGWMg:0
+[167687824ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGXas:0
+[167692832ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGYp8:0
+[167697838ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGa1N:0
+[167702847ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGbFc:0
+[167707852ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGcTv:0
+[167712862ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGdi3:0
+[167717869ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGewP:0
+[167722874ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGg8a:0
+[167727879ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGhMo:0
+[167732887ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGia-:0
+[167737893ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGjpF:0
+[167742897ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGl1T:0
+[167747902ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGmFf:0
+[167752906ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGnTq:0
+[167757912ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGoi3:0
+[167762917ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGpwF:0
+[167767924ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGr8T:0
+[167772930ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGsMh:0
