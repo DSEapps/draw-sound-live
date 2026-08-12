@@ -181,7 +181,8 @@ footer {
 
 .performer-name div:first-child  {
     /* line-height:2rem; */
-    font-family: 'Raleway Bold', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     font-size:1.3rem;
     letter-spacing: .1rem;
 }
