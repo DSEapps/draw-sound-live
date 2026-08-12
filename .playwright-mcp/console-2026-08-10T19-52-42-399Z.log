@@ -1,3 +1,0 @@
-[     134ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
-[     155ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ https://draw-sound-live.onrender.com/static/js/main.b1d3d9d0.js:0
-[     474ms] [WARNING] Error while trying to use the following icon from the Manifest: https://draw-sound-live.onrender.com/favicon.ico (Resource size is not correct - typo in the Manifest?) @ https://draw-sound-live.onrender.com/login:0

@@ -1,8 +1,0 @@
-- generic [ref=f11e4]:
-  - paragraph [ref=f11e6]: To continue to the performace space you will need to login with your Google account.
-  - generic [ref=f11e7]:
-    - button "Cancel" [ref=f11e8] [cursor=pointer]
-    - generic [ref=f11e10]:
-      - button "Continue with Google. Opens in new tab" [ref=f11e12] [cursor=pointer]:
-        - generic [ref=f11e14]: Continue with Google
-      - iframe

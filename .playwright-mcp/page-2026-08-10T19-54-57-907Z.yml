@@ -1,8 +1,0 @@
-- generic [ref=f14e4]:
-  - paragraph [ref=f14e5]: You can only access the performance space with a Google account.
-  - generic [ref=f14e6]:
-    - generic [ref=f14e8]:
-      - button "Continue with Google. Opens in new tab" [ref=f14e10] [cursor=pointer]:
-        - generic [ref=f14e12]: Continue with Google
-      - iframe
-    - button "Nevermind" [ref=f14e22] [cursor=pointer]

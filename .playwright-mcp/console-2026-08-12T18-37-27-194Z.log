@@ -1,5 +1,0 @@
-[      27ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ https://draw-sound-live.onrender.com/static/js/main.2c00bf33.js:0
-[      51ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ https://draw-sound-live.onrender.com/static/js/main.2c00bf33.js:0
-[     166ms] [WARNING] Error while trying to use the following icon from the Manifest: https://draw-sound-live.onrender.com/favicon.ico (Resource size is not correct - typo in the Manifest?) @ https://draw-sound-live.onrender.com/:0
-[    8640ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.postMessage call. @ https://accounts.google.com/gsi/client:384
-[    8640ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.postMessage call. @ https://accounts.google.com/gsi/client:384

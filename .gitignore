@@ -6,3 +6,4 @@ design-refs
 .env
 npm-debug.log
 .vs
+.playwright-mcp
