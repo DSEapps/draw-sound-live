@@ -440,12 +440,6 @@ canvas {
     animation: openpanel 0.5s 1;
 }
 
-/* Matches .performer-name div:first-child's treatment */
-.chat-name {
-    font-weight: 700;
-    text-transform: none;
-}
-
 
 @keyframes openpanel {
     0%   {height:0px; background: rgba(255, 255, 255, 1);}

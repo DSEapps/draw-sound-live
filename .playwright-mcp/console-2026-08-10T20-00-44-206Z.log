@@ -64551,3 +64551,94 @@ Refresh the page if necessary. @ http://localhost:3000/static/js/bundle.js:14998
 [167762917ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGpwF:0
 [167767924ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGr8T:0
 [167772930ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGsMh:0
+[167777939ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGtax:0
+[167782944ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGupA:0
+[167787949ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGw1O:0
+[167792955ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGxFb:0
+[167797961ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGyTo:0
+[167802963ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tGzh_:0
+[167807968ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tG-wA:0
+[167812975ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH08O:0
+[167817982ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH1Me:0
+[167822988ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH2as:0
+[167827993ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH3p3:0
+[167832997ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH51H:0
+[167838003ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH6FS:0
+[167843008ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH7Th:0
+[167848012ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH8ht:0
+[167853019ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tH9w4:0
+[167858026ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHB8J:0
+[167863031ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHCMY:0
+[167868036ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHDak:0
+[167874537ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[167874542ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[167874564ms] [WARNING] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio @ http://localhost:3000/static/js/bundle.js:60685
+[167874580ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167874580ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167874629ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[167875275ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167875275ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167875275ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[167875275ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167875276ms] [WARNING] ./src/components/Venue/Stage/Instruments/Instrument.js
+  Line 40:  Expected an assignment or function call and instead saw an expression  no-unused-expressions @ http://localhost:3000/static/js/bundle.js:15060
+[167875276ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[167913742ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:40203
+[167913748ms] [LOG] %c * Tone.js r12-dev *  background: #000; color: #fff @ http://localhost:3000/static/js/bundle.js:60048
+[167913790ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s BrowserRouter, Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167913790ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Route, Router, Switch @ http://localhost:3000/static/js/bundle.js:15297
+[167913832ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/favicon.ico (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/:0
+[167914464ms] [WARNING] ./src/App.js
+  Line 7:  'io' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167914464ms] [WARNING] ./src/components/Landing/Landing.js
+  Line 2:   'API' is defined but never used                                                                            no-unused-vars
+  Line 15:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text @ http://localhost:3000/static/js/bundle.js:15060
+[167914464ms] [WARNING] ./src/components/Venue/Venue.js
+  Line 3:  'API' is defined but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167914464ms] [WARNING] ./src/components/Venue/Stage/Stage.js
+  Line 4:  'audioURLS' is assigned a value but never used  no-unused-vars @ http://localhost:3000/static/js/bundle.js:15060
+[167914464ms] [WARNING] ./src/components/Venue/Stage/Instruments/Instrument.js
+  Line 40:  Expected an assignment or function call and instead saw an expression  no-unused-expressions @ http://localhost:3000/static/js/bundle.js:15060
+[167914464ms] [WARNING] There were more warnings in other files.
+You can find a complete log in the terminal. @ http://localhost:3000/static/js/bundle.js:15054
+[167942407ms] [INFO] The development server has disconnected.
+Refresh the page if necessary. @ http://localhost:3000/static/js/bundle.js:14998
+[167942423ms] [ERROR] WebSocket connection to 'ws://localhost:3000/socket.io/?EIO=3&transport=websocket&sid=9T1krX4gF0DoR8wZAAAE' failed: Connection closed before receiving a handshake response @ http://localhost:3000/static/js/bundle.js:8091
+[167942424ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHUsc&sid=9T1krX4gF0DoR8wZAAAE:0
+[167942425ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHVl5&sid=9T1krX4gF0DoR8wZAAAE:0
+[167942434ms] [ERROR] WebSocket connection to 'ws://localhost:3000/sockjs-node/931/kt5noci0/websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:56426
+[167943891ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHW5_:0
+[167945252ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHWRG:0
+[167950257ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHXfS:0
+[167955265ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHYtf:0
+[167960268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHa5t:0
+[167965272ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHbK2:0
+[167970278ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/socket.io/?EIO=3&transport=polling&t=P_tHcYG:0

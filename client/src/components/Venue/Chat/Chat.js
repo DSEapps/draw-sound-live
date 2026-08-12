@@ -29,9 +29,9 @@ class Chat extends Component {
     }
 
     emitChat = () => {
-        const name = this.props.userInfo.name;
+        const name = this.props.userInfo.name.toUpperCase();
         this.setState({ chat: "" });
-        this.props.socket.emit('chat msg', { name: name, text: this.state.chat });
+        this.props.socket.emit('chat msg', name + ": " + this.state.chat);
     }
 
     handleClick = () => {
@@ -49,7 +49,7 @@ class Chat extends Component {
             <div className="chat fixed-bottom">
                 {this.state.chats.map(chat =>
                     <div className="chat-data" style={this.state.expanded ? { display: 'block' } : { display: 'none' }} >
-                        <div className="chat-body"><span className="chat-name">{chat.name}</span>: {chat.text}</div>
+                        <div className="chat-body">{chat}</div>
                     </div>
                 )}
                 <div className="chat-panel">
