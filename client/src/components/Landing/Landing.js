@@ -13,7 +13,7 @@ class Landing extends Component {
       <div className="landing-root wrapper">
         <div className="content center centerFlex">
           <img src={Vector} />
-          <button className="button-primary" onClick={this.enterClick}>Live</button>
+          <button className="button-primary" onClick={this.enterClick}>Enter Venue</button>
         </div>
         <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
       </div>
