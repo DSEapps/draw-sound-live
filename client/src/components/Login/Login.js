@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { withRouter } from "react-router-dom";
+import EnterBadge from "./images/graphic_enter.svg";
 
 // Decodes the payload of a Google ID token (JWT) using only built-in
 // browser functions - no library needed, and no chance of a modern
@@ -60,6 +61,7 @@ class Login extends Component {
 
       <div className="login-root wrapper center centerFlex">
         <div className="content">
+          <img className="login-badge" src={EnterBadge} alt="" />
           <p>You can only access the performance space with a Google account.</p>
           <div className="actions">
             <div id="google-login-button"></div>

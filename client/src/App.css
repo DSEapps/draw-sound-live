@@ -99,15 +99,25 @@ footer {
     background-size: 100% auto;
 }
 
-/* Opaque so the background art reads as being behind the card, not through it */
 .login-root .content {
+    position: relative;
     width:50%;
     max-width:400px;
     text-align:center;
-    padding:40px 32px;
-    background-color: rgba(237, 233, 214, 1);
-    border-radius:6px;
+    padding:56px 32px 40px;
+    background-color: #f9f8f3;
+    border: 1px solid #cccccc;
+    border-radius: 0;
     box-shadow:0px 0px 70px 10px rgba(128, 128, 128, 0.3);
+}
+
+.login-badge {
+    position: absolute;
+    top: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92px;
+    height: 92px;
 }
 
 .login-root p {
