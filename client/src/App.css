@@ -47,9 +47,48 @@ footer {
     padding-top:25px;
 }
 
+/* Buttons Shared Properties
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Shared button mechanics — shape, spacing, typography.
+   Anything likely to diverge (fill/text color) stays out of here,
+   in each button's own rule below. */
+   .btn-venue,
+   .btn-landing,
+   .login-root .actions button {
+       display: inline-block;
+       height: 38px;
+       padding: 0 30px;
+       text-align: center;
+       font-size: 11px;
+       font-weight: 600;
+       line-height: 38px;
+       letter-spacing: .1rem;
+       text-transform: uppercase;
+       text-decoration: none;
+       white-space: nowrap;
+       box-sizing: border-box;
+       cursor: pointer;
+   
+       border-width: 1px;
+       border-style: solid;
+       border-color: #000000;
+       border-radius: 4px;
+       background-color: transparent;
+   }
+   
+   .btn-venue:focus-visible,
+   .btn-landing:focus-visible,
+   .login-root .actions button:focus-visible {
+       outline-width: 2px;
+       outline-style: solid;
+       outline-offset: 2px;
+   }
+
 /* Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Landing */
+/* Landing 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .landing-root {
     background-color:rgba(237, 233, 214, 1);
     background-image: url('./components/Landing/images/splashimage.png');
@@ -86,11 +125,33 @@ footer {
     max-height: 50vh;
 }
 
+
+
+/* Landing page button (Enter Venue) */
 .landing-root button { 
     margin-top:25px;
 }
 
-/* Login */
+.btn-landing {
+    color: #dddddd;
+    background-color: #333333;
+}
+.btn-landing:hover {
+    color: #ffffff;
+    background-color: #5b5b5b;
+}
+.btn-landing:focus-visible {
+    color: #ffffff;
+    background-color: #5b5b5b;
+    outline-color: #5b5b5b;
+}
+.btn-landing:active {
+    color: #666666;
+    background-color: #000000;
+}
+
+/* Login 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .login-root {
     background-color:rgba(237, 233, 214, 1);
     background-image: url('./components/Landing/images/splashimage.png');
@@ -131,17 +192,19 @@ footer {
     margin-top:25px;
 }
 
+/* Login "Nevermind" button */
 .login-root .actions button {
-    margin-top:15px;
-    background:none;
-    border:none;
-    color:rgba(128, 128, 128, 1);
-    text-decoration:underline;
-    cursor:pointer;
+    margin-top: 15px;
+    border-style: none;
+    color: rgba(128, 128, 128, 1);
+    text-decoration: underline;
 }
-
 .login-root .actions button:hover {
-    color:#333;
+    color: #333;
+}
+.login-root .actions button:focus-visible {
+    color: #333;
+    outline-color: #333;
 }
 
 
@@ -160,6 +223,25 @@ footer {
 /* .venue-root > div {
     border: 1px solid black;
 } */
+
+/* Venue buttons (Get On Stage / Leave Stage) */
+.btn-venue {
+    color: #dddddd;
+    background-color: #333333;
+}
+.btn-venue:hover {
+    color: #ffffff;
+    background-color: #5b5b5b;
+}
+.btn-venue:focus-visible {
+    color: #ffffff;
+    background-color: #5b5b5b;
+    outline-color: #5b5b5b;
+}
+.btn-venue:active {
+    color: #666666;
+    background-color: #000000;
+}
 
 
 /* > Perform 
@@ -205,7 +287,7 @@ footer {
 }
 
 
-.btn-perform {
+.performer-controls {
     width:calc(100%  /3);
     text-align: center;
 }

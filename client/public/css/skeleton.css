@@ -169,24 +169,7 @@ a:hover {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box; }
+input[type="button"],
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -196,18 +179,12 @@ input[type="button"]:hover,
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; }
+input[type="button"]:focus,
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: black;
-  border-color: black; }
+input[type="button"].button-primary,
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -217,10 +194,7 @@ input[type="button"].button-primary:hover,
 button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #808080;
-  border-color: #808080; }
+input[type="button"].button-primary:focus,
 
 
 /* Forms
@@ -338,8 +312,7 @@ td:last-child {
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
-.button {
-  margin-bottom: 1rem; }
+.button,
 input,
 textarea,
 select,
