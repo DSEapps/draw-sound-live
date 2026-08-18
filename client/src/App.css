@@ -258,7 +258,9 @@ footer {
     align-items: center;
     width:80vw; 
     padding-top:8px;
-    margin-bottom:-3px;
+    padding-left:8px;
+    padding-right: 8px;
+    margin-bottom:12px;
 }
 
 /* .performer-name * {
