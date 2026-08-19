@@ -116,6 +116,18 @@ footer {
 .landing-root footer {
     flex-shrink: 0;
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.landing-root footer p {
+    margin: 0;
+    font-style: italic;
+}
+
+.landing-root footer p:first-child {
+    margin-bottom: 6px;
 }
 
 .landing-root img {
@@ -258,8 +270,9 @@ footer {
     align-items: center;
     width:80vw; 
     padding-top:8px;
-    padding-left:8px;
-    padding-right: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin-bottom:12px;
 }
 

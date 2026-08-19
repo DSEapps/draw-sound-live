@@ -15,7 +15,10 @@ class Landing extends Component {
           <img src={Vector} />
           <button className="btn-landing" onClick={this.enterClick}>Enter Venue</button>
         </div>
-        <footer> <em>All rights reserved (c) 2018 Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</em></footer>
+        <footer>
+          <p>All rights reserved (c) 2018</p>
+          <p>Charles Bowden, Scott Bower, Evan Harrison, and David Killian.</p>
+        </footer>
       </div>
     );
   }
